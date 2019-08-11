@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "Welcome to Jekyll!"
 date:   2019-08-11 19:49:13 +1000
 categories: jekyll update
