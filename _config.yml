@@ -25,15 +25,13 @@ title:                 Gabriele Marini
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
   "PhD Candidate in Computing and Information System at the University of Melbourne".
-  **Hydejack** is your presence on the web, featuring a blog, portfolio, and resume.
-  Open `_config.yml` to edit this text.
 
 # A shorter description for the sidebar.
 tagline:               >
   "PhD Candidate in Computing and Information System at the University of Melbourne".
 
 # A list of keywords for your blog
-keywords:              []
+keywords:              [PhD, coding, programming, android, IoT, Ubiquitous, computing, computer, science]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
@@ -42,8 +40,8 @@ logo:                  /assets/icons/icon.jpg
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name:                Gabriele Marini
+  email:               giaga7@gmail.com
   # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
@@ -65,7 +63,7 @@ menu:
 #     url:               /cookies-policy/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2019. All rights reserved. Open `_config.yml` to edit this text.
+copyright:            Gabriele Marini © 2019. All rights reserved
 
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/
@@ -86,7 +84,7 @@ accent_color:          rgb(79,177,186)
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
-#theme_color:           rgb(29,53,64)
+#theme_color:           rgb(29,53,64) #old one
 theme_color:           rgb(42,84,104)
 
 # The string encoding which fonts to fetch from Google Fonts.
@@ -130,7 +128,7 @@ defaults:
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-# disqus:                <disqus_shortname>
+disqus:                gabryxx7
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # tinyletter:            <tinyletter_username>

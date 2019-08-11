@@ -9,20 +9,19 @@ title: About
 # Write a short (~150 characters) description of each blog post.
 # This description is used to preview the page on search engines, social media, etc.
 description: >
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  "PhD Candidate in Computing and Information System at the University of Melbourne".
 
 # You can show the description on the page by deleting this line:
 hide_description: true
 
 # TODO
-image: /assets/img/blog/hydejack-8.png
+image: /assets/icons/IMG_7900-Edit.jpg
 ---
 
-The "Best Jekyll Theme by a Mile".
+PhD Candidate in Computing and Information System at the University of Melbourne, Australia.
 {:.lead}
 
-![Screenshot](assets/img/blog/hydejack-8.png){:.lead}
+![Profile Pic](assets/icons/IMG_7900-Edit.jpg){:.lead}
 Hydejack's cover page on a variety of screens.
 {:.figure}
 
