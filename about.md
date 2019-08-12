@@ -1,27 +1,13 @@
 ---
-# This page uses Hydejack's `about` layout, which shows the primary author's picture and about text at the top.
-# You can change it to the regular `page` layout if you want.
-layout: about
-
-# The title of the page.
-title: About
-
-# Write a short (~150 characters) description of each blog post.
-# This description is used to preview the page on search engines, social media, etc.
-description: >
-  "PhD Candidate in Computing and Information System at the University of Melbourne".
-
-# You can show the description on the page by deleting this line:
-hide_description: true
-
-# TODO
-image: /assets/icons/IMG_7900-Edit.jpg
+image: /assets/img/blog/hydejack-8.png
 ---
 
-PhD Candidate in Computing and Information System at the University of Melbourne, Australia.
+# About
+
+The "Best Jekyll Theme by a Mile".
 {:.lead}
 
-![Profile Pic](assets/icons/IMG_7900-Edit.jpg){:.lead}
+![Screenshot](assets/img/blog/hydejack-8.png){:.lead srcset="/assets/img/blog/hydejack-8.png 1920w, /assets/img/blog/hydejack-8@0,5x.png 960w, /assets/img/blog/hydejack-8@0,25x.png 480w" data-width="1920" data-height="1080"}
 Hydejack's cover page on a variety of screens.
 {:.figure}
 
@@ -41,15 +27,15 @@ There are two versions of **Hydejack**: The base version is free, while features
 | [Welcome]              |                | &#x2714; |
 | [Newsletter Box][news] |                | &#x2714; |
 | [Custom Forms][forms]  |                | &#x2714; |
-| Dark Mode              |                | &#x2714; |
+| [Dark Mode][darkm]     |                | &#x2714; |
+| [Offline Support][ofln]|                | &#x2714; |
 | Cookie Banner          |                | &#x2714; |
-| Offline Support        |                | &#x2714; |
 | No Hydejack Branding   |                | &#x2714; |
 | License                | [GPL-3.0][lic] | [PRO]    |
 | Source                 | [GitHub][src]  | Included |
 | Support[^1]            | No             | No       |
 | Price                  | Free           | $59      |
-| | [**Download**][kit] <br/>-- or --<br/> [![Deploy to Netlify][dtn]{:data-ignore=""}][nfy]{:.no-hover.no-mark} | [**Buy PRO**][buy] |
+| | [**Download**][kit] <br/>-- or --<br/> [![Deploy to Netlify][dtn]{:data-ignore=""}][nfy]{:.no-hover.no-mark} | [**Buy PRO** --- $59][buy]{:.btn.btn-primary.btn-lg.heading} |
 {:.stretch-table.dl-table}
 
 
@@ -144,15 +130,15 @@ This table below shows what's included in each version:
 | [Welcome]              |                | &#x2714; |
 | [Newsletter Box][news] |                | &#x2714; |
 | [Custom Forms][forms]  |                | &#x2714; |
-| Dark Mode              |                | &#x2714; |
+| [Dark Mode][darkm]     |                | &#x2714; |
+| [Offline Support][ofln]|                | &#x2714; |
 | Cookie Banner          |                | &#x2714; |
-| Offline Support        |                | &#x2714; |
 | No Hydejack Branding   |                | &#x2714; |
 | License                | [GPL-3.0][lic] | [PRO]    |
 | Source                 | [GitHub][src]  | Included |
 | Support[^1]            | No             | No       |
 | Price                  | Free           | $59      |
-| | [**Download**][kit] <br/>-- or --<br/> [![Deploy to Netlify][dtn]{:data-ignore=""}][nfy]{:.no-hover.no-mark} | [**Buy PRO**][buy] |
+| | [**Download**][kit] <br/>-- or --<br/> [![Deploy to Netlify][dtn]{:data-ignore=""}][nfy]{:.no-hover.no-mark} | [**Buy PRO** --- $59][buy]{:.btn.btn-primary.btn-lg.heading} |
 {:.stretch-table.dl-table}
 
 
@@ -172,13 +158,15 @@ This table below shows what's included in each version:
 [features]: #features
 [news]: #build-an-audience
 [syntax]: #syntax-highlighting
-[latex]: example/_posts/2018-06-01-example-content-iii.md#math
+[latex]: hydejack/_posts/2018-06-01-example-content-iii.md#math
+[darkm]: hydejack/_posts/2018-09-01-introducing-dark-mode.md
 
-[lic]: https://hydejack.com/LICENSE/
-[pro]: https://hydejack.com/licenses/PRO/
-[docs]: https://hydejack.com/docs/
+[lic]: LICENSE.md
+[pro]: licenses/PRO.md
+[docs]: docs/README.md
+[ofln]: docs/advanced.md#enabling-offline-support
 
-[kit]: https://github.com/qwtel/hydejack-starter-kit/archive/master.zip
+[kit]: https://github.com/qwtel/hydejack-starter-kit/archive/v8.5.0.zip
 [src]: https://github.com/qwtel/hydejack
 [gem]: https://rubygems.org/gems/jekyll-theme-hydejack
 [buy]: https://app.simplegoods.co/i/NATYVLYT
