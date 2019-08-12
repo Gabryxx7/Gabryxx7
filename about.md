@@ -1,7 +1,8 @@
 ---
+layout: about
 image: /assets/img/blog/hydejack-8.png
 ---
-
+<!--author-->
 # About
 
 The "Best Jekyll Theme by a Mile".
