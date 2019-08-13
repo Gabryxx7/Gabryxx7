@@ -48,15 +48,17 @@ body {
   }
 }
 
-.clearfix {
+.clearfix,.layout-projects .columns::after,.layout-project .columns::after,.layout-home .columns::after,.layout-welcome .columns::after,.layout-resume .clearafter::after,.layout-resume .columns::after {
   content: "";
   display: table;
-  clear: both;
+  clear: both
 }
 
-.color-transition {
-  transition: background-color 1s ease, border-color 1s ease;
+
+.color-transition,blockquote,.faded,.read-more,figure,.figure,table:not(.highlight) thead,table:not(.highlight) thead+tbody,table:not(.highlight) tbody+tbody,table:not(.highlight) tfoot,table:not(.highlight) tbody tr:nth-child(even) td,table:not(.highlight) tbody tr:nth-child(even) th,table:not(.highlight) tbody tr:nth-child(odd) td,table:not(.highlight) tbody tr:nth-child(odd) th,.footnotes::before,code,.pagination,#_cookies-banner,.layout-projects .project-card,.layout-project .project-card,.layout-home .project-card,.layout-welcome .project-card,.layout-resume .tag,.layout-resume .symbol {
+  transition: background-color 1s ease, border-color 1s ease
 }
+
 
 .no-color-transition {
   transition: none!important;

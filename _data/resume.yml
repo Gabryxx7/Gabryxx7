@@ -31,6 +31,12 @@ basics:
     - network: "LinkedIn"
       username: "Richard Hendricks"
       url: ""
+    - network: "Email"
+      username: "giaga7@gmail.com"
+      url: "mailto:giaga7@gmail.com"
+    - network: "Facebook"
+      username: "Gabriele Marini"
+      url: "https://facebook.com/gabryxx7"
 work:
   - company: "Pied Piper"
     position: "CEO/President"

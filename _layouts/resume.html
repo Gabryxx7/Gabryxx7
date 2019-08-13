@@ -1,0 +1,85 @@
+---
+# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+layout: base
+---
+
+{% assign resume = site.data.resume %}
+{% for countryT in site.data.countries %}
+    {% if countryT.code == resume.basics.location.countryCode %}
+        {% assign country = countryT %}
+    {% endif %}
+{% endfor %}
+
+<article id="resume" class="page vcard h-card" role="article" typeof="Person" resource:"#resume">
+    <header class="hr">
+        <h1 class="page-title">{{ resume.basics.name }}</h1>
+        {% include components/hy-img.html img=resume.basics.picture alt=resume.basics.name class="avatar photo u-photo" %}
+        <p class="h3 faded subline title p-job-title" property="jobTitle">{{ resume.basics.label }}</p>
+    </header>
+    <p class="note p-note" property="description">
+        {{ resume.basics.summary | markdownify }}
+    </p>
+
+    <div class="columns contact">
+        <dl class="column column-3-5">
+            {% if resume.basics.location.address %}
+            <dt class="faded">
+                <span class="icon-location" title="Location"></span>
+                <span class="sr-only">Location</span></dt>
+            <dd class="bold adr p-adr h-adr" property="address" typeof="PostalAddress"> <span
+                    class="street-address p-street-address"
+                    property="streetAddress">{{ resume.basics.location.address }}</span>, <span
+                    class="postal-code p-postal-code"
+                    property="postalCode">{{ resume.basics.location.postalCode }}</span>, <span
+                    class="locality p-locality" property="addressLocality">{{ resume.basics.location.city }}</span>,
+                <span class="region p-region" property="addressRegion">{{ resume.basics.location.region }}</span>,
+                <meta property="addressCountry" content="{{ country.code }}"> <span
+                    class="country-name p-country-name">{{ country.name }}</span></dd>
+            {% endif %}
+            {% if resume.basics.phone %}
+            <dt class="faded"> <span class="icon-phone" title="Phone"></span> <span class="sr-only">Phone</span></dt>
+            <dd class="bold">
+                <meta property="telephone" content="{{ resume.basics.phone }}"> <a href="tel:{{ resume.basics.phone }}"
+                    class="external no-print-link tel p-tel">{{ resume.basics.phone }}</a></dd>
+            {% endif %}
+            {% if resume.basics.website %}
+            <dt class="faded"> <span class="icon-home3" title="Website"></span> <span class="sr-only">Website</span>
+            </dt>
+            <dd class="bold"> <a href="{{ resume.basics.website }}" class="external no-print-link url u-url"
+                    property="sameAs">{{ resume.basics.website }}</a></dd>
+            {% endif %}
+        </dl>
+        <dl class="column column-2-5">
+            {% for profile in resume.basics.profiles %}
+                {% for social in site.data.social %}
+                    {% if social[1].name == profile.network %}
+                        <dt class="faded"> <span class="{{ social[1].icon }}" title="{{ social[1].name }}"></span> <span class="sr-only">{{ social[1].name }}</span>
+                        </dt>
+                        <dd class="bold">
+                        {% if profile.url != null and profile.url != "" %}
+                            <a href="{{ profile.url }}" class="external no-print-link url u-url" property="sameAs">{{ profile.username }}</a>
+                        {% else %}
+                            <span class="nickname p-nickname ">{{ profile.username }}</span>
+                        {% endif %}
+                        </dd>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </dl>
+    </div>
+</article>
+
