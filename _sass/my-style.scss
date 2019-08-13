@@ -9,12 +9,21 @@
 }
 
 #_sidebar {
-  p, h2, nav{
-    text-align: left;
+  p{
+    text-align: center;
+  }
+  h2{
+    text-align: center;
+  }
+  nav{
+    text-align: center;
   }
   h2 {
     font-weight: 600;
-    }
+  }
+  .sidebar-about h2 a{
+    border-bottom: none;
+  }
 } 
 
 @media screen and (max-width: 600px) {
