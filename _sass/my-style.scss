@@ -24,7 +24,18 @@
   .sidebar-about h2 a{
     border-bottom: none;
   }
+  .avatar{
+    width: 9rem;
+    height: 9rem;
+  }
 } 
+
+.content article .avatar {
+  float: right;
+  margin-left: 0.5rem;
+  right: -0.5rem;
+  top: -5.7rem;
+}
 
 @media screen and (max-width: 600px) {
 
