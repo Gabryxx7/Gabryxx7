@@ -52,6 +52,8 @@ menu:
     url:               /
   - title:             Resume\CV
     url:               /resume/
+  - title:             Publications
+    url:               /publications/
   - title:             About
     url:               /about/
 
