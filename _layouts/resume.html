@@ -31,7 +31,8 @@ layout: base
         <p class="h3 faded subline title p-job-title" property="jobTitle">{{ resume.basics.label }}</p>
     </header>
     <p class="note p-note" property="description">
-        {{ resume.basics.summary | markdownify }}
+        {% include components/message.html text=resume.basics.summary alt="" %}
+        <!-- {{ resume.basics.summary | markdownify }} -->
     </p>
 
     <div class="columns contact">
@@ -56,7 +57,7 @@ layout: base
                 <meta property="telephone" content="{{ resume.basics.phone }}"> <a href="tel:{{ resume.basics.phone }}"
                     class="external no-print-link tel p-tel">{{ resume.basics.phone }}</a></dd>
             {% endif %}
-            {% if resume.basics.website %}
+            {% if resume.basics.website and resume.basics.website != "" %}
             <dt class="faded"> <span class="icon-home3" title="Website"></span> <span class="sr-only">Website</span>
             </dt>
             <dd class="bold"> <a href="{{ resume.basics.website }}" class="external no-print-link url u-url"
@@ -70,16 +71,271 @@ layout: base
                         <dt class="faded"> <span class="{{ social[1].icon }}" title="{{ social[1].name }}"></span> <span class="sr-only">{{ social[1].name }}</span>
                         </dt>
                         <dd class="bold">
-                        {% if profile.url != null and profile.url != "" %}
-                            <a href="{{ profile.url }}" class="external no-print-link url u-url" property="sameAs">{{ profile.username }}</a>
-                        {% else %}
-                            <span class="nickname p-nickname ">{{ profile.username }}</span>
-                        {% endif %}
+                        {% include components/link.html title=profile.username property="sameAs" href=profile.url class="external no-print-link url u-url" span_class="nickname p-nickname" %}
                         </dd>
                     {% endif %}
                 {% endfor %}
             {% endfor %}
         </dl>
+    </div>
+    <div class="columns">
+        <div class="column column-3-5">
+            <section>
+                <div class="npb">
+                    <h2 id="work" class="h3 faded hr"> Experience <span class="symbol icon-briefcase"></span> 
+                        <a href="#work" class="permalink">
+                            <span class="sr-only">Permalink</span> 
+                            <span class="icon-link"></span> 
+                        </a> 
+                    </h2>
+                    <section>
+                    {% for work in resume.work %}
+                        <header class="" property="worksFor" typeof="Organization">
+                            <h3 class="h4 faded">
+                                <meta property="name" content="{{ work.company }}"> <span class="bc">{{ work.position }}</span> at
+                                {% include components/link.html title=work.company property="sameAs" href=work.website class="org p-org h-card" %}
+                            </h3>
+                            <p class="faded"> <time datetime="{{ work.startDate | date_to_xmlschema }}">{{ work.startDate | date:  resume.basics.dateformats  }}</time> –
+                                {% if work.endDate and work.endDate != "" %}
+                                    <time datetime="{{ work.endDate | date_to_xmlschema}}">{{ work.endDate | date:  resume.basics.dateformats  }}</time>
+                                {% else %}
+                                    <em>present</em>
+                                {% endif %}
+                                 {{ work.location | prepend: " &centerdot; " | default:"" }} 
+                            </p>
+                        </header>
+                            <span style="font-size: 0.8rem;"> 
+                            {% include components/message.html text=work.summary alt="" %}
+                            {{ work.extra | markdownify }} </span>
+                        <h4 class="sr-only">Highlights</h4>
+                            <ul style="font-size: 0.8rem;">
+                                {% for highlight in work.highlights %}
+                                    <li>{{ highlight | markdownify | remove: '<p>' | remove: '</p>' }}</li>                                
+                                {% endfor %}
+                            </ul>
+                    {% endfor %}
+                    </section>
+                </div>
+            </section>
+            <section>
+                <div class="npb">
+                    <h2 id="education" class="h3 faded hr"> Education <span class="symbol icon-library"></span> <a
+                            href="#education" class="permalink"> <span class="sr-only">Permalink</span> <span
+                                class="icon-link"></span> </a> </h2>
+                    <section>
+                    {% for education in resume.education %}
+                        <header class="">                            
+                        <h3 class="h4 faded">
+                            <meta property="alumniOf" content="{{ education.organization }}" typeof="EducationalOrganization"> 
+                            <span class="bc">{{ education.studyType }}</span> in 
+                            <span class="bc">{{ education.area }}</span> from
+                            <span class="bc" property="name">{{ education.institution }}</span> 
+                            {{ education.gradeDescription | default:"with a GPA of"}}
+                                <span class="bc">{{ education.grade | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+                        </h3>
+                        <p class="faded"> <time datetime="{{ education.startDate | date_to_xmlschema }}">{{ education.startDate | date:  resume.basics.dateformats  }}</time> –
+                            {% if education.endDate and education.endDate != "" %}
+                                <time datetime="{{ education.endDate | date_to_xmlschema}}">{{ education.endDate | date:  resume.basics.dateformats  }}</time>
+                            {% else %}
+                                <em>present</em>
+                            {% endif %}
+                            {{ education.location | prepend: " &centerdot; " | default:"" }} 
+                        </p>    
+                        </header>
+                        <span style="font-size: 0.8rem;"> 
+                        {% include components/message.html text=education.description alt="" %}
+                            {{ education.extra | markdownify }} </span>
+                        <h4 class="sr-only">Courses</h4>
+                            <ul style="font-size: 0.8rem;">
+                                {% for course in education.courses %}
+                                    <li>{{ course | markdownify | remove: '<p>' | remove: '</p>' }}</li>                                
+                                {% endfor %}
+                            </ul>
+                    {% endfor %}
+                    </section>
+                </div>
+            </section>
+            <section>
+                <div class="npb">
+                    <h2 id="volunteer" class="h3 faded hr"> Volunteer <span class="symbol icon-earth"></span> 
+                        <a href="#volunteer" class="permalink"> <span class="sr-only">Permalink</span> 
+                            <span class="icon-link"></span> </a> 
+                    </h2>
+                    <section class="no-page-break">
+                    {% for volunteer in resume.volunteer %}
+                        <header class="">                         
+                        <h3 class="h4 faded">
+                            <meta property="name" content="{{ volunteer.organization }}"> <span class="bc">{{ volunteer.position }}</span> at
+                            {% include components/link.html  title=volunteer.organization property="sameAs" href=volunteer.website  class="org p-org h-card" %}
+                        </h3>
+                        <p class="faded"> <time datetime="{{ volunteer.startDate | date_to_xmlschema }}">{{ volunteer.startDate | date:  resume.basics.dateformats  }}</time> –
+                            {% if volunteer.endDate and volunteer.endDate != "" %}
+                                <time datetime="{{ volunteer.endDate | date_to_xmlschema}}">{{ volunteer.endDate | date:  resume.basics.dateformats  }}</time>
+                            {% else %}
+                                <em>present</em>
+                            {% endif %}
+                            {{ volunteer.location | prepend: " &centerdot; " | default:"" }} 
+                        </p>       
+                        </header>
+                        <span style="font-size: 0.8rem;"> 
+                            {% include components/message.html text=volunteer.summary %} </span>
+                        <h4 class="sr-only">Highlights</h4>
+                            <ul style="font-size: 0.8rem;">
+                                {% for highlight in volunteer.highlights %}
+                                    <li>{{ highlight | markdownify | remove: '<p>' | remove: '</p>' }}</li>                                
+                                {% endfor %}
+                            </ul>
+                    {% endfor %}
+                    </section>
+                </div>
+            </section>
+            <section>
+                <div class="npb">
+                    <h2 id="awards" class="h3 faded hr"> Awards <span class="symbol icon-trophy"></span> <a
+                            href="#awards" class="permalink"> <span class="sr-only">Permalink</span> <span
+                                class="icon-link"></span> </a> </h2>
+                    <section>
+                        {% for award in resume.awards %}
+                        <header class="">
+                            <h3 class="h4 faded" property="award"> <span class="bc">{{ award.title }} </span> from 
+                                {% include components/link.html  title=award.awarder property="sameAs" href=award.website span_class="bc" %}
+                            </h3>
+                            <p class="faded"> <time datetime="{{ award.date | date: resume.basics.dateformats }}">{{ award.date | date:  resume.basics.dateformats  }}</time>
+                                {{ award.location | prepend:" &centerdot; " | default:"" }} </p>
+                        </header>
+                        <span style="font-size: 0.8rem;"> 
+                        {% include components/message.html text=award.summary %} </span>
+                    {% endfor %}
+                    </section>
+                </div>
+            </section>
+            <section>
+                <div class="npb">
+                    <h2 id="publications" class="h3 faded hr"> Publications <span class="symbol icon-book"></span> <a
+                            href="#publications" class="permalink"> <span class="sr-only">Permalink</span> <span
+                                class="icon-link"></span> </a> </h2>
+                    <section>
+                        {% for publication in resume.publications %}
+                            <header class="">
+                                <h3 class="h4 faded">
+                                    {% include components/link.html title=publication.name href=publication.website %}
+                                    by
+                                    {% include components/link.html title=publication.publisher href=publication.publisherUrl class="org p-org h-card" span_class="bc" %}
+                                </h3>
+                                <p class="faded"> <time datetime="{{ publication.date | date: resume.basics.dateformats }}">{{ publication.releaseDate | date: resume.basics.dateformats }}</time></p>
+                            </header>
+                            <span style="font-size: 0.8rem;"> 
+                            {% include components/message.html text=publication.summary %} </span>
+                        {% endfor %}
+                    </section>
+                </div>
+            </section>
+            <section>
+                <div class="npb">
+                    <h2 id="references" class="h3 faded hr"> References <span class="symbol icon-quotes-right"></span>
+                        <a href="#references" class="permalink"> <span class="sr-only">Permalink</span> <span
+                                class="icon-link"></span> </a> </h2>
+                    {% for reference in resume.references %}
+                    <blockquote class="reference">
+                        {{ reference.reference | markdownify }}
+                        <footer>— <cite>{{ reference.name }}</cite></footer>
+                    </blockquote>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+
+        <div class="column column-2-5">
+                <section class="npb">
+                    <h2 id="languages" class="h3 faded hr"> Languages <span class="symbol icon-bubbles"></span> <a
+                            href="#languages" class="permalink"> <span class="sr-only">Permalink</span> <span
+                                class="icon-link"></span> </a> </h2>
+                    <dl class="skills">
+                        {% for language in resume.languages %}
+                        <dt class="h4 fl">{{ language.language }}</dt>
+                        <dd style="font-size: 0.8rem;" class="faded clearafter">
+                                <span >{{ language.fluency | prepend: " &centerdot; " }}</span> 
+                            <div class="fr"> <span class="sr-only">Fluency:</span> 
+                                <span class="help" title="{{ language.fluency }}"> 
+                                    <span class="sr-only">{{ language.fluency }}</span> 
+                                        {% for i in (1..language.stars) %}
+                                            <span class="icon-star-full"></span>
+                                        {% endfor %}
+                                        {% assign remainStars=5 | minus:language.stars %}
+                                        {% for i in (1..remainStars) %}
+                                            <span class="icon-star-empty"></span>
+                                        {% endfor %}
+                                </span>
+                            </div>
+                        </dd>
+                        {% endfor %}
+                    </dl>
+                </section>
+                <section class="npb">
+                        <h2 id="certificates" class="h3 faded hr"> Certificates <span class="symbol icon-envelop"></span> <a
+                                href="#certificates" class="permalink"> <span class="sr-only">Permalink</span> <span
+                                    class="icon-link"></span> </a> </h2>
+                        <dl class="skills">
+                            {% for certificate in resume.certificates %}
+                            <dt class="h4 fl">{{ certificate.title }}</dt>
+                            <dd class="faded clearafter">
+                                <p class="faded"> <time datetime="{{ award.date | date: resume.basics.dateformats }}">{{ certificate.date | date: resume.basics.dateformats | prepend: " &centerdot; " }}</time>
+                                <p style="font-size: 0.8rem; margin: 0rem;"> 
+                                        {{ certificate.extra | markdownify }} </p>
+                            </dd>
+                            {% endfor %}
+                        </dl>
+                    </section>
+            <section class="npb">
+                <h2 id="skills" class="h3 faded hr"> Skills <span class="symbol icon-wrench"></span> <a href="#skills"
+                        class="permalink"> <span class="sr-only">Permalink</span> <span class="icon-link"></span> </a>
+                </h2>
+                <dl class="skills">
+                    {% for skill in resume.skills %}
+                    <dt class="h4 fl">{{ skill.name }}</dt>
+                    <dd class="faded clearafter">
+                        <div class="fr"> <span class="sr-only">Level:</span> <span class="help" title="Master"> 
+                            <span class="sr-only">Master</span>  
+                                {% if skill.stars %}                                   
+                                    {% for i in (1..skill.stars) %}
+                                        <span class="icon-star-full"></span>
+                                    {% endfor %}
+                                    {% assign remainStars=5 | minus:skill.stars %}
+                                    {% for i in (1..remainStars) %}
+                                        <span class=".icon-star-empty"></span>
+                                    {% endfor %}
+                                {% endif %}
+                            </span>
+                        </div>
+                        <div> <span class="sr-only">Keywords:</span>
+                            <ul class="tags">
+                                {% for keyword in skill.keywords %}
+                                <li class="tag">{{ keyword }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </dd>
+                    {% endfor %}
+                </dl>
+            </section>
+            <section class="npb">
+                <h2 id="interests" class="h3 faded hr"> Interests <span class="symbol icon-heart"></span> <a
+                        href="#interests" class="permalink"> <span class="sr-only">Permalink</span> <span
+                            class="icon-link"></span> </a> </h2>
+                <dl class="skills">
+                    {% for interest in resume.interests %}
+                    <dt class="h4">{{ interest.name }}</dt>
+                    <dd> <span class="sr-only">Keywords:</span>
+                        <ul class="tags">
+                            {% for keyword in interest.keywords %}
+                            <li class="tag">{{ keyword }}</li>
+                            {% endfor %}
+                        </ul>
+                    </dd>
+                    {% endfor %}
+                </dl>
+            </section>
+        </div>
     </div>
 </article>
 

@@ -2,108 +2,239 @@
 # If you don't have a JSON Resume you can just edit this YAML file instead.
 # See also: <https://jsonresume.org/>.
 basics:
-  name: "Richard Hendricks"
-  label: "Programmer"
-  picture: "/assets/icons/icon.png"
+  # dateformats: "%F"
+  dateformats: "%b %Y"
+  name: "Gabriele Marini"
+  label: "PhD Candidate and Programmer"
+  picture: "/assets/icons/icon.jpg"
   email: ""
-  phone: "(912) 555-4321"
-  website: "https://piedpiper.com"
+  phone: "+61 048 1149376"
+  website: "http://gabryxx7.com"
   summary: >
-    Richard hails from Tulsa.
-    He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!)
-    Before starting Pied Piper, he worked for Hooli as a part time software developer.
-    While his work focuses on applied information theory,
-    mostly optimizing lossless compression schema of both the length-limited and adaptive variants,
-    his non-work interests range widely,
-    everything from quantum computing to chaos theory.
-    He could tell you about it, but THAT would NOT be a “length-limited” conversation!
-    Open `_data/resume.yml` to edit this text.
+    Computer Scientist, researcher, photographer and traveller. Currently pursuing a PhD in Computing and Information System at the University of Melbourne. 
   location:
-    address: "2712 Broadway St"
-    postalCode: "CA 94115"
-    city: "San Francisco"
-    countryCode: "US"
-    region: "California"
+    address: "168, The University of Melbourne, Grattan St, Parkville"
+    postalCode: "VIC 3052"
+    city: "Melbourne"
+    countryCode: "AU"
+    region: "Victoria"
   profiles:
-    - network: "Twitter"
-      username: "RHendricksCEO"
-      url: ""
     - network: "LinkedIn"
-      username: "Richard Hendricks"
-      url: ""
+      username: "Gabriele Marini"
+      url: "https://www.linkedin.com/in/gabryxx7/"
     - network: "Email"
       username: "giaga7@gmail.com"
       url: "mailto:giaga7@gmail.com"
     - network: "Facebook"
       username: "Gabriele Marini"
-      url: "https://facebook.com/gabryxx7"
+      url: "https://www.facebook.com/Gabryxx7"
 work:
-  - company: "Pied Piper"
-    position: "CEO/President"
-    website: "https://piedpiper.com"
-    startDate: "2013-12-01"
-    endDate: ""
-    summary: >
-      Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has
-      consistently fielded high Weisman Scores™ that are not merely competitive,
-      but approach the theoretical limit of lossless compression.
-    highlights:
-      - "Build an algorithm for artist to detect if their music was violating copy right infringement laws"
-      - "Successfully won Techcrunch Disrupt"
-      - "Optimized an algorithm that holds the current world record for Weisman Scores"
+  - company: "The University of Melbourne"
+    position: "PhD Candidate in Computing and Information Systems"
+    startDate: "2018-05-01"
+    location: Melbourne, Australia
+    summary: "Working on Ubiquitous Computing and IoT"
+    extra: |-
+      __Teaching__
+        * S2 2018: COMP30019 - Computer Graphics and Interaction
+        * S2 2019: COMP30019 - Computer Graphics and Interaction
+      
+      __Extras__
+        * Treasurer of the Computing and Information System GRaduate Research Students group ([CIS-GReS](https://www.cis-gres.org))
+        * Floor Warden
+        * Assets manager
+  - company: "CSIRO - Data61"
+    position: "PhD Candidate"
+    summary: "PhD Sponsored by a top-up Data61 - CSIRO scholarship"
+    startDate: "2018-05-01"
+    location: Melbourne, Australia
+  - company: "European Central Bank"
+    position: "Consultant"
+    startDate: "2017-10-01"
+    endDate: "2018-03-01"
+    location: Frankfurt Am Main Area, Germany
+    summary: "Working on the IReF long-term project "
+    highlights: 
+      - Implementation of an online survey to be sent out to all the banks in Europe 
+      - Technical support for IT-related matters (Python scripts, WordPress websites management, Javascript, VBA)
+  - company: "Scuola Superiore Sant'Anna - TeCIP Institute"
+    position: "Research Assistant"
+    startDate: "2017-07-01"
+    endDate: "2017-10-01"
+    location: Pisa, Italy
+    # summary: ""
+    highlights: 
+      - Robot Vision and Hand-Eye Camera Robot calibration 
+      - HMI development (C#, MySQL) 
+      - 3D Viewer of robotic arm with Inverse Kinematics
+  - company: "Software Engineer Intern"
+    position: "VRMedia SRL"
+    startDate: "2016-10-01"
+    endDate: "2017-06-01"
+    location: Pisa, Italy    
+    summary: "I worked on my Master's thesis under the supervision of Franco Tecchia and Marcello Carrozzino. Occasional work on part of other projects on the Unreal Engine.
+          I developed a plugin for the Unreal Engine that implements the S3D scripting language and the of the XVR Environment (included its VM) in the engine. The project also includes the development of a code editor with a custom debugger and a debug UI"
+  - company: "Università di Cagliari"
+    position: "Internship"
+    startDate: "2014-05-01"
+    endDate: "2014-07-01"
+    location: Cagliari, Italy
+    summary: "Bachelor's thesis project under the supervision of Riccardo Scateni"
 volunteer:
-  - organization: "CoderDojo"
-    position: "Teacher"
-    website: "https://coderdojo.com/"
-    startDate: "2012-01-01"
-    endDate: "2013-01-01"
-    summary: "Global movement of free coding clubs for young people."
-    highlights:
-      - "Awarded 'Teacher of the Month'"
+  - organization: "UbiComp 2019"
+    website: "http://ubicomp.org/ubicomp2019/"
+    position: "Student Volunteer (SV)"
+    startDate: "2019-09-01"
+    endDate: "2019-09-01"
+    summary:  "Conference reception and technical support"
+  - organization: "OzCHI 2018"
+    position: "Student Volunteer (SV)"
+    website: "http://www.ozchi.org/2018/"
+    startDate: "2018-09-01"
+    endDate: "2018-09-01"
+    summary: "Conference reception and technical support"
 education:
-  - institution: "University of Oklahoma"
-    area: "Information Technology"
-    studyType: "Bachelor"
-    startDate: "2011-06-01"
-    endDate: "2014-01-01"
-    gpa: "4.0"
+  - institution: "University of Melbourne"
+    area: "Computing and Information Systems"
+    studyType: "PhD"
+    # description: "test"
+    # extra: "test2"
+    startDate: "2017-05-01"
+    gradeDescription: ""
     courses:
-      - "DB1101 - Basic SQL"
-      - "CS2011 - Java Introduction"
+      - "INFO90003 - Designing Novel Interaction (Best Project Award)"
+      - "COMP90044 - Research Methods"  
+  - institution: "Università degli studi di Pisa"
+    area: "Computer Science"
+    studyType: "MSc"
+    startDate: "2014-09-01"
+    endDate: "2017-06-01"
+    gradeDescription: with a grade of 
+    grade: 110/110 *cum laude*
+  - institution: "Università degli studi di Cagliari"
+    area: "Computer Science"
+    studyType: "BSc"
+    startDate: "2011-09-01"
+    endDate: "2014-07-01"
+    gradeDescription: with a grade of 
+    grade: 110/110 *cum laude*
+  # - institution: "University of Melbourne"
+  #   description: "TEST2"
+  #   area: "Computing and Information Systems"
+  #   studyType: "PhD"
+  #   startDate: "2018-05-01"
+  #   endDate: ""
+  #   grade: ""
+  #   gradeDescription: ""
 awards:
-  - title: "Digital Compression Pioneer Award"
-    date: "2014-11-01"
-    awarder: "Techcrunch"
-    summary: "There is no spoon."
+  - title: "Data61 - CSIRO Scholarship"
+    date: "2019-05-01"
+    awarder: "Data61 - CSIRO"
+    website: "https://www.data61.csiro.au/"
+  - title: "Top graduates (Academic year 2017)"
+    date: "2017-07-01"
+    awarder: "Università degli studi di Pisa"
+  - title: "Regional Merit Scholarship (Academic year 2014-2015)"
+    date: "2015-07-01"
+    awarder: "DSU Toscana"
+  - title: "Graduation Prize (Academic year 2015)"
+    date: "2015-07-01"
+    awarder: "ERSU Cagliari"
+  - title: "3rd Place Open Water Swimming Circuit"
+    date: "2014-07-01"
+    awarder: "FIN Sardegna"
 publications:
-  - name: "Video compression for 3d media"
-    publisher: "Hooli"
-    releaseDate: "2014-10-01"
-    website: "https://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)"
-    summary: "Innovative middle-out compression algorithm that changes the way we store data."
+  - name: "Northern Health gets its teeth into patient flow"
+    publisher: "VicHealth"
+    publisherUrl: "http://www.health.vic.gov.au"
+    releaseDate: "2019-07-01"
+    website: "http://www.health.vic.gov.au/healthvictoria/jul19/flow.htm"  
+  - name: "Towards context-free Semantic Localisation"
+    publisher: "UbiComp 2019"
+    releaseDate: "2019-07-01"
+    website: "http://www.health.vic.gov.au/healthvictoria/jul19/flow.htm"
+certificates:
+  - title: "TOEFL"
+    date: "2019-05-01"
+    extra: "Total 112 (Reading: 28, Listening: 28, Speaking: 26, Writing: 30)"
 skills:
+  - name: "Programming"
+    level: "Master"
+    # stars: 3
+    keywords:
+      - "C"
+      - "C++"
+      - "C#"
+      - "Java"
+      - "Python"
+      - "OCAML"
+      - "GLSL/HLSL"
+      - "XVR"
+  - name: "Data Analysis"
+    level: "Master"
+    # stars: 3
+    keywords:
+      - "R"
+      - "Python"    
+  - name: "Development & Softwared"
+    level: "Master"
+    # stars: 3
+    keywords:
+      - "Android"
+      - "Unity 3D"
+      - "Unreal Engine"
+      - ".NET"
   - name: "Web Development"
     level: "Master"
+    # stars: 3
     keywords:
       - "HTML"
       - "CSS"
       - "Javascript"
-  - name: "Compression"
+      - "PHP"
+      - "SQL"
+      - "MySQL"
+      - "SQLite"
+      - "NodeJS"
+  - name: "Writing"
     level: "Master"
+    # stars: 3
     keywords:
-      - "Mpeg"
-      - "MP4"
-      - "GIF"
+      - "LaTeX"
+      - "Markdown"
+  - name: "Editing"
+    level: "Master"
+    # stars: 3
+    keywords:
+      - "Adobe Photoshop"
+      - "Adobe Illustrator"
+      - "Adobe Premiere"
 languages:
-  - language: "English"
+  - language: "Italian"
     fluency: "Native speaker"
+    stars: 5
+  - language: "English"
+    fluency: "C2- Proficient"
+    stars: 4
+  - language: "Spanish"
+    fluency: "Intermediate"
+    stars: 3
 interests:
-  - name: "Wildlife"
+  - name: "Hobbies"
     keywords:
-      - "Ferrets"
-      - "Unicorns"
+      - "Traveling"
+      - "Gaming"
+      - "Spearfishing"
+  - name: "Sports"
+    keywords:
+      - "Swimming"
+      - "Martial Arts"
+  - name: "Photography"
+    keywords:
+      - "Landscape"
+      - "Astrophotography"
 references:
-  - name: "Erlich Bachman"
-    reference: >
-      It is my pleasure to recommend Richard, his performance working as a consultant for Main St.
-      Company proved that he will be a valuable addition to any company.
+  # - name: "Erlich Bachman"
+  #   reference: >
+  #     It is my pleasure to recommend Richard, his performance working as a consultant for Main St.
+  #     Company proved that he will be a valuable addition to any company.
