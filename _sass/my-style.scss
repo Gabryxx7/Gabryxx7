@@ -7,3 +7,29 @@
     margin: 1.5rem 0;
   }
 }
+
+#_sidebar {
+  p, h2, nav{
+    text-align: left;
+  }
+  h2 {
+    font-weight: 600;
+    }
+} 
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media (min-width: 48em) {
+  #_menu {
+    display: none;
+}
+  .content {
+    padding-top: 2rem;
+  }
+
+  .page-title {
+    font-weight: bold;
+  }
+}
