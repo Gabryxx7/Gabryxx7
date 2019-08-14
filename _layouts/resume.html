@@ -211,27 +211,6 @@ layout: base
             </section>
             <section>
                 <div class="npb">
-                    <h2 id="publications" class="h3 faded hr"> Publications <span class="symbol icon-book"></span> <a
-                            href="#publications" class="permalink"> <span class="sr-only">Permalink</span> <span
-                                class="icon-link"></span> </a> </h2>
-                    <section>
-                        {% for publication in resume.publications %}
-                            <header class="">
-                                <h3 class="h4 faded">
-                                    {% include components/link.html title=publication.name href=publication.website %}
-                                    by
-                                    {% include components/link.html title=publication.publisher href=publication.publisherUrl class="org p-org h-card" span_class="bc" %}
-                                </h3>
-                                <p class="faded"> <time datetime="{{ publication.date | date: resume.basics.dateformats }}">{{ publication.releaseDate | date: resume.basics.dateformats }}</time></p>
-                            </header>
-                            <span style="font-size: 0.8rem;"> 
-                            {% include components/message.html text=publication.summary %} </span>
-                        {% endfor %}
-                    </section>
-                </div>
-            </section>
-            <section>
-                <div class="npb">
                     <h2 id="references" class="h3 faded hr"> References <span class="symbol icon-quotes-right"></span>
                         <a href="#references" class="permalink"> <span class="sr-only">Permalink</span> <span
                                 class="icon-link"></span> </a> </h2>
@@ -335,6 +314,28 @@ layout: base
                     {% endfor %}
                 </dl>
             </section>
+        </div>
+
+        <div class="column column-5-5">
+            <div class="npb">
+                <h2 id="publications" class="h3 faded hr"> Publications <span class="symbol icon-book"></span> <a
+                        href="#publications" class="permalink"> <span class="sr-only">Permalink</span> <span
+                            class="icon-link"></span> </a> </h2>
+                <section>
+                    {% for publication in resume.publications %}
+                        <header class="">
+                            <h3 class="h4 faded">
+                                {% include components/link.html title=publication.name href=publication.website %}
+                                by
+                                {% include components/link.html title=publication.publisher href=publication.publisherUrl class="org p-org h-card" span_class="bc" %}
+                            </h3>
+                            <p class="faded"> <time datetime="{{ publication.date | date: resume.basics.dateformats }}">{{ publication.releaseDate | date: resume.basics.dateformats }}</time></p>
+                        </header>
+                        <span style="font-size: 0.8rem;"> 
+                        {% include components/message.html text=publication.summary %} </span>
+                    {% endfor %}
+                </section>
+            </div>
         </div>
     </div>
 </article>
