@@ -1,0 +1,44 @@
+---
+layout: base
+---
+{% assign projPage = site.pages | where:"layout","projects" | first %}
+
+
+<article id="page" class="page" role="article" vocab="http://schema.org/" typeof="CreativeWork" resource="#project">
+    <header>
+        <h1 class="page-title" property="name">{{ page.title }}</h1>
+        <p class="post-date heading"> 
+            <a href="{{ projPage.url }}" class="flip-title" property="genre">{{ projPage.title }}</a> | 
+            <time datetime="{{ page.date | date_to_xmlschema}}">{{ page.date | date: "%Y" }}</time>
+            <span class="fr"> 
+                <span class="sr-only">| Links:</span>
+                {% for link in page.links %}
+                    {% if link != page.links.first %}
+                        |
+                    {% endif %}
+                    <a class="external" href="{{ link.url }}" property="sameAs">{{ link.title }}</a>
+                {% endfor %}
+            </span>
+        </p>
+        <div class="img lead sixteen-nine" style="opacity: 1;">
+            {% include components/hy-img.html style="display: block;" img=page.screenshot  alt=page.title %}
+        </div>
+        {% include components/message.html text=page.description alt="" property="description" %}
+    </header>
+</article>
+
+
+<hr class="dingbat related" />
+
+
+{% assign addons = page.addons | default:site.hydejack.post_addons %}
+{% unless addons %}{% assign addons = "about,newsletter,related,random" | split:"," %}{% endunless %}
+{% for addon in addons %}
+  {% case addon %}
+  {% when 'about' %}
+     {% include components/about.html %}
+  {% when 'related' %}
+    {% include components/related-posts.html post=post %}
+  {% else %}
+  {% endcase %}
+{% endfor %}

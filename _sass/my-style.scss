@@ -478,3 +478,92 @@ body.dark-mode .highlight .language-json .kc {
       width: 40%
   }
 }
+
+
+
+
+// LAYOUT-PROJECTS
+
+
+.layout-projects .columns,.layout-project .columns,.layout-home .columns,.layout-welcome .columns {
+  margin-left: -1rem;
+  display: flex;
+  flex-wrap: wrap
+}
+
+.layout-projects .column,.layout-project .column,.layout-home .column,.layout-welcome .column {
+  float: left;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex
+}
+
+@media screen and (min-width: 42em) {
+  .layout-projects .column-1-2,.layout-project .column-1-2,.layout-home .column-1-2,.layout-welcome .column-1-2 {
+      width:50%
+  }
+}
+
+@media print {
+  .layout-projects .columns,.layout-project .columns,.layout-home .columns,.layout-welcome .columns {
+      display: block
+  }
+
+  .layout-projects .column,.layout-project .column,.layout-home .column,.layout-welcome .column {
+      display: block;
+      width: 50%
+  }
+}
+
+.layout-projects .project-card,.layout-project .project-card,.layout-home .project-card,.layout-welcome .project-card {
+  width: 100%;
+  color: var(--gray-text);
+  background-color: var(--gray-bg);
+  padding-bottom: .75rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0.125rem 0.125rem 1rem rgba(0,0,0,0.2);
+  contain: content;
+  page-break-inside: avoid
+}
+
+.layout-projects .project-card>a .project-card-img,.layout-project .project-card>a .project-card-img,.layout-home .project-card>a .project-card-img,.layout-welcome .project-card>a .project-card-img {
+  margin-bottom: 0;
+  position: relative
+}
+
+.layout-projects .project-card>a .project-card-img img,.layout-project .project-card>a .project-card-img img,.layout-home .project-card>a .project-card-img img,.layout-welcome .project-card>a .project-card-img img {
+  display: block;
+  transition: transform 500ms
+}
+
+.layout-projects .project-card>a:hover .project-card-img img,.layout-projects .project-card>a:focus .project-card-img img,.layout-project .project-card>a:hover .project-card-img img,.layout-project .project-card>a:focus .project-card-img img,.layout-home .project-card>a:hover .project-card-img img,.layout-home .project-card>a:focus .project-card-img img,.layout-welcome .project-card>a:hover .project-card-img img,.layout-welcome .project-card>a:focus .project-card-img img {
+  transition: transform 250ms;
+  transform: scale(1.025)
+}
+
+.layout-projects .project-card>.project-card-title,.layout-projects .project-card>.project-card-text,.layout-project .project-card>.project-card-title,.layout-project .project-card>.project-card-text,.layout-home .project-card>.project-card-title,.layout-home .project-card>.project-card-text,.layout-welcome .project-card>.project-card-title,.layout-welcome .project-card>.project-card-text {
+  text-align: center;
+  padding: 0 1rem
+}
+
+.layout-projects .project-card>.project-card-title,.layout-project .project-card>.project-card-title,.layout-home .project-card>.project-card-title,.layout-welcome .project-card>.project-card-title {
+  display: block;
+  font-size: 1rem;
+  margin-top: .75rem;
+  margin-bottom: .25rem;
+  color: inherit
+}
+
+.layout-projects .project-card>.project-card-text,.layout-project .project-card>.project-card-text,.layout-home .project-card>.project-card-text,.layout-welcome .project-card>.project-card-text {
+  margin: .25rem 0
+}
+
+.layout-projects .column-1>.project-card>.project-card-title,.layout-project .column-1>.project-card>.project-card-title,.layout-home .column-1>.project-card>.project-card-title,.layout-welcome .column-1>.project-card>.project-card-title {
+  font-size: 1.17rem
+}
+
+.layout-projects .column-1>.project-card>.project-card-text,.layout-project .column-1>.project-card>.project-card-text,.layout-home .column-1>.project-card>.project-card-text,.layout-welcome .column-1>.project-card>.project-card-text {
+  font-size: 1rem
+}

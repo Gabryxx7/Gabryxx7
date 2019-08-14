@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+
+
+<!-- Generato da Microsoft Visio, esportazione SVG Disegno2.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="13.0387" height="6.91409" viewBox="0 0 938.789 497.814" xml:space="preserve" color-interpolation-filters="sRGB" class="st37">
+	<v:documentproperties v:langid="1040" v:metric="true" v:viewmarkup="false">
+		<v:userdefs>
+			<v:ud v:nameu="msvSubprocessMaster" v:prompt="" v:val="VT4(Rectangle)"></v:ud>
+			<v:ud v:nameu="msvNoAutoConnect" v:val="VT0(1):26"></v:ud>
+		</v:userdefs>
+	</v:documentproperties>
+
+	<style type="text/css">
+	
+		.st1 {fill:#ffffff;stroke:#759fcc;stroke-width:0.75}
+		.st2 {fill:#ffffff;stroke:#ed7d31;stroke-width:0.75}
+		.st3 {fill:#ffffff;stroke:#70ad47;stroke-width:0.75}
+		.st4 {visibility:visible}
+		.st5 {fill:#759fcc;fill-opacity:0.22;filter:url(#filter_2);stroke:#759fcc;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.22}
+		.st6 {fill:#759fcc;stroke:#c7c8c8;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st7 {fill:#feffff;font-family:Calibri;font-size:1.99999em;font-weight:bold}
+		.st8 {fill:#759fcc;fill-opacity:0.22;filter:url(#filter_2);stroke:#759fcc;stroke-opacity:0.22}
+		.st9 {fill:#759fcc;stroke:#c7c8c8;stroke-width:0.25}
+		.st10 {fill:#feffff;font-family:Calibri;font-size:1.16666em}
+		.st11 {fill:#ed7d31;fill-opacity:0.22;filter:url(#filter_2);stroke:#ed7d31;stroke-opacity:0.22}
+		.st12 {fill:#ed7d31;stroke:#c7c8c8;stroke-width:0.25}
+		.st13 {fill:#70ad47;fill-opacity:0.22;filter:url(#filter_2);stroke:#70ad47;stroke-opacity:0.22}
+		.st14 {fill:#70ad47;stroke:#c7c8c8;stroke-width:0.25}
+		.st15 {marker-end:url(#mrkr4-72);stroke:#5b9bd5;stroke-linecap:round;stroke-linejoin:round;stroke-width:3}
+		.st16 {fill:#5b9bd5;fill-opacity:1;stroke:#5b9bd5;stroke-opacity:1;stroke-width:0.48076923076923}
+		.st17 {marker-end:url(#mrkr4-88);stroke:#ed7d31;stroke-linecap:round;stroke-linejoin:round;stroke-width:3}
+		.st18 {fill:#ed7d31;fill-opacity:1;stroke:#ed7d31;stroke-opacity:1;stroke-width:0.48076923076923}
+		.st19 {marker-end:url(#mrkr4-104);stroke:#70ad47;stroke-linecap:round;stroke-linejoin:round;stroke-width:3}
+		.st20 {fill:#70ad47;fill-opacity:1;stroke:#70ad47;stroke-opacity:1;stroke-width:0.48076923076923}
+		.st21 {fill:none;filter:url(#filter_4);stroke:none}
+		.st22 {fill:#000000;filter:url(#filter_4);font-family:Calibri;font-size:2.66666em;font-weight:bold;opacity:0.117647}
+		.st23 {fill:none;stroke:none;stroke-width:0.25}
+		.st24 {fill:#5b9bd5;font-family:Calibri;font-size:2.66666em;font-weight:bold}
+		.st25 {font-size:1em}
+		.st26 {fill:none;stroke:none;stroke-width:0.75}
+		.st27 {fill:#ed7d31;font-family:Calibri;font-size:2.66666em;font-weight:bold}
+		.st28 {fill:#70ad47;font-family:Calibri;font-size:2.66666em;font-weight:bold}
+		.st29 {fill:#bdd0e9;fill-opacity:0.22;filter:url(#filter_2);stroke:#bdd0e9;stroke-opacity:0.22}
+		.st30 {fill:#bdd0e9;stroke:#c7c8c8;stroke-width:0.25}
+		.st31 {fill:#feffff;font-family:Calibri;font-size:2.66666em}
+		.st32 {fill:#5b9bd5;fill-opacity:0.22;filter:url(#filter_2);stroke:#5b9bd5;stroke-opacity:0.22}
+		.st33 {fill:#5b9bd5;stroke:#c7c8c8;stroke-width:0.25}
+		.st34 {fill:#feffff;font-family:Calibri;font-size:1.08334em;font-weight:bold}
+		.st35 {marker-end:url(#mrkr4-72);marker-start:url(#mrkr4-175);stroke:#5b9bd5;stroke-linecap:round;stroke-linejoin:round;stroke-width:3}
+		.st36 {fill:#5b9bd5;fill-opacity:1;stroke:#5b9bd5;stroke-opacity:1;stroke-width:0.54347826086957}
+		.st37 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	
+	</style>
+
+	<defs id="Markers">
+		<g id="lend4">
+			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none"></path>
+		</g>
+		<marker id="mrkr4-72" class="st16" v:arrowtype="4" v:arrowsize="3" v:setback="4.16" refX="-4.16" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-2.08,-2.08) "></use>
+		</marker>
+		<marker id="mrkr4-88" class="st18" v:arrowtype="4" v:arrowsize="3" v:setback="4.16" refX="-4.16" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-2.08,-2.08) "></use>
+		</marker>
+		<marker id="mrkr4-104" class="st20" v:arrowtype="4" v:arrowsize="3" v:setback="4.16" refX="-4.16" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-2.08,-2.08) "></use>
+		</marker>
+		<marker id="mrkr4-175" class="st36" v:arrowtype="4" v:arrowsize="2" v:setback="3.56" refX="3.56" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(1.84) "></use>
+		</marker>
+	</defs>
+	<defs id="Filters">
+		<filter id="filter_2">
+			<feGaussianBlur stdDeviation="2"></feGaussianBlur>
+		</filter>
+		<filter id="filter_4">
+			<feGaussianBlur stdDeviation="4"></feGaussianBlur>
+		</filter>
+	</defs>
+	<g v:mid="0" v:index="1" v:groupcontext="foregroundPage">
+		<v:userdefs>
+			<v:ud v:nameu="msvThemeOrder" v:val="VT0(0):26"></v:ud>
+		</v:userdefs>
+		<title>Pagina 1</title>
+		<v:pageproperties v:drawingscale="0.0393701" v:pagescale="0.0393701" v:drawingunits="24" v:shadowoffsetx="8.50394" v:shadowoffsety="-8.50394"></v:pageproperties>
+		<v:layer v:name="Connettore" v:index="0"></v:layer>
+		<g id="shape21-1" v:mid="21" v:groupcontext="shape" transform="translate(22.331,-283.552)">
+			<title>Rettangolo.21</title>
+			<v:userdefs>
+				<v:ud v:nameu="visVersion" v:val="VT0(15):26"></v:ud>
+			</v:userdefs>
+			<rect x="0" y="401.013" width="705.402" height="96.8009" class="st1"></rect>
+		</g>
+		<g id="shape6-3" v:mid="6" v:groupcontext="shape" transform="translate(22.331,-152.148)">
+			<title>Rettangolo.6</title>
+			<v:userdefs>
+				<v:ud v:nameu="visVersion" v:val="VT0(15):26"></v:ud>
+			</v:userdefs>
+			<rect x="0" y="401.013" width="705.402" height="96.8009" class="st2"></rect>
+		</g>
+		<g id="shape17-5" v:mid="17" v:groupcontext="shape" transform="translate(22.331,-23.273)">
+			<title>Rettangolo.17</title>
+			<v:userdefs>
+				<v:ud v:nameu="visVersion" v:val="VT0(15):26"></v:ud>
+			</v:userdefs>
+			<rect x="0" y="401.013" width="705.402" height="96.8009" class="st3"></rect>
+		</g>
+		<g id="shape1-7" v:mid="1" v:groupcontext="shape" transform="translate(215.654,-405.622)">
+			<title>Rettangolo</title>
+			<desc>TheTower.s3d</desc>
+			<v:userdefs>
+				<v:ud v:nameu="visVersion" v:val="VT0(15):26"></v:ud>
+			</v:userdefs>
+			<v:textblock v:margins="rect(4,4,4,4)" v:tabspace="42.5197"></v:textblock>
+			<v:textrect cx="241.072" cy="455.377" width="482.15" height="84.8757"></v:textrect>
+			<g id="shadow1-8" v:groupcontext="shadow" v:shadowoffsetx="0.345598" v:shadowoffsety="-1.97279" v:shadowtype="1" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st4">
+				<rect x="0" y="412.939" width="482.144" height="84.8757" rx="5.66929" ry="5.66929" class="st5"></rect>
+			</g>
+			<rect x="0" y="412.939" width="482.144" height="84.8757" rx="5.66929" ry="5.66929" class="st6"></rect>
+			<text x="170.5" y="462.58" class="st7" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>TheTower.s3d</text>		</g>
+		<g id="shape3-13" v:mid="3" v:groupcontext="shape" transform="translate(209.73,-283.644)">
+			<title>Ellisse</title>
+			<desc>OnInit()</desc>
+			<v:userdefs>
+				<v:ud v:nameu="visVersion" v:val="VT0(15):26"></v:ud>
+			</v:userdefs>
+			<v:textblock v:margins="rect(4,4,4,4)" v:tabspace="42.5197"></v:textblock>
+			<v:textrect cx="59.6546" cy="449.414" width="104.4" height="84.7008"></v:textrect>
+			<g id="shadow3-14" v:groupcontext="shadow" v:shadowoffsetx="0.345598" v:shadowoffsety="-1.97279" v:shadowtype="1" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st4">
+				<path d="M0 449.41 A59.6546 48.4005 0 1 1 119.31 449.41 A59.6546 48.4005 0 1 1 0 449.41 Z" class="st8"></path>
+			</g>
+			<path d="M0 449.41 A59.6546 48.4005 0 1 1 119.31 449.41 A59.6546 48.4005 0 1 1 0 449.41 Z" class="st9"></path>
+			<text x="37.7" y="453.61" class="st10" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>OnInit()</text>		</g>
+		<g id="shape4-19" v:mid="4" v:groupcontext="shape" transform="translate(570.074,-283.644)">
+			<title>Ellisse.4</title>
+			<desc>OnTimer()</desc>
+			<v:userdefs>
+				<v:ud v:nameu="visVersion" v:val="VT0(15):26"></v:ud>
+			</v:userdefs>
+			<v:textblock v:margins="rect(4,4,4,4)" v:tabspace="42.5197"></v:textblock>
+			<v:textrect cx="59.6546" cy="449.414" width="104.4" height="84.7008"></v:textrect>
+			<g id="shadow4-20" v:groupcontext="shadow" v:shadowoffsetx="0.345598" v:shadowoffsety="-1.97279" v:shadowtype="1" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st4">
+				<path d="M0 449.41 A59.6546 48.4005 0 0 1 119.31 449.41 A59.6546 48.4005 0 1 1 0 449.41 Z" class="st8"></path>
+			</g>
+			<path d="M0 449.41 A59.6546 48.4005 0 0 1 119.31 449.41 A59.6546 48.4005 0 1 1 0 449.41 Z" class="st9"></path>
+			<text x="30.56" y="453.61" class="st10" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>OnTimer()</text>		</g>
+		<g id="shape5-25" v:mid="5" v:groupcontext="shape" transform="translate(396.944,-283.644)">
+			<title>Ellisse.5</title>
+			<desc>OnFrame()</desc>
+			<v:userdefs>
+				<v:ud v:nameu="visVersion" v:val="VT0(15):26"></v:ud>
+			</v:userdefs>
+			<v:textblock v:margins="rect(4,4,4,4)" v:tabspace="42.5197"></v:textblock>
+			<v:textrect cx="59.6546" cy="449.414" width="104.4" height="84.7008"></v:textrect>
+			<g id="shadow5-26" v:groupcontext="shadow" v:shadowoffsetx="0.345598" v:shadowoffsety="-1.97279" v:shadowtype="1" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st4">
+				<path d="M0 449.41 A59.6546 48.4005 0 1 1 119.31 449.41 A59.6546 48.4005 0 1 1 0 449.41 Z" class="st8"></path>
+			</g>
+			<path d="M0 449.41 A59.6546 48.4005 0 1 1 119.31 449.41 A59.6546 48.4005 0 1 1 0 449.41 Z" class="st9"></path>
+			<text x="29.01" y="453.61" class="st10" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>OnFrame()</text>		</g>
+		<g id="shape14-31" v:mid="14" v:groupcontext="shape" transform="translate(209.73,-152.148)">
+			<title>Ellisse.14</title>
+			<desc>GameManager()</desc>
+			<v:userdefs>
+				<v:ud v:nameu="visVersion" v:val="VT0(15):26"></v:ud>
+			</v:userdefs>
+			<v:textblock v:margins="rect(4,4,4,4)" v:tabspace="42.5197"></v:textblock>
+			<v:textrect cx="59.6546" cy="449.414" width="104.4" height="84.7008"></v:textrect>
+			<g id="shadow14-32" v:groupcontext="shadow" v:shadowoffsetx="0.345598" v:shadowoffsety="-1.97279" v:shadowtype="1" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st4">
+				<path d="M0 449.41 A59.6546 48.4005 0 1 1 119.31 449.41 A59.6546 48.4005 0 1 1 0 449.41 Z" class="st11"></path>
+			</g>
+			<path d="M0 449.41 A59.6546 48.4005 0 1 1 119.31 449.41 A59.6546 48.4005 0 1 1 0 449.41 Z" class="st12"></path>
+			<text x="12.98" y="453.61" class="st10" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>GameManager()</text>		</g>
+		<g id="shape15-37" v:mid="15" v:groupcontext="shape" transform="translate(396.944,-152.148)">
+			<title>Ellisse.15</title>
+			<desc>Render()</desc>
+			<v:userdefs>
+				<v:ud v:nameu="visVersion" v:val="VT0(15):26"></v:ud>
+			</v:userdefs>
+			<v:textblock v:margins="rect(4,4,4,4)" v:tabspace="42.5197"></v:textblock>
+			<v:textrect cx="59.6546" cy="449.414" width="104.4" height="84.7008"></v:textrect>
+			<g id="shadow15-38" v:groupcontext="shadow" v:shadowoffsetx="0.345598" v:shadowoffsety="-1.97279" v:shadowtype="1" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st4">
+				<path d="M0 449.41 A59.6546 48.4005 0 0 1 119.31 449.41 A59.6546 48.4005 0 0 1 0 449.41 Z" class="st11"></path>
+			</g>
+			<path d="M0 449.41 A59.6546 48.4005 0 0 1 119.31 449.41 A59.6546 48.4005 0 0 1 0 449.41 Z" class="st12"></path>
+			<text x="34.85" y="453.61" class="st10" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>Render()</text>		</g>
+		<g id="shape18-43" v:mid="18" v:groupcontext="shape" transform="translate(209.73,-23.273)">
+			<title>Ellisse.18</title>
+			<desc>LevelInit()</desc>
+			<v:userdefs>
+				<v:ud v:nameu="visVersion" v:val="VT0(15):26"></v:ud>
+			</v:userdefs>
+			<v:textblock v:margins="rect(4,4,4,4)" v:tabspace="42.5197"></v:textblock>
+			<v:textrect cx="59.6546" cy="449.414" width="104.4" height="84.7008"></v:textrect>
+			<g id="shadow18-44" v:groupcontext="shadow" v:shadowoffsetx="0.345598" v:shadowoffsety="-1.97279" v:shadowtype="1" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st4">
+				<path d="M0 449.41 A59.6546 48.4005 0 0 1 119.31 449.41 A59.6546 48.4005 0 0 1 0 449.41 Z" class="st13"></path>
+			</g>
+			<path d="M0 449.41 A59.6546 48.4005 0 0 1 119.31 449.41 A59.6546 48.4005 0 0 1 0 449.41 Z" class="st14"></path>
+			<text x="31.34" y="453.61" class="st10" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>LevelInit()</text>		</g>
+		<g id="shape19-49" v:mid="19" v:groupcontext="shape" transform="translate(396.944,-23.4386)">
+			<title>Ellisse.19</title>
+			<desc>Render()</desc>
+			<v:userdefs>
+				<v:ud v:nameu="visVersion" v:val="VT0(15):26"></v:ud>
+			</v:userdefs>
+			<v:textblock v:margins="rect(4,4,4,4)" v:tabspace="42.5197"></v:textblock>
+			<v:textrect cx="59.6546" cy="449.497" width="104.4" height="84.5558"></v:textrect>
+			<g id="shadow19-50" v:groupcontext="shadow" v:shadowoffsetx="0.345598" v:shadowoffsety="-1.97279" v:shadowtype="1" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st4">
+				<path d="M0 449.5 A59.6546 48.3176 0 1 1 119.31 449.5 A59.6546 48.3176 0 0 1 -0 449.5 Z" class="st13"></path>
+			</g>
+			<path d="M0 449.5 A59.6546 48.3176 0 1 1 119.31 449.5 A59.6546 48.3176 0 0 1 -0 449.5 Z" class="st14"></path>
+			<text x="34.85" y="453.7" class="st10" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>Render()</text>		</g>
+		<g id="shape25-55" v:mid="25" v:groupcontext="shape" transform="translate(570.074,-152.148)">
+			<title>Ellisse.25</title>
+			<desc>UpdateLogic(dt)</desc>
+			<v:userdefs>
+				<v:ud v:nameu="visVersion" v:val="VT0(15):26"></v:ud>
+			</v:userdefs>
+			<v:textblock v:margins="rect(4,4,4,4)" v:tabspace="42.5197"></v:textblock>
+			<v:textrect cx="59.6546" cy="449.414" width="104.4" height="84.7008"></v:textrect>
+			<g id="shadow25-56" v:groupcontext="shadow" v:shadowoffsetx="0.345598" v:shadowoffsety="-1.97279" v:shadowtype="1" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st4">
+				<path d="M0 449.41 A59.6546 48.4005 0 1 1 119.31 449.41 A59.6546 48.4005 0 1 1 0 449.41 Z" class="st11"></path>
+			</g>
+			<path d="M0 449.41 A59.6546 48.4005 0 1 1 119.31 449.41 A59.6546 48.4005 0 1 1 0 449.41 Z" class="st12"></path>
+			<text x="13.86" y="453.61" class="st10" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>UpdateLogic(dt)</text>		</g>
+		<g id="shape26-61" v:mid="26" v:groupcontext="shape" transform="translate(570.074,-23.4386)">
+			<title>Ellisse.26</title>
+			<desc>UpdateLogic(dt)</desc>
+			<v:userdefs>
+				<v:ud v:nameu="visVersion" v:val="VT0(15):26"></v:ud>
+			</v:userdefs>
+			<v:textblock v:margins="rect(4,4,4,4)" v:tabspace="42.5197"></v:textblock>
+			<v:textrect cx="59.6546" cy="449.751" width="104.4" height="84.1106"></v:textrect>
+			<g id="shadow26-62" v:groupcontext="shadow" v:shadowoffsetx="0.345598" v:shadowoffsety="-1.97279" v:shadowtype="1" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st4">
+				<path d="M0 449.75 A59.6546 48.0632 0 0 1 119.31 449.75 A59.6546 48.0632 0 1 1 0 449.75 Z" class="st13"></path>
+			</g>
+			<path d="M0 449.75 A59.6546 48.0632 0 0 1 119.31 449.75 A59.6546 48.0632 0 1 1 0 449.75 Z" class="st14"></path>
+			<text x="13.86" y="453.95" class="st10" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>UpdateLogic(dt)</text>		</g>
+		<g id="shape27-67" v:mid="27" v:groupcontext="shape" v:layermember="0" transform="translate(456.726,-405.622)">
+			<title>Connettore dinamico</title>
+			<path d="M0 497.81 L0 508.44 L-187.34 508.44 L-187.34 510.51" class="st15"></path>
+		</g>
+		<g id="shape28-73" v:mid="28" v:groupcontext="shape" v:layermember="0" transform="translate(456.726,-405.622)">
+			<title>Connettore dinamico.28</title>
+			<path d="M0 497.81 L0 508.44 L173 508.44 L173 510.51" class="st15"></path>
+		</g>
+		<g id="shape29-78" v:mid="29" v:groupcontext="shape" v:layermember="0" transform="translate(463.749,-405.622)">
+			<title>Connettore dinamico.29</title>
+			<path d="M-7.02 497.81 L-7.02 508.44 L-7.15 508.44 L-7.15 510.51" class="st15"></path>
+		</g>
+		<g id="shape31-83" v:mid="31" v:groupcontext="shape" v:layermember="0" transform="translate(262.298,-283.644)">
+			<title>Connettore dinamico.31</title>
+			<path d="M7.09 497.81 L7.09 520.03" class="st17"></path>
+		</g>
+		<g id="shape32-89" v:mid="32" v:groupcontext="shape" v:layermember="0" transform="translate(449.512,-283.644)">
+			<title>Connettore dinamico.32</title>
+			<path d="M7.09 497.81 L7.09 520.03" class="st17"></path>
+		</g>
+		<g id="shape33-94" v:mid="33" v:groupcontext="shape" v:layermember="0" transform="translate(622.642,-283.644)">
+			<title>Connettore dinamico.33</title>
+			<path d="M7.09 497.81 L7.09 520.03" class="st17"></path>
+		</g>
+		<g id="shape34-99" v:mid="34" v:groupcontext="shape" v:layermember="0" transform="translate(622.642,-152.148)">
+			<title>Connettore dinamico.34</title>
+			<path d="M7.09 497.81 L7.09 517.92" class="st19"></path>
+		</g>
+		<g id="shape35-105" v:mid="35" v:groupcontext="shape" v:layermember="0" transform="translate(449.512,-152.148)">
+			<title>Connettore dinamico.35</title>
+			<path d="M7.09 497.81 L7.09 517.41" class="st19"></path>
+		</g>
+		<g id="shape36-110" v:mid="36" v:groupcontext="shape" v:layermember="0" transform="translate(262.298,-152.148)">
+			<title>Connettore dinamico.36</title>
+			<path d="M7.09 497.81 L7.09 517.41" class="st19"></path>
+		</g>
+		<g id="shape37-115" v:mid="37" v:groupcontext="shape" transform="translate(22.331,-283.644)">
+			<title>Foglio.37</title>
+			<desc>XVR</desc>
+			<v:textblock v:margins="rect(4,4,4,4)" v:tabspace="42.5197"></v:textblock>
+			<v:textrect cx="74.4094" cy="449.414" width="148.82" height="96.8009"></v:textrect>
+			<g id="shadow37-116" v:groupcontext="shadow" v:shadowoffsetx="2.95442" v:shadowoffsety="-0.520945" v:shadowtype="1" transform="matrix(1,0,0,1,2.95442,0.520945)" class="st4">
+				<rect x="0" y="401.013" width="148.819" height="96.8009" class="st21"></rect>
+				<text x="47.13" y="459.01" class="st22" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>XVR</text>			</g>
+			<rect x="0" y="401.013" width="148.819" height="96.8009" class="st23"></rect>
+			<text x="47.13" y="459.01" class="st24" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>XVR</text>		</g>
+		<g id="shape39-123" v:mid="39" v:groupcontext="shape" transform="translate(22.331,-152.148)">
+			<title>Foglio.39</title>
+			<desc>Game Manager</desc>
+			<v:textblock v:margins="rect(4,4,4,4)" v:tabspace="42.5197"></v:textblock>
+			<v:textrect cx="74.4094" cy="449.414" width="148.82" height="96.8009"></v:textrect>
+			<g id="shadow39-124" v:groupcontext="shadow" v:shadowoffsetx="2.95442" v:shadowoffsety="-0.520945" v:shadowtype="1" transform="matrix(1,0,0,1,2.95442,0.520945)" class="st4">
+				<rect x="0" y="401.013" width="148.819" height="96.8009" class="st21"></rect>
+				<text x="35.25" y="439.81" class="st22" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>Game<v:lf></v:lf><tspan x="14.71" dy="1.2em" class="st25">Manager</tspan></text>			</g>
+			<rect x="0" y="401.013" width="148.819" height="96.8009" class="st26"></rect>
+			<text x="35.25" y="439.81" class="st27" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>Game<v:lf></v:lf><tspan x="14.71" dy="1.2em" class="st25">Manager</tspan></text>		</g>
+		<g id="shape40-133" v:mid="40" v:groupcontext="shape" transform="translate(22.331,-22.9756)">
+			<title>Foglio.40</title>
+			<desc>Level</desc>
+			<v:textblock v:margins="rect(4,4,4,4)" v:tabspace="42.5197"></v:textblock>
+			<v:textrect cx="74.4094" cy="449.414" width="148.82" height="96.8009"></v:textrect>
+			<g id="shadow40-134" v:groupcontext="shadow" v:shadowoffsetx="2.95442" v:shadowoffsety="-0.520945" v:shadowtype="1" transform="matrix(1,0,0,1,2.95442,0.520945)" class="st4">
+				<rect x="0" y="401.013" width="148.819" height="96.8009" class="st21"></rect>
+				<text x="40.03" y="459.01" class="st22" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>Level</text>			</g>
+			<rect x="0" y="401.013" width="148.819" height="96.8009" class="st23"></rect>
+			<text x="40.03" y="459.01" class="st28" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>Level</text>		</g>
+		<g id="shape41-141" v:mid="41" v:groupcontext="shape" transform="translate(768.41,-23.1871)">
+			<title>Rettangolo.41</title>
+			<desc>Input Manager</desc>
+			<v:userdefs>
+				<v:ud v:nameu="visVersion" v:val="VT0(15):26"></v:ud>
+			</v:userdefs>
+			<v:textblock v:margins="rect(4,4,4,4)" v:tabspace="42.5197"></v:textblock>
+			<v:textrect cx="74.4094" cy="341.88" width="148.82" height="311.868"></v:textrect>
+			<g id="shadow41-142" v:groupcontext="shadow" v:shadowoffsetx="0.345598" v:shadowoffsety="-1.97279" v:shadowtype="1" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st4">
+				<rect x="0" y="185.946" width="148.819" height="311.868" rx="5.66929" ry="5.66929" class="st29"></rect>
+			</g>
+			<rect x="0" y="185.946" width="148.819" height="311.868" rx="5.66929" ry="5.66929" class="st30"></rect>
+			<text x="39.8" y="332.28" class="st31" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>Input<v:newlinechar></v:newlinechar><tspan x="15.93" dy="1.2em" class="st25">Manager</tspan></text>		</g>
+		<g id="shape42-148" v:mid="42" v:groupcontext="shape" v:layermember="0" transform="translate(689.383,-194.073)">
+			<title>Connettore dinamico.42</title>
+			<path d="M0 491.34 L63.71 490.32" class="st17"></path>
+		</g>
+		<g id="shape44-153" v:mid="44" v:groupcontext="shape" v:layermember="0" transform="translate(689.383,-78.5256)">
+			<title>Connettore dinamico.44</title>
+			<path d="M0 504.84 L63.71 504.94" class="st19"></path>
+		</g>
+		<g id="shape45-158" v:mid="45" v:groupcontext="shape" transform="translate(783.165,-404.014)">
+			<title>Rombo</title>
+			<desc>FrancoDLL.DLL</desc>
+			<v:userdefs>
+				<v:ud v:nameu="visVersion" v:prompt="" v:val="VT0(15):26"></v:ud>
+			</v:userdefs>
+			<v:textblock v:margins="rect(4,4,4,4)" v:tabspace="42.5197"></v:textblock>
+			<v:textrect cx="59.6546" cy="453.768" width="119.31" height="88.0933"></v:textrect>
+			<g id="shadow45-159" v:groupcontext="shadow" v:shadowoffsetx="0.345598" v:shadowoffsety="-1.97279" v:shadowtype="1" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st4">
+				<path d="M62.18 495.95 L114.68 457.19 A4.25197 4.25197 -180 0 0 114.68 450.35 L62.18 411.59 A4.25197 4.25197 -180
+							 0 0 57.13 411.59 L4.63 450.35 A4.25197 4.25197 -180 0 0 4.63 457.19 L57.13 495.95 A4.25197 4.25197 -180
+							 0 0 62.18 495.95 Z" class="st32"></path>
+			</g>
+			<path d="M62.18 495.95 L114.68 457.19 A4.25197 4.25197 -180 0 0 114.68 450.35 L62.18 411.59 A4.25197 4.25197 -180 0 0
+						 57.13 411.59 L4.63 450.35 A4.25197 4.25197 -180 0 0 4.63 457.19 L57.13 495.95 A4.25197 4.25197 -180 0 0
+						 62.18 495.95 Z" class="st33"></path>
+			<text x="20.52" y="457.67" class="st34" v:langid="1040"><v:paragraph v:horizalign="1"></v:paragraph><v:tablist></v:tablist>FrancoDLL.DLL</text>		</g>
+		<g id="shape46-164" v:mid="46" v:groupcontext="shape" v:layermember="0" transform="translate(697.798,-440.974)">
+			<title>Connettore dinamico.46</title>
+			<path d="M0 490.73 L72.89 490.73" class="st15"></path>
+		</g>
+		<g id="shape47-169" v:mid="47" v:groupcontext="shape" v:layermember="0" transform="translate(835.733,-404.014)">
+			<title>Connettore dinamico.47</title>
+			<path d="M7.09 508.49 L7.09 508.85 L7.09 554.29" class="st35"></path>
+		</g>
+	</g>
+</svg>

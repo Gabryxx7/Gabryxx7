@@ -16,7 +16,7 @@
 
 layout: base
 ---
-
+{{ content | markdownify }}
 {% assign plugins = site.plugins | default:site.gems %}
 
 {% if plugins contains 'jekyll-paginate' %}

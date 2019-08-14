@@ -17,6 +17,7 @@
 layout: base
 ---
 
+{% assign resumePage = site.pages | where:"layout","resume" | first %}
 {% assign resume = site.data.resume %}
 {% for countryT in site.data.countries %}
     {% if countryT.code == resume.basics.location.countryCode %}
