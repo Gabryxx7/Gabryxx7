@@ -540,7 +540,7 @@ body.dark-mode .highlight .language-json .kc {
 
 .layout-projects .project-card>a:hover .project-card-img img,.layout-projects .project-card>a:focus .project-card-img img,.layout-project .project-card>a:hover .project-card-img img,.layout-project .project-card>a:focus .project-card-img img,.layout-home .project-card>a:hover .project-card-img img,.layout-home .project-card>a:focus .project-card-img img,.layout-welcome .project-card>a:hover .project-card-img img,.layout-welcome .project-card>a:focus .project-card-img img {
   transition: transform 250ms;
-  transform: scale(1.025)
+  transform: scale(1.1)
 }
 
 .layout-projects .project-card>.project-card-title,.layout-projects .project-card>.project-card-text,.layout-project .project-card>.project-card-title,.layout-project .project-card>.project-card-text,.layout-home .project-card>.project-card-title,.layout-home .project-card>.project-card-text,.layout-welcome .project-card>.project-card-title,.layout-welcome .project-card>.project-card-text {
@@ -576,23 +576,27 @@ body.dark-mode .highlight .language-json .kc {
   height: 100%;
   color: var(--gray-text);
   background-color: var(--gray-bg);
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0; */
-    /* right: 0; */
-    /* bottom: 0; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  /* right: 0; */
+  /* bottom: 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-icon>div{
   display: block;
-  transition: transform 500ms;
 }
 
-.project-icon>div:hover{
-  transition: transform 250ms;
+.project-icon{
+  transition: all 500ms;
+}
+
+.project-icon:hover{
+  color: #4fb1ba;
+  transition: all 250ms;
   transform: scale(1.1)
 }
 
