@@ -332,8 +332,9 @@ layout: base
                             </h3>
                             <p class="faded"> <time datetime="{{ publication.date | date: resume.basics.dateformats }}">{{ publication.releaseDate | date: resume.basics.dateformats }}</time></p>
                         </header>
-                        <span style="font-size: 0.8rem;"> 
-                        {% include components/message.html text=publication.summary %} </span>
+                        {% if publication.summary %}                        
+                            <span style="font-size: 0.8rem;">  {% include components/message.html text=publication.summary %} </span>
+                        {% endif %}
                     {% endfor %}
                 </section>
             </div>
