@@ -50,9 +50,9 @@ author:
 menu:
   - title:             Blog
     url:               /
-  - title:             Projects123
+  - title:             Projects
     url:               /projects/
-  - title:             Resume\CV
+  - title:             Résumé\CV
     url:               /resume/
   - title:             Publications
     url:               /resume/#publications

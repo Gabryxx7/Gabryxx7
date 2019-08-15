@@ -1,7 +1,7 @@
 ---
 # file: projects.md
 layout:          projects
-title:           Projects*
+title:           Projects
 show_collection: projects
 featured:        true
 ---

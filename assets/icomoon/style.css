@@ -19,7 +19,7 @@
   text-transform: none;
   line-height: 1;
 
-  /* Better Font Rendering =========== */
+  /* better font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -282,3 +282,4 @@
 .icon-key:before {
   content: "\e98d";
 }
+
