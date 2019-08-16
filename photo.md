@@ -7,7 +7,17 @@ title: Photos
     # css: 
     #     - /assets/gabryxx7/css/lato.css 
 ---
- <div class="columns"><div id="instafeed"></div></div>
+ <div class="columns">
+    <div id="instafeed">
+    <hy-img data-ignore>
+        <span class="loading" slot="loading">
+            <span class="icon-cog"></span>
+        </span>
+        <br/>
+    </hy-img>
+    </div>
+</div>
+
 <script type="text/javascript" src="/assets/gabryxx7/js/instafeed.min.js"></script>
 <script type="text/javascript">
     // $("#instafeed").attr("test","ciao");
@@ -22,6 +32,7 @@ title: Photos
         limit: '100',
         template: {% raw %}"<div class='column column-1-2'><article class='project-card' style='margin-bottom: 0; padding-bottom: 0;'> <a href='{{link}}' class='no-hover no-print-link flip-project'> <div class='project-card-img img'><img data-ignore src='{{image}}'> </img></div></a><p class='project-card-text' style='font-size: .7em; line-height: 1.4em;'>{{caption}}</p></article></div>"{% endraw %},
         success: function(response){
+            $("#instafeed hy-img").remove();
             console.log("Instafeed.js response", response);
         }
     });
