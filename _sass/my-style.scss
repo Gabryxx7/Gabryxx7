@@ -23,6 +23,13 @@
   transition: all 500ms;
 }
 
+@media screen and (max-width: 60em) {
+  #instafeed>.column {
+      width:100%;
+      margin: 3% 0;
+  }
+}
+
 
 #instafeed.project-card>a .project-card-img img,
 #instafeed .project-card>a .project-card-img img,
