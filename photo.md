@@ -1,14 +1,14 @@
 ---
 layout: photos
 title: Photos
-include:
-    js:
-        - /assets/gabryxx7/js/instafeed.min.js
+# include:
+#     js:
+#         - /assets/gabryxx7/js/instafeed.min.js
     # css: 
     #     - /assets/gabryxx7/css/lato.css 
 ---
  <div class="columns"><div id="instafeed"></div></div>
-
+<script type="text/javascript" src="/assets/gabryxx7/js/instafeed.min.js"></script>
 <script type="text/javascript">
     // $("#instafeed").attr("test","ciao");
     var feed = new Instafeed({
