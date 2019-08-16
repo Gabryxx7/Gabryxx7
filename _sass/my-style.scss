@@ -1,3 +1,45 @@
+#instafeed>.column{
+  width: 48.9%;
+  display: inline-flex;
+  margin: 0.5%;
+  color: var(--gray-text);
+  background-color: var(--gray-bg);
+  padding-bottom: .25rem;
+  overflow: hidden;
+  box-shadow: 0.125rem 0.125rem 1rem rgba(0,0,0,0.2);
+  contain: content;
+  page-break-inside: avoid;
+  transition: all 500ms;
+  border-radius: 6px;
+  vertical-align: middle;
+}
+
+#instafeed>.column p{
+  font-size: .65em;
+  line-height: 1.3em;
+  margin: 0.25rem 0;
+  text-align: center;
+  padding: 0 0.25rem;
+  transition: all 500ms;
+}
+
+
+#instafeed.project-card>a .project-card-img img,
+#instafeed .project-card>a .project-card-img img,
+#instafeed .project-card>a .project-card-img img,
+#instafeed .project-card>a .project-card-img img{
+  transition: all 250ms;
+  transform: scale(1.0);
+}
+
+#instafeed.project-card>a:hover .project-card-img img,
+#instafeed .project-card>a:focus .project-card-img img,
+#instafeed .project-card>a:hover .project-card-img img,
+#instafeed .project-card>a:focus .project-card-img img{
+  transition: all 250ms;
+  transform: scale(1.1);
+}
+
 .dl-table {
   a {
     padding-bottom: 0.4rem;
