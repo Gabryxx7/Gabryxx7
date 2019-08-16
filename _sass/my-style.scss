@@ -1,4 +1,4 @@
-#instafeed>.column{
+#instafeed .column{
   width: 48.9%;
   display: inline-flex;
   margin: 0.5%;
@@ -6,7 +6,8 @@
   background-color: var(--gray-bg);
   padding-bottom: .25rem;
   overflow: hidden;
-  box-shadow: 0.125rem 0.125rem 1rem rgba(0,0,0,0.2);
+  box-shadow: 0.01rem 0.01rem 0.5rem rgba(0,0,0,0.2);
+  // box-shadow: 0.125rem 0.125rem 1rem rgba(0,0,0,0.2);
   contain: content;
   page-break-inside: avoid;
   transition: all 500ms;
@@ -14,7 +15,7 @@
   vertical-align: middle;
 }
 
-#instafeed>.column p{
+#instafeed .column p{
   font-size: .65em;
   line-height: 1.3em;
   margin: 0.25rem 0;
@@ -23,15 +24,15 @@
   transition: all 500ms;
 }
 
-@media screen and (max-width: 60em) {
-  #instafeed>.column {
+@media screen and (max-width: 55em) {
+  #instafeed .column {
       width:100%;
       margin: 3% 0;
   }
 }
 
 
-#instafeed.project-card>a .project-card-img img,
+#instafeed .project-card>a .project-card-img img,
 #instafeed .project-card>a .project-card-img img,
 #instafeed .project-card>a .project-card-img img,
 #instafeed .project-card>a .project-card-img img{
@@ -39,7 +40,7 @@
   transform: scale(1.0);
 }
 
-#instafeed.project-card>a:hover .project-card-img img,
+#instafeed .project-card>a:hover .project-card-img img,
 #instafeed .project-card>a:focus .project-card-img img,
 #instafeed .project-card>a:hover .project-card-img img,
 #instafeed .project-card>a:focus .project-card-img img{
@@ -616,6 +617,55 @@ body.dark-mode .highlight .language-json .kc {
 .layout-projects .column-1>.project-card>.project-card-text,.layout-project .column-1>.project-card>.project-card-text,.layout-home .column-1>.project-card>.project-card-text,.layout-welcome .column-1>.project-card>.project-card-text {
   font-size: 1rem
 }
+
+
+
+
+
+
+
+
+.content.fullscreen {
+  position: relative;
+  margin-left: auto;
+  // margin-right: auto;
+  max-width: none !important;
+  padding: 6rem 1rem 12rem
+}
+
+@media screen {
+  .content.fullscreen {
+      padding-left: 1.5rem;
+      min-height: 100vh
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .content.fullscreen {
+      padding-left:1rem;
+      margin-left: 24rem;
+  }
+}
+
+@media screen and (min-width: 88em) {
+  .content.fullscreen {
+      margin-left:25rem;
+  }
+}
+
+@media print {
+  .content.fullscreen {
+      padding-bottom: 1rem
+  }
+}
+
+
+
+
+
+
+
+
 
 
 
