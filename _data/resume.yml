@@ -35,14 +35,14 @@ work:
     location: Melbourne, Australia
     summary: "Working on Ubiquitous Computing and IoT"
     extra: |-
-      __Teaching__
-        * S2 2018: COMP30019 - Computer Graphics and Interaction
-        * S2 2019: COMP30019 - Computer Graphics and Interaction
-      
-      __Extras__
-        * Treasurer of the Computing and Information System GRaduate Research Students group ([CIS-GReS](https://www.cis-gres.org))
-        * Floor Warden
-        * Assets manager
+      > __Teaching__
+         * S2 2018: COMP30019 - Computer Graphics and Interaction
+         * S2 2019: COMP30019 - Computer Graphics and Interaction
+       
+      > __Extras__
+         * Treasurer of the Computing and Information System GRaduate Research Students group ([CIS-GReS](https://www.cis-gres.org))
+         * Floor Warden
+         * Assets manager
   - company: "CSIRO - Data61"
     position: "PhD Candidate"
     summary: "PhD Sponsored by a top-up Data61 - CSIRO scholarship"
@@ -54,26 +54,27 @@ work:
     endDate: "2018-03-01"
     location: Frankfurt Am Main Area, Germany
     summary: "Working on the IReF long-term project "
-    highlights: 
-      - Implementation of an online survey to be sent out to all the banks in Europe 
-      - Technical support for IT-related matters (Python scripts, WordPress websites management, Javascript, VBA)
+    extra: |-
+      > - Implementation of an online survey to be sent out to all the banks in Europe 
+      > - Technical support for IT-related matters (Python scripts, WordPress websites management, Javascript, VBA)
   - company: "Scuola Superiore Sant'Anna - TeCIP Institute"
     position: "Research Assistant"
     startDate: "2017-07-01"
     endDate: "2017-10-01"
     location: Pisa, Italy
     # summary: ""
-    highlights: 
-      - Robot Vision and Hand-Eye Camera Robot calibration 
-      - HMI development (C#, MySQL) 
-      - 3D Viewer of robotic arm with Inverse Kinematics
+    extra: |-
+      > - Robot Vision and Hand-Eye Camera Robot calibration
+      > - HMI development (C#, MySQL)
+      > - 3D Viewer of robotic arm with Inverse Kinematics
   - company: "Software Engineer Intern"
     position: "VRMedia SRL"
     startDate: "2016-10-01"
     endDate: "2017-06-01"
     location: Pisa, Italy    
-    summary: "I worked on my Master's thesis under the supervision of Franco Tecchia and Marcello Carrozzino. Occasional work on part of other projects on the Unreal Engine.
-          I developed a plugin for the Unreal Engine that implements the S3D scripting language and the of the XVR Environment (included its VM) in the engine. The project also includes the development of a code editor with a custom debugger and a debug UI"
+    extra: |-
+      > I worked on my Master's thesis under the supervision of Franco Tecchia and Marcello Carrozzino. Occasional work on part of other projects on the Unreal Engine.
+      > I developed a plugin for the Unreal Engine that implements the S3D scripting language and the of the XVR Environment (included its VM) in the engine. The project also includes the development of a code editor with a custom debugger and a debug UI
   - company: "Università di Cagliari"
     position: "Internship"
     startDate: "2014-05-01"
@@ -101,9 +102,10 @@ education:
     # extra: "test2"
     startDate: "2017-05-01"
     gradeDescription: ""
-    courses:
-      - "INFO90003 - Designing Novel Interaction (Best Project Award)"
-      - "COMP90044 - Research Methods"  
+    course: ""
+    extra: |-
+      > - "INFO90003 - Designing Novel Interaction (Best Project Award)"
+      > - "COMP90044 - Research Methods"  
   - institution: "Università degli studi di Pisa"
     area: "Computer Science"
     studyType: "MSc"
