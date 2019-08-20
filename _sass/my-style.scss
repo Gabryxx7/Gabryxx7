@@ -700,10 +700,36 @@ body.dark-mode .highlight .language-json .kc {
 }
 
 
+td.code>pre, td.gutter.gl>pre{
+  padding: 0;
+  color: inherit;
+  background-color: transparent !important;
+  font-size: 1em;
+  background-color: var(--gray-bg);
+  text-align: left;
+}
 
 
+td.code, td.gutter.gl{
+  padding: 0.25em 1em !important;
+  background-color: transparent !important;
+  border: none !important;
+  font-size: 1.2em;
+}
 
+td.gutter.gl .lineno{
+  border-right: 1px solid var(--border-color);
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
 
+figure.highlight pre{  
+  padding: 0rem 0rem 0rem 1rem;
+}
+
+figure.highlight .rouge-table{
+  margin-bottom: 0;
+}
 
 
 
