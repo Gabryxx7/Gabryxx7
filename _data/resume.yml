@@ -6,7 +6,7 @@ basics:
   dateformats: "%b %Y"
   name: "Gabriele Marini"
   label: "PhD Candidate and Programmer"
-  picture: "/assets/icons/icon.jpg"
+  picture: "/assets/icons/icon-small.jpg"
   email: ""
   phone: "+61 048 1149376"
   website: "http://gabryxx7.com"
