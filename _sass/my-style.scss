@@ -104,9 +104,6 @@
   #_menu {
     display: none;
   }
-  .content {
-    padding-top: 4rem;
-  }
 
   .page-title {
     font-weight: bold;
@@ -700,6 +697,7 @@ body.dark-mode .highlight .language-json .kc {
 }
 
 
+//Highlights and line numbering
 td.code>pre, td.gutter.gl>pre{
   padding: 0;
   color: inherit;
