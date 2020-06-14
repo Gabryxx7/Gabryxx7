@@ -794,6 +794,14 @@ body.dark-mode .highlight .language-json .kc {
   }
 }
 
+
+@media screen and (min-width: 100em) {
+  .content.fullscreen {
+      margin-left: 44rem;
+      margin-right: 2rem;
+  }
+}
+
 @media print {
   .content.fullscreen {
       padding-bottom: 1rem
@@ -838,6 +846,15 @@ body.dark-mode .highlight .language-json .kc {
 @media screen and (min-width: 88em) {
   .content {
       margin-left:23rem;
+      margin-right: 4rem;
+      max-width: 60rem;
+  }
+}
+
+
+@media screen and (min-width: 100em) {
+  .content {
+      margin-left:44rem;
       margin-right: 4rem;
       max-width: 60rem;
   }
