@@ -763,6 +763,52 @@ body.dark-mode .highlight .language-json .kc {
 
 
 
+hy-drawer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 2
+}
+
+@media screen {
+  hy-drawer {
+      --hy-drawer-width: 100%;--hy-drawer-slide-width: calc(100% - .5rem);--hy-drawer-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25)}
+}
+
+@media screen and (min-width: 64em) {
+  hy-drawer {
+      position:fixed;
+      width: 21rem;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      margin-left: 0;
+      --hy-drawer-slide-width: calc(100% - 21rem)}
+
+  hy-drawer.cover {
+      position: relative;
+      width: 100%
+  }
+}
+
+@media screen and (min-width: 88em) {
+  hy-drawer {
+      width:calc(50% - 28rem);
+      --hy-drawer-slide-width: calc(50% + 28rem)}
+}
+
+
+@media screen and (min-width: 120em) {
+  hy-drawer {
+      width:calc(50% - 40rem);
+      --hy-drawer-slide-width: calc(50% + 40rem)}
+}
+
+@media screen {
+  hy-drawer.loaded {
+      position: static
+  }
+}
 
 
 .content.fullscreen {
@@ -795,7 +841,7 @@ body.dark-mode .highlight .language-json .kc {
 }
 
 
-@media screen and (min-width: 100em) {
+@media screen and (min-width: 120em) {
   .content.fullscreen {
       margin-left: 44rem;
       margin-right: 2rem;
@@ -852,7 +898,7 @@ body.dark-mode .highlight .language-json .kc {
 }
 
 
-@media screen and (min-width: 100em) {
+@media screen and (min-width: 120em) {
   .content {
       margin-left:44rem;
       margin-right: 4rem;
