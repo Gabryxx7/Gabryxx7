@@ -21,6 +21,7 @@ lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
 title:                 Gabriele Marini
+short_bio:             PhD Candidate / Photographer
 
 
 instagram: 
@@ -58,14 +59,14 @@ author:
 menu:
   - title:             Blog
     url:               /
-  - title:             Projects
-    url:               /projects/
+  - title:             Photography
+    url:               /photo/
   - title:             Résumé\CV
     url:               /resume/
   - title:             Publications
     url:               /resume/#publications
-  - title:             Photos
-    url:               /photo/
+  - title:             Projects
+    url:               /projects/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..

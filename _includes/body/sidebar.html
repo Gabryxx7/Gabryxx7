@@ -25,6 +25,7 @@
         {% endif %}
         <h2 class="h1"><a href="{{ '/resume/' | relative_url }}">{{ site.short_title | default:site.title }}</a></h2>
         {% assign text = site.tagline | default:site.description %}
+        <h3> {{ site.short_bio }} </h3>
         {% if text %}
           <p class="{% if text.size > 100 %}fine{% endif %}">
             {{ text | markdownify | replace:'<p>','' | replace:'</p>','' }}

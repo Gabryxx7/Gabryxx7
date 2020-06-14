@@ -28,6 +28,12 @@ basics:
     - network: "Facebook"
       username: "Gabriele Marini"
       url: "https://www.facebook.com/Gabryxx7"
+    - network: "Instagram"
+      username: "gabryxx7"
+      url: "https://www.instagram.com/gabryxx7"
+    - network: "GitHub"
+      username: "Gabryxx7"
+      url: "https://github.com/Gabryxx7"
 work:
   - company: "The University of Melbourne"
     position: "PhD Candidate in Computing and Information Systems"
