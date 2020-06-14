@@ -806,8 +806,15 @@ hy-drawer {
 
 
 @media screen and (min-width: 120em) {
+  body::before {
+      width:calc(50% - 40rem)
+  }
+}
+
+
+@media screen and (min-width: 120em) {
   .sidebar-sticky {
-      margin-right: 0rem;
+      margin-right: -10rem;
   }
 }
 
