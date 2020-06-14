@@ -98,7 +98,8 @@ accent_color:          rgb(79,177,186)
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
 #theme_color:           rgb(29,53,64) #old one
-theme_color:           rgb(42,84,104)
+#theme_color:           rgb(42,84,104)
+theme_color:            rgb(61, 71, 82)
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>

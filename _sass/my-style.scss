@@ -31,22 +31,145 @@
   }
 }
 
+#instafeed .project-card{
+  position: relative;
+  color: white !important;
+  overflow: hidden;
+}
 
-#instafeed .project-card>a .project-card-img img,
-#instafeed .project-card>a .project-card-img img,
-#instafeed .project-card>a .project-card-img img,
-#instafeed .project-card>a .project-card-img img{
+
+#instafeed .project-card> .project-card-img img,
+#instafeed .project-card> .project-card-img img,
+#instafeed .project-card> .project-card-img img,
+#instafeed .project-card> .project-card-img img{
   transition: all 250ms;
   transform: scale(1.0);
+  filter: blur(0px);
 }
 
-#instafeed .project-card>a:hover .project-card-img img,
-#instafeed .project-card>a:focus .project-card-img img,
-#instafeed .project-card>a:hover .project-card-img img,
-#instafeed .project-card>a:focus .project-card-img img{
+#instafeed .project-card:hover > .project-card-img img,
+#instafeed .project-card:focus > .project-card-img img,
+#instafeed .project-card:hover > .project-card-img img,
+#instafeed .project-card:focus > .project-card-img img{
+  transition: all 250ms;
+  transform: scale(1.05);
+  webkit-filter: blur(1px); /* Chrome, Safari, Opera */
+  filter: blur(1px);
+}
+
+.project-card-caption{
+  display: block;
+  // background-color: rgba(12,93,242,0.6);
+  background-color: rgba(67, 89, 115, 0.7);
+  color: white !important;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: start;
+  justify-content: start;
+  align-content: start;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  line-height: 1;
+  padding: 10%;
+
+  .img-descr{
+    font-size: 70%;
+  }
+
+
+  .img-title{
+    font-size: 110%;
+    font-weight: bold;
+    margin-bottom: 10%;
+  }
+}
+
+
+#instafeed .project-card>.project-card-caption,
+#instafeed .project-card>.project-card-caption,
+#instafeed .project-card>.project-card-caption,
+#instafeed .project-card>.project-card-caption{
   transition: all 250ms;
   transform: scale(1.1);
+  opacity: 0;
 }
+
+
+#instafeed .project-card:hover> .project-card-caption,
+#instafeed .project-card:focus> .project-card-caption,
+#instafeed .project-card:hover> .project-card-caption,
+#instafeed .project-card:focus> .project-card-caption{
+  transition: all 250ms;
+  transform: scale(1.0);
+  opacity: 1;
+}
+
+div#instafeed {
+    /* Prevent vertical gaps */
+  line-height: 0;
+  
+  -webkit-column-count: 2;
+  -webkit-grid-gap:   1%;
+  -moz-column-count:    2;
+  -moz-grid-gap:      1%;
+  column-count:         2;
+  grid-gap:           1%;  
+}
+
+@media (max-width: 1200px) {
+  #instafeed {
+    -moz-column-count:    4;
+    -webkit-column-count: 4;
+    column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  #instafeed{
+    -moz-column-count:    3;
+    -webkit-column-count: 3;
+    column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #instafeed {
+    -moz-column-count:    2;
+    -webkit-column-count: 2;
+    column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #instafeed {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+}
+
+#instafeed .project-card {
+  margin-bottom: 1%;
+}
+
+#instafeed .project-card img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .dl-table {
   a {

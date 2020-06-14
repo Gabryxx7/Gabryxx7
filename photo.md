@@ -2,13 +2,16 @@
 layout: photos
 title: Photos
 fullscreen: true
-# include:
-#     js:
-#         - /assets/gabryxx7/js/instafeed.min.js
-    # css: 
-    #     - /assets/gabryxx7/css/lato.css 
+include:
+     js:
+         - /assets/gabryxx7/js/instafeed.min.js
+     css: 
+         - /assets/gabryxx7/css/gabry.css 
+
+instagram: true
+photos: false
 ---
-<script type="text/javascript" src="/assets/gabryxx7/js/instafeed.min.js"></script>
+
  <div class="columns">
     <div id="instafeed">
     <hy-img data-ignore>
@@ -17,9 +20,8 @@ fullscreen: true
         </span>
         <br/>
     </hy-img>
-    </div>
-</div>
 
+{% if page.instagram %}
 <script type="text/javascript">
     // $("#instafeed").attr("test","ciao");
     var feed = new Instafeed({
@@ -31,7 +33,7 @@ fullscreen: true
         accessToken: '{{ site.instagram.access_token }}',
         clientId: '{{ site.instagram.client_id }}',
         limit: '100',
-        template: {% raw %}"<div class='column column-1-2'><article class='project-card' style='margin-bottom: 0; padding-bottom: 0;'> <a href='{{link}}' class='no-hover no-print-link flip-project'> <div class='project-card-img img'><img data-ignore src='{{image}}'> </img></div></a><p class='project-card-text' style='font-size: .7em; line-height: 1.4em;'>{{caption}}</p></article></div>"{% endraw %},
+        template: {% raw %}"<article class='project-card'> <div class='project-card-img img'><img data-ignore src='{{image}}'></img></div><a href='{{link}}' class='no-hover no-print-link project-card-caption'><div class='img-title'>  </div> <div class='img-descr'> {{caption}} </div> </a></article>"{% endraw %},
         success: function(response){
             $("#instafeed hy-img").remove();
             console.log("Instafeed.js response", response);
@@ -39,5 +41,27 @@ fullscreen: true
     });
     feed.run();
 </script>
+{% else %}
+    <script type="text/javascript">
+        $("#instafeed hy-img").remove();
+    </script>
+{% endif %}
 
+{% if page.photos %}
+
+{% assign photolist = site.data.photos-list %}
+{% for photo in photolist.photos %}
+    <article class='project-card'>
+        <div class='project-card-img img'>
+            <img data-ignore src='{{ photolist.preview_folder }}{{ photo.file }}'></img>
+        </div>
+        <a href='{{ photo.link }}' class='no-hover no-print-link project-card-caption'>
+            <div class='img-title'> {{ photo.title }}</div>
+            <div class='img-descr'> {{ photo.description }} </div>
+        </a>
+    </article>        
+{% endfor %}
     
+{% endif %}
+    </div>
+</div>

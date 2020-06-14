@@ -1,0 +1,7 @@
+preview_folder: /assets/gabryxx7/img/photos/preview/
+full_folder: /assets/gabryxx7/img/photos/full/
+photos:
+  - file: Capture.PNG
+    title: Test
+    description: Not sure what to write
+    link:
