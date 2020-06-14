@@ -117,7 +117,7 @@ div#instafeed {
   grid-gap:           1%;  
 }
 
-@media (max-width: 2000px) {
+@media (min-width: 2000px) {
   #instafeed {
     -moz-column-count:    3;
     -webkit-column-count: 3;
@@ -125,7 +125,7 @@ div#instafeed {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 2000px) {
   #instafeed {
     -moz-column-count:    2;
     -webkit-column-count: 2;
