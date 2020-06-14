@@ -1,3 +1,52 @@
+
+
+
+
+div#instafeed {
+line-height: 0;
+-webkit-grid-gap:   1%;
+-moz-grid-gap:      1%;
+grid-gap:           1%;  
+}
+
+
+#instafeed .project-card{
+  position: relative;
+  color: white !important;
+  overflow: hidden;
+  box-shadow: #7d7d7d5c 2px 3px 5px 0;
+  margin-bottom: 2%;
+}
+/*
+div#instafeed {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: auto;
+}
+
+
+#instafeed .project-card {
+  position: relative;
+  color: white !important;
+  overflow: hidden;
+  box-shadow: #7d7d7d5c 2px 3px 5px 0;
+  margin: 0.5%;
+  width: 25%;
+  height: auto;
+  flex: 0 1 25%;
+}
+*/
+
+
+
+#instafeed .project-card img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+
+
 #instafeed .column{
   width: 48.9%;
   display: inline-flex;
@@ -29,12 +78,6 @@
       width:100%;
       margin: 3% 0;
   }
-}
-
-#instafeed .project-card{
-  position: relative;
-  color: white !important;
-  overflow: hidden;
 }
 
 
@@ -109,13 +152,6 @@
   opacity: 1;
 }
 
-div#instafeed {
-    /* Prevent vertical gaps */
-  line-height: 0;
-  -webkit-grid-gap:   1%;
-  -moz-grid-gap:      1%;
-  grid-gap:           1%;  
-}
 
 @media (min-width: 2000px) {
   #instafeed {
@@ -155,16 +191,6 @@ div#instafeed {
   }
 }
 
-#instafeed .project-card {
-  box-shadow: #7d7d7d5c 2px 3px 5px 0;
-  margin-bottom: 2%;
-}
-
-#instafeed .project-card img {
-  /* Just in case there are inline attributes */
-  width: 100% !important;
-  height: auto !important;
-}
 
 
 
