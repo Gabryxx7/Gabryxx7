@@ -1,12 +1,9 @@
-
-
-
-
+/*
 div#instafeed {
 line-height: 0;
--webkit-grid-gap:   1%;
--moz-grid-gap:      1%;
-grid-gap:           1%;  
+-webkit-grid-gap:   0.5%;
+-moz-grid-gap:      0.5%;
+grid-gap:           0.5%;  
 }
 
 
@@ -15,9 +12,11 @@ grid-gap:           1%;
   color: white !important;
   overflow: hidden;
   box-shadow: #7d7d7d5c 2px 3px 5px 0;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
 }
-/*
+*/
+
+
 div#instafeed {
   display: flex;
   flex-wrap: wrap;
@@ -30,13 +29,10 @@ div#instafeed {
   position: relative;
   color: white !important;
   overflow: hidden;
-  box-shadow: #7d7d7d5c 2px 3px 5px 0;
+  //box-shadow: #7d7d7d5c 2px 3px 5px 0;
   margin: 0.5%;
-  width: 25%;
-  height: auto;
-  flex: 0 1 25%;
+  flex: 0 1 34%;
 }
-*/
 
 
 
@@ -155,9 +151,9 @@ div#instafeed {
 
 @media (min-width: 2000px) {
   #instafeed {
-    -moz-column-count:    3;
-    -webkit-column-count: 3;
-    column-count:         3;
+    -moz-column-count:    2;
+    -webkit-column-count: 2;
+    column-count:         2;
   }
 }
 
