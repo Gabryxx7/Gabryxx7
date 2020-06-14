@@ -55,7 +55,7 @@ photos: true
         <div class='project-card-img img'>
             <img data-ignore src='{{ photolist.preview_folder }}{{ photo.file }}' loading='lazy'/>
         </div>
-        <a href='{{ photo.link }}' class='no-hover no-print-link project-card-caption'>
+        <a href='{{ photo.url }}' class='no-hover no-print-link project-card-caption'>
             <div class='img-title'> {{ photo.title }}</div>
             <div class='img-descr'> {{ photo.caption }} </div>
         </a>
