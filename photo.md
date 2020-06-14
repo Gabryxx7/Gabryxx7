@@ -33,7 +33,7 @@ photos: false
         accessToken: '{{ site.instagram.access_token }}',
         clientId: '{{ site.instagram.client_id }}',
         limit: '100',
-        template: {% raw %}"<article class='project-card'> <div class='project-card-img img'><img data-ignore src='{{image}}'></img></div><a href='{{link}}' class='no-hover no-print-link project-card-caption'><div class='img-title'>  </div> <div class='img-descr'> {{caption}} </div> </a></article>"{% endraw %},
+        template: {% raw %}"<article class='project-card'> <div class='project-card-img img'><img data-ignore src='{{image}}' loading='lazy'></img></div><a href='{{link}}' class='no-hover no-print-link project-card-caption'><div class='img-title'>  </div> <div class='img-descr'> {{caption}} </div> </a></article>"{% endraw %},
         success: function(response){
             $("#instafeed hy-img").remove();
             console.log("Instafeed.js response", response);
@@ -53,7 +53,7 @@ photos: false
 {% for photo in photolist.photos %}
     <article class='project-card'>
         <div class='project-card-img img'>
-            <img data-ignore src='{{ photolist.preview_folder }}{{ photo.file }}'></img>
+            <img data-ignore src='{{ photolist.preview_folder }}{{ photo.file }}' loading='lazy'></img>
         </div>
         <a href='{{ photo.link }}' class='no-hover no-print-link project-card-caption'>
             <div class='img-title'> {{ photo.title }}</div>

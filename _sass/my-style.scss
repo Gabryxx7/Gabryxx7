@@ -156,13 +156,28 @@ div#instafeed {
 }
 
 #instafeed .project-card {
-  margin-bottom: 1%;
+  box-shadow: #7d7d7d5c 2px 3px 5px 0;
+  margin-bottom: 2%;
 }
 
 #instafeed .project-card img {
   /* Just in case there are inline attributes */
   width: 100% !important;
   height: auto !important;
+}
+
+
+
+.nav-btn-bar {
+  margin: 0 -1rem 0 -.875rem
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  padding: 1rem 0.875rem;
+  color: var(--menu-text) !important;
+  cursor: pointer;
 }
 
 
@@ -755,7 +770,7 @@ body.dark-mode .highlight .language-json .kc {
   margin-left: auto;
   // margin-right: auto;
   max-width: none !important;
-  padding: 6rem 1rem 12rem
+  padding: 4rem 1rem 10rem
 }
 
 @media screen {
@@ -768,19 +783,69 @@ body.dark-mode .highlight .language-json .kc {
 @media screen and (min-width: 64em) {
   .content.fullscreen {
       padding-left:1rem;
-      margin-left: 24rem;
+      margin-left: 22rem;
   }
 }
 
 @media screen and (min-width: 88em) {
   .content.fullscreen {
-      margin-left:25rem;
+      margin-left:23rem;
+      margin-right: 2rem;
   }
 }
 
 @media print {
   .content.fullscreen {
       padding-bottom: 1rem
+  }
+}
+
+
+
+
+
+
+
+.content {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem 1rem 10rem
+}
+
+@media screen {
+  .content {
+      padding-left: 1.5rem;
+      max-width: 40rem;
+      min-height: 100vh
+  }
+}
+
+@media screen and (min-width: 54em) {
+  .content {
+      max-width:45rem
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .content {
+      padding-left: 1rem;
+      margin-left: 22rem;
+      margin-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 88em) {
+  .content {
+      margin-left:23rem;
+      margin-right: 4rem;
+      max-width: 60rem;
+  }
+}
+
+@media screen and (min-width: 1666px) {
+  .content {
+      // margin:auto
   }
 }
 
