@@ -804,6 +804,13 @@ hy-drawer {
       --hy-drawer-slide-width: calc(50% + 40rem)}
 }
 
+
+@media screen and (min-width: 120em) {
+  .sidebar-sticky {
+      margin-right: 0rem;
+  }
+}
+
 @media screen {
   hy-drawer.loaded {
       position: static
@@ -843,7 +850,7 @@ hy-drawer {
 
 @media screen and (min-width: 120em) {
   .content.fullscreen {
-      margin-left: 44rem;
+      margin-left: 33rem;
       margin-right: 2rem;
   }
 }
@@ -900,7 +907,7 @@ hy-drawer {
 
 @media screen and (min-width: 120em) {
   .content {
-      margin-left:44rem;
+      margin-left:33rem;
       margin-right: 4rem;
       max-width: 60rem;
   }
