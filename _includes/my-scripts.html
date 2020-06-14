@@ -63,7 +63,7 @@ The snippet below will run the code on every `hy-push-state-load` event instead.
     e.add("dark-mode"))
   }
   var localTime = new Date();
-  if(localTime.getHours() > 18){
+  if(localTime.getHours() > 18 || localTime.getHours() < 8){
     toggleDarkMode();
   }
 </script>
