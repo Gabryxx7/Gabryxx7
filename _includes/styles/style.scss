@@ -60,7 +60,9 @@ $theme-color:         {{ site.theme_color  | default:'#193747' }};
   @import "hydejack/__link__/break-layout";
   {% endunless %}
 
-  @import "syntax";
+  //@import "syntax";
+  @import "ayu-syntax/ayu-light";
+  @import "ayu-syntax/ayu-mirage";
   @import "spinner";
 
   @import "my-style";
@@ -96,7 +98,9 @@ $theme-color:         {{ site.theme_color  | default:'#193747' }};
     @import "hydejack/_break-layout.pre.scss";
   {% endunless %}
 
-  @import "syntax";
+  //@import "syntax";
+  @import "ayu-syntax/ayu-light";
+  @import "ayu-syntax/ayu-mirage";
   @import "spinner";
 
   @import "my-inline";
