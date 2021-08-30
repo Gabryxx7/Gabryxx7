@@ -8,10 +8,15 @@ image:
   class: "wide-img"
   html: |-
     <div class='typing-window post' style='margin: 2rem;'>
-    <div class='typing-toolbar'>
-    <div class="typing-toolbar-btn min">—</div>
-    <div class="typing-toolbar-btn size">☐</div>
-    <div class="typing-toolbar-btn close disabled">✕</div>
+    <div class='typing-toolbar'>    
+        <div class="toolbar-title">
+          Window Title
+        </div>
+        <div class="toolbar-btns-container">
+          <div class="typing-toolbar-btn min">—</div>
+          <div class="typing-toolbar-btn size">☐</div>
+          <div class="typing-toolbar-btn close disabled">✕</div>
+        </div>
     </div>
     <div class="typing-area">▌</div>
     </div>
@@ -230,10 +235,15 @@ Let's try and give it more of a terminal look now by adding a Ubuntu-styled stat
 
 {% highlight html %}
   <div class='typing-window'>
-    <div class='typing-toolbar'>
-      <div class="typing-toolbar-btn min">—</div>
-      <div class="typing-toolbar-btn size">☐</div>
-      <div class="typing-toolbar-btn close disabled">✕</div>
+    <div class='typing-toolbar'>      
+        <div class="toolbar-title">
+          Window Title
+        </div>
+        <div class="toolbar-btns-container">
+          <div class="typing-toolbar-btn min">—</div>
+          <div class="typing-toolbar-btn size">☐</div>
+          <div class="typing-toolbar-btn close disabled">✕</div>
+        </div>
     </div>
     <div class="typing-area">▌</div>
   </div>
@@ -295,10 +305,15 @@ The only clickable button should be the closing button so let's change it's `:ho
 {% endhighlight %}
 
 <div class='typing-window test-close_noaction'>
-  <div class='typing-toolbar'>
-    <div class="typing-toolbar-btn min">—</div>
-    <div class="typing-toolbar-btn size">☐</div>
-    <div class="typing-toolbar-btn close">✕</div>
+  <div class='typing-toolbar'>    
+        <div class="toolbar-title">
+          Window Title
+        </div>
+        <div class="toolbar-btns-container">
+          <div class="typing-toolbar-btn min">—</div>
+          <div class="typing-toolbar-btn size">☐</div>
+          <div class="typing-toolbar-btn close disabled">✕</div>
+        </div>
   </div>
   <div class="typing-area">▌</div>
 </div>
@@ -344,10 +359,15 @@ var startTestTyper = function() {
 {% endhighlight %}
 
 <div class='typing-window test-close'>
-  <div class='typing-toolbar'>
-    <div class="typing-toolbar-btn min">—</div>
-    <div class="typing-toolbar-btn size">☐</div>
-    <div class="typing-toolbar-btn close disabled">✕</div>
+  <div class='typing-toolbar'>    
+        <div class="toolbar-title">
+          Window Title
+        </div>
+        <div class="toolbar-btns-container">
+          <div class="typing-toolbar-btn min">—</div>
+          <div class="typing-toolbar-btn size">☐</div>
+          <div class="typing-toolbar-btn close disabled">✕</div>
+        </div>
   </div>
   <div class="typing-area">▌</div>
 </div>
@@ -611,10 +631,15 @@ image:
   class: "wide-img"
   html: |-
     <div class='typing-window post' id='typing-window'>
-    <div class='typing-toolbar'>
-    <div class="typing-toolbar-btn min">—</div>
-    <div class="typing-toolbar-btn size">☐</div>
-    <div class="typing-toolbar-btn close disabled" id="typing-close-btn">✕</div>
+    <div class='typing-toolbar'>    
+        <div class="toolbar-title">
+          Window Title
+        </div>
+        <div class="toolbar-btns-container">
+          <div class="typing-toolbar-btn min">—</div>
+          <div class="typing-toolbar-btn size">☐</div>
+          <div class="typing-toolbar-btn close disabled" id="typing-close-btn">✕</div>
+        </div>
     </div>
     <div class="typing-area">▌</div>
     </div>
