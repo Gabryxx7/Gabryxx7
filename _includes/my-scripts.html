@@ -40,7 +40,7 @@ var startBlogTyper = function(typingWindow){
   if(!typingWindow){
     return;
   };
-  var typingWindowWrapper = document.getElementsByClassName('typing-window-wrapper')[0];  
+  var typingWindowWrapper = document.getElementsByClassName('blog-page-message')[0];  
   var app = typingWindow.getElementsByClassName('typing-area')[0];
   var closeBtn =  typingWindow.getElementsByClassName('typing-toolbar-btn close')[0];
   typingWindowWrapper.addEventListener('transitionend', function(event) {
@@ -57,6 +57,7 @@ var startBlogTyper = function(typingWindow){
   setTimeout (function() {
     closeBtn.classList.toggle('disabled');
     closeBtn.onclick = function() {
+          console.log("Stopping blog typer!");
           typewriter.stop();
           typingWindowWrapper.style.opacity = 0.01;
       };

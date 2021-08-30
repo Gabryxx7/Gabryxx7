@@ -1,4 +1,4 @@
-###  Hi there, I'm Gabriele. I am currently a PhD candidate in Computing and Information System at the University of Melbourne
+### Hi there, I'm Gabriele. I am currently a PhD candidate in Computing and Information System at the University of Melbourne
 - 💡 I’m currently learning everything! Or trying at least / 🎯 2021 Goals: Contribute more to Open Source projects
 - 🏊 I am also an open water swimmer and dabble in calisthenics and weightlifting
 - Fun facts: 🎮 PC Gamer / 💬 I speak Italian, English and Spanish, learning Portuguese / ✈️ I have visited 22 countries so far.
