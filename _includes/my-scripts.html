@@ -93,9 +93,12 @@ var startBlogTyper = function(typingWindow){
 
   if(secret_message){
     typewriter
-    .changeDelay(50)
+    .changeDelay(80)
     .pasteString(terminalStarter)
-    .typeString("Hey <strong>Mon</strong>!👀 I know it's you!!")
+    .typeString("Hey <strong>Mon</strong>!👀")
+    .pauseFor(300)
+    .pauseFor(randomDelay())
+    .typeString(" I know it's you!!")
     .pauseFor(randomDelay())
     .typeString("<br /> ");
   };
