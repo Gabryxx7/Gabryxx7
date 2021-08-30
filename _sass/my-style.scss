@@ -35,11 +35,41 @@ h1 code,h1 code, h2 code, h3 code, .h1 code, .h2 code, .h3 code  {
       bottom: 0.1rem;
       left: -1.3rem;
       border-radius: 0.15rem;
-      border-left: 0.35rem solid var(--menu-text);
+      border-left-width: 0.35rem;
+      border-left-color: var(--menu-text);
+      border-left-style: solid;
     }
     &.new::before{
-      border-left: 0.4rem solid #fc6565;
+      border-left-width: 0.4rem;
+      border-left-color: #fc6565;
     }
+}
+
+@media (max-width: $break-point-2) {
+  .content{
+    padding-left: 2.1rem;
+  }
+  .post-title{
+  position: relative;
+    &::before {
+      border-left-width: 0.3rem;
+      content: "";
+      left: -1rem;
+    }
+    &.new::before{
+      border-left-width: 0.35rem;
+    } 
+}
+}
+
+.note-sm, #markdown-toc, .note {
+  background: transparent;
+  color: var(--body-color);
+  font-size: smaller;
+  border-left: 1px solid var(--border-color);
+  padding: 1.2rem 1rem 0 0.5rem;
+  margin: 1rem -0.5rem;
+  position: relative;
 }
 
 .avatar {

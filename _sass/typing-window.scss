@@ -4,8 +4,12 @@
     right: unset;
     width: unset;
     top: unset;
-    margin-top: 0.5rem;
+    &::before{  
+      content: "Note";
+    }
   }
+
+  
   
   @media screen and (min-width: 1760px){
     .blog-page-message .note-sm{    
@@ -14,7 +18,6 @@
       width: 21rem;
       top: 9rem;
       margin-bottom: 1.5rem;
-      padding: 0.5rem 1rem 0 1rem;
     }
   }
   
