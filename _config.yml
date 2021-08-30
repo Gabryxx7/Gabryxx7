@@ -204,7 +204,7 @@ giscus:
   category-id:         "DIC_kwDODAZmfc4B-3ie"
   mapping:             "pathname"
   reaction-enabled:    "1"
-  theme:              "http://gmarini.com/assets/gabryxx7/css/giscus_theme.css" # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme", [url]
+  theme:              "dark_dimmed" # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme", [url]
   crossorigin:         "anonymous"
 
 kramdown:
