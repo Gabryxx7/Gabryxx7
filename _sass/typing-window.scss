@@ -70,20 +70,6 @@
       font-size: 1.1rem;
       }
     }
-
-  .toolbar-btns-container {
-    display: flex;
-    width: 6rem;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .toolbar-title{
-    font-size: 0.85rem;
-    vertical-align: middle;
-    padding-top: 0.2rem;
-    color: var(--gray-text);
-  }
   
   .typing-toolbar {
     display: flex;
@@ -92,6 +78,20 @@
     background-color: var(--border-color);
     border-radius: 0.5rem 0.5rem 0rem 0rem;
     box-shadow: inset -6px 3px 10px 0px rgba(0,0,0,0.11);
+      
+    .toolbar-btns-container {
+      display: flex;
+      width: 6rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .toolbar-title{
+      font-size: 0.85rem;
+      vertical-align: middle;
+      padding-top: 0.2rem;
+      color: var(--gray-text);
+    }
   
     .typing-toolbar-btn {
       transition: background-color 250ms;
