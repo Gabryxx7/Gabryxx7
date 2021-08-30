@@ -192,7 +192,7 @@ utterances:
   repo:                "Gabryxx7/Gabryxx7"
   issue-term:          "pathname"
   label:               "Blog Comments"
-  theme:               "dark-blue"
+  theme:               "dark"
 
 # You must install giscus github app before use.(https://github.com/apps/giscus)
 # Make sure all variables are set properly. Check below link for detail.
@@ -204,7 +204,7 @@ giscus:
   category-id:         "DIC_kwDODAZmfc4B-3ie"
   mapping:             "pathname"
   reaction-enabled:    "1"
-  theme:               "dark_dimmed"
+  theme:              "http://gmarini.com/assets/gabryxx7/css/giscus_theme.css" # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme", [url]
   crossorigin:         "anonymous"
 
 kramdown:
