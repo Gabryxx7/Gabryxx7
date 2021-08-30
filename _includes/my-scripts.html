@@ -67,7 +67,8 @@ var startBlogTyper = function(typingWindow){
   
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  const secret_message = urlParams.get('test') != null;
+  var secret_message = urlParams.get('test') != null;
+  var print_date = false;
 
   var totalLoops = 20;
   var wordList = ["<em>PhD Student</em> 📚", "Programmer 💻", "Photographer 📷", "Pizza Lover 🍕", "Gamer 👾", "Swimmer 🏊", "Traveller 🌏"];
@@ -86,10 +87,12 @@ var startBlogTyper = function(typingWindow){
     cursor: '▌'
   });
 
-  // typewriter
-  // .pasteString(terminalStarter +"["+formatted_date+"]")
-  // .pauseFor(1000)
-  // .pasteString("<br />");
+  if(print_date){
+    typewriter
+    .pasteString(terminalStarter +"["+formatted_date+"]")
+    .pauseFor(1000)
+    .pasteString("<br />");
+  };
 
   if(secret_message){
     typewriter
