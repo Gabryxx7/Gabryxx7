@@ -1,0 +1,441 @@
+/*!
+ * GitHub Dark v0.5.0
+ * Copyright (c) 2012 - 2017 GitHub, Inc.
+ * Licensed under MIT (https://github.com/primer/github-syntax-theme-generator/blob/master/LICENSE)
+ */
+
+ .dark-mode .pl-c {
+	color: #959da5
+}
+
+.dark-mode .pl-c1,
+.dark-mode .pl-s .pl-v {
+	color: #c8e1ff
+}
+
+.dark-mode .pl-e,
+.dark-mode .pl-en {
+	color: #b392f0
+}
+
+.dark-mode .pl-s .pl-s1,
+.dark-mode .pl-smi {
+	color: #f6f8fa
+}
+
+.dark-mode .pl-ent {
+	color: #7bcc72
+}
+
+.dark-mode .pl-k {
+	color: #ea4a5a
+}
+
+.dark-mode .pl-pds,
+.dark-mode .pl-s,
+.dark-mode .pl-s .pl-pse .pl-s1,
+.dark-mode .pl-sr,
+.dark-mode .pl-sr .pl-cce,
+.dark-mode .pl-sr .pl-sra,
+.dark-mode .pl-sr .pl-sre {
+	color: #79b8ff
+}
+
+.dark-mode .pl-ml,
+.dark-mode .pl-v {
+	color: #fb8532
+}
+
+.dark-mode .pl-bu {
+	color: #d73a49
+}
+
+.dark-mode .pl-c2,
+.dark-mode .pl-ii {
+	background-color: #d73a49;
+	color: #fafbfc
+}
+
+.dark-mode .pl-c2:before {
+	content: "^M"
+}
+
+.dark-mode .pl-sr .pl-cce {
+	color: #7bcc72;
+	font-weight: 700
+}
+
+.dark-mode .pl-mh,
+.dark-mode .pl-mh .pl-en,
+.dark-mode .pl-ms {
+	color: #0366d6;
+	font-weight: 700
+}
+
+.dark-mode .pl-mi {
+	color: #f6f8fa;
+	font-style: italic
+}
+
+.dark-mode .pl-mb {
+	color: #f6f8fa;
+	font-weight: 700
+}
+
+.dark-mode .pl-md {
+	background-color: #ffeef0;
+	color: #b31d28
+}
+
+.dark-mode .pl-mi1 {
+	background-color: #f0fff4;
+	color: #176f2c
+}
+
+.dark-mode .pl-mc {
+	background-color: #fffdef;
+	color: #b08800
+}
+
+.dark-mode .pl-mi2 {
+	background-color: #959da5;
+	color: #2f363d
+}
+
+.dark-mode .pl-mdr {
+	color: #b392f0;
+	font-weight: 700
+}
+
+.dark-mode .pl-mo {
+	color: #0366d6
+}
+
+.dark-mode .pl-ba {
+	color: #ffeef0
+}
+
+.dark-mode .pl-sg {
+	color: #6a737d
+}
+
+.dark-mode .pl-corl {
+	color: #79b8ff;
+	text-decoration: underline
+}
+
+
+/*!
+ * Modified from GitHub's Dark Dimmed theme, licensed under the MIT License
+ * Copyright (c) 2018 GitHub Inc.
+ * https://github.com/primer/primitives/blob/main/LICENSE
+ */
+
+.dark-mode main {
+	--color-text-primary: #adbac7;
+	--color-text-secondary: #768390;
+	--color-text-tertiary: #768390;
+	--color-text-link: #58a6ff;
+	--color-text-danger: #f85149;
+	--color-text-success: #3fb950;
+	--color-border-primary: #30363d;
+	--color-border-secondary: #21262d;
+	--color-border-tertiary: hsla(215, 8%, 47%, 0.4);
+	--color-border-info: #1f6feb;
+	--color-bg-canvas: #15202b;
+	--color-bg-canvas-inset: #15202b;
+	--color-bg-primary: #192734;
+	--color-bg-secondary: #253341;
+	--color-bg-tertiary: #15202b;
+	--color-bg-overlay: #161b22;
+	--color-bg-info: rgba(56, 139, 253, 0.15);
+	--color-state-focus-border: #1f6feb;
+	--color-state-focus-shadow: 0 0 0 3px #0c2d6b;
+	--color-alert-error-text: #f85149;
+	--color-alert-error-bg: rgba(248, 81, 73, 0.15);
+	--color-alert-error-border: rgba(248, 81, 73, 0.4);
+	--color-counter-secondary-text: #8b949e;
+	--color-counter-secondary-bg: hsla(215, 8%, 47%, 0.1);
+	--color-box-border-info: rgba(56, 139, 253, 0.4);
+	--color-markdown-code-bg: hsla(215, 8%, 47%, 0.1);
+	--color-hidden-text-expander-bg: hsla(215, 8%, 47%, 0.4);
+	--color-label-border: #30363d;
+	--color-input-bg: #15202b;
+	--color-input-contrast-bg: #15202b;
+	--color-input-border: #30363d;
+	--color-diff-blob-num-text: #768390;
+	--color-diff-blob-num-hover-text: #adbac7;
+	--color-btn-text: #c9d1d9;
+	--color-btn-bg: #21262d;
+	--color-btn-border: rgba(240, 246, 252, 0.1);
+	--color-btn-shadow: 0 0 transparent;
+	--color-btn-inset-shadow: 0 0 transparent;
+	--color-btn-hover-bg: #30363d;
+	--color-btn-hover-border: #8b949e;
+	--color-btn-active-bg: #282e33;
+	--color-btn-active-border: #6e7681;
+	--color-btn-primary-text: #fff;
+	--color-btn-primary-bg: #238636;
+	--color-btn-primary-border: rgba(240, 246, 252, 0.1);
+	--color-btn-primary-shadow: 0 0 transparent;
+	--color-btn-primary-inset-shadow: 0 0 transparent;
+	--color-btn-primary-hover-bg: #2ea043;
+	--color-btn-primary-hover-border: rgba(240, 246, 252, 0.1);
+	--color-btn-primary-selected-bg: #238636;
+	--color-btn-primary-selected-shadow: 0 0 transparent;
+	--color-btn-primary-disabled-text: rgba(240, 246, 252, 0.5);
+	--color-btn-primary-disabled-bg: rgba(35, 134, 54, 0.6);
+	--color-btn-primary-disabled-border: rgba(240, 246, 252, 0.1);
+	--color-scale-gray-7: #373e47;
+	--color-scale-gray-8: #2d333b;
+	--color-scale-blue-8: #143d79;
+	--color-social-reaction-border: var(--color-scale-blue-8);
+	--color-social-reaction-bg: var(--color-scale-gray-8);
+	--color-social-reaction-bg-hover: var(--color-scale-gray-7);
+	--color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8)
+}
+
+.dark-mode main .pagination-loader-container {
+	background-image: url(https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg)
+}
+
+.dark-mode main {
+	color-scheme: dark
+}
+
+/*!
+ * GitHub Light v0.5.0
+ * Copyright (c) 2012 - 2017 GitHub, Inc.
+ * Licensed under MIT (https://github.com/primer/github-syntax-theme-generator/blob/master/LICENSE)
+ */
+
+.light-mode .pl-c /* comment, punctuation.definition.comment, string.comment */ {
+    color: #6a737d;
+  }
+  
+  .light-mode .pl-c1 /* constant, entity.name.constant, variable.other.constant, variable.language, support, meta.property-name, support.constant, support.variable, meta.module-reference, markup.raw, meta.diff.header, meta.output */,
+  .light-mode .pl-s .pl-v /* string variable */ {
+    color: #005cc5;
+  }
+  
+  .light-mode .pl-e /* entity */,
+  .light-mode .pl-en /* entity.name */ {
+    color: #6f42c1;
+  }
+  
+  .light-mode .pl-smi /* variable.parameter.function, storage.modifier.package, storage.modifier.import, storage.type.java, variable.other */,
+  .light-mode .pl-s .pl-s1 /* string source */ {
+    color: #24292e;
+  }
+  
+  .light-mode .pl-ent /* entity.name.tag, markup.quote */ {
+    color: #22863a;
+  }
+  
+  .light-mode .pl-k /* keyword, storage, storage.type */ {
+    color: #d73a49;
+  }
+  
+  .light-mode .pl-s /* string */,
+  .light-mode .pl-pds /* punctuation.definition.string, source.regexp, string.regexp.character-class */,
+  .light-mode .pl-s .pl-pse .pl-s1 /* string punctuation.section.embedded source */,
+  .light-mode .pl-sr /* string.regexp */,
+  .light-mode .pl-sr .pl-cce /* string.regexp constant.character.escape */,
+  .light-mode .pl-sr .pl-sre /* string.regexp source.ruby.embedded */,
+  .light-mode .pl-sr .pl-sra /* string.regexp string.regexp.arbitrary-repitition */ {
+    color: #032f62;
+  }
+  
+  .light-mode .pl-v /* variable */,
+  .light-mode .pl-smw /* sublimelinter.mark.warning */ {
+    color: #e36209;
+  }
+  
+  .light-mode .pl-bu /* invalid.broken, invalid.deprecated, invalid.unimplemented, message.error, brackethighlighter.unmatched, sublimelinter.mark.error */ {
+    color: #b31d28;
+  }
+  
+  .light-mode .pl-ii /* invalid.illegal */ {
+    color: #fafbfc;
+    background-color: #b31d28;
+  }
+  
+  .light-mode .pl-c2 /* carriage-return */ {
+    color: #fafbfc;
+    background-color: #d73a49;
+  }
+  
+  .light-mode .pl-c2::before /* carriage-return */ {
+    content: "^M";
+  }
+  
+  .light-mode .pl-sr .pl-cce /* string.regexp constant.character.escape */ {
+    font-weight: bold;
+    color: #22863a;
+  }
+  
+  .light-mode .pl-ml /* markup.list */ {
+    color: #735c0f;
+  }
+  
+  .light-mode .pl-mh /* markup.heading */,
+  .light-mode .pl-mh .pl-en /* markup.heading entity.name */,
+  .light-mode .pl-ms /* meta.separator */ {
+    font-weight: bold;
+    color: #005cc5;
+  }
+  
+  .light-mode .pl-mi /* markup.italic */ {
+    font-style: italic;
+    color: #24292e;
+  }
+  
+  .light-mode .pl-mb /* markup.bold */ {
+    font-weight: bold;
+    color: #24292e;
+  }
+  
+  .light-mode .pl-md /* markup.deleted, meta.diff.header.from-file, punctuation.definition.deleted */ {
+    color: #b31d28;
+    background-color: #ffeef0;
+  }
+  
+  .light-mode .pl-mi1 /* markup.inserted, meta.diff.header.to-file, punctuation.definition.inserted */ {
+    color: #22863a;
+    background-color: #f0fff4;
+  }
+  
+  .light-mode .pl-mc /* markup.changed, punctuation.definition.changed */ {
+    color: #e36209;
+    background-color: #ffebda;
+  }
+  
+  .light-mode .pl-mi2 /* markup.ignored, markup.untracked */ {
+    color: #f6f8fa;
+    background-color: #005cc5;
+  }
+  
+  .light-mode .pl-mdr /* meta.diff.range */ {
+    font-weight: bold;
+    color: #6f42c1;
+  }
+  
+  .light-mode .pl-ba /* brackethighlighter.tag, brackethighlighter.curly, brackethighlighter.round, brackethighlighter.square, brackethighlighter.angle, brackethighlighter.quote */ {
+    color: #586069;
+  }
+  
+  .light-mode .pl-sg /* sublimelinter.gutter-mark */ {
+    color: #959da5;
+  }
+  
+  .light-mode .pl-corl /* constant.other.reference.link, string.other.link */ {
+    text-decoration: underline;
+    color: #032f62;
+  }
+
+/*! MIT License
+ * Copyright (c) 2018 GitHub Inc.
+ * https://github.com/primer/primitives/blob/main/LICENSE
+ */
+
+ .light-mode main {
+  --color-text-primary: #24292f;
+  --color-text-secondary: #57606a;
+  --color-text-tertiary: #57606a;
+  --color-text-link: #0969da;
+  --color-text-danger: #cf222e;
+  --color-text-success: #1a7f37;
+  --color-border-primary: #d0d7de;
+  --color-border-secondary: #d8dee4;
+  --color-border-tertiary: rgba(175, 184, 193, 0.4);
+  --color-border-info: #0969da;
+  --color-bg-canvas: #fff;
+  --color-bg-canvas-inset: #f6f8fa;
+  --color-bg-primary: #fff;
+  --color-bg-secondary: #f6f8fa;
+  --color-bg-tertiary: #f6f8fa;
+  --color-bg-overlay: #fff;
+  --color-bg-info: #ddf4ff;
+  --color-state-focus-border: #0969da;
+  --color-state-focus-shadow: 0 0 0 3px rgba(9, 105, 218, 0.3);
+  --color-alert-error-text: #24292f;
+  --color-alert-error-bg: #ffebe9;
+  --color-alert-error-border: rgba(255, 129, 130, 0.4);
+  --color-counter-secondary-text: #57606a;
+  --color-counter-secondary-bg: rgba(234, 238, 242, 0.5);
+  --color-box-border-info: rgba(84, 174, 255, 0.4);
+  --color-markdown-code-bg: rgba(175, 184, 193, 0.4);
+  --color-hidden-text-expander-bg: rgba(175, 184, 193, 0.4);
+  --color-label-border: #d0d7de;
+  --color-input-bg: #fff;
+  --color-input-contrast-bg: #f6f8fa;
+  --color-input-border: #d0d7de;
+  --color-diff-blob-num-text: #57606a;
+  --color-diff-blob-num-hover-text: #24292f;
+  --color-btn-text: #24292f;
+  --color-btn-bg: #f6f8fa;
+  --color-btn-border: rgba(27, 31, 36, 0.15);
+  --color-btn-shadow: 0 1px 0 rgba(27, 31, 36, 0.04);
+  --color-btn-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  --color-btn-hover-bg: #f3f4f6;
+  --color-btn-hover-border: rgba(27, 31, 36, 0.15);
+  --color-btn-active-bg: #ebecf0;
+  --color-btn-active-border: rgba(27, 31, 36, 0.15);
+  --color-btn-primary-text: #fff;
+  --color-btn-primary-bg: #2da44e;
+  --color-btn-primary-border: rgba(27, 31, 36, 0.15);
+  --color-btn-primary-shadow: 0 1px 0 rgba(27, 31, 36, 0.1);
+  --color-btn-primary-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  --color-btn-primary-hover-bg: #2c974b;
+  --color-btn-primary-hover-border: rgba(27, 31, 36, 0.15);
+  --color-btn-primary-selected-bg: #298e46;
+  --color-btn-primary-selected-shadow: inset 0 1px 0 rgba(0, 45, 17, 0.2);
+  --color-btn-primary-disabled-text: rgba(255, 255, 255, 0.8);
+  --color-btn-primary-disabled-bg: #94d3a2;
+  --color-btn-primary-disabled-border: rgba(27, 31, 36, 0.15);
+  --color-scale-gray-0: #f6f8fa;
+  --color-scale-gray-1: #eaeef2;
+  --color-scale-blue-1: #b6e3ff;
+  --color-scale-blue-8: #0a3069;
+
+  /* Extensions from color-modes.scss */
+  --color-social-reaction-border: var(--color-scale-blue-1);
+  --color-social-reaction-bg: var(--color-scale-gray-0);
+  --color-social-reaction-bg-hover: var(--color-scale-gray-1);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1);
+}
+
+.light-mode main .pagination-loader-container {
+  background-image: url(https://github.com/images/modules/pulls/progressive-disclosure-line.svg);
+}
+
+/*! Custom CSS */
+.light-mode main {
+  color-scheme: light;
+}
+
+/* 
+.gsc-reactions-count {
+	display: none
+}
+
+.gsc-comments>.gsc-header {
+	order: 1
+}
+
+.gsc-comments>.gsc-comment-box {
+	margin-bottom: 1rem;
+	order: 2
+}
+
+.gsc-comments>.gsc-timeline {
+	order: 3
+}
+
+.gsc-timeline {
+	flex-direction: column-reverse
+}
+
+.gsc-header {
+	padding-bottom: 1rem
+} */

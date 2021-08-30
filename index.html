@@ -1,6 +1,5 @@
 ---
-layout: blog_custom
-title: Blog
+layout: home_custom
 description: >
   Gabryxx7 personal blog
 last_modified_at: 2021-08-30
@@ -8,3 +7,6 @@ no_link_title: false
 no_excerpt: false 
 hide_image: false
 ---
+
+{% capture my_include %}{% include_relative README.md %}{% endcapture %}
+{{ my_include | markdownify }}

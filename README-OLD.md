@@ -21,7 +21,7 @@ no_third_column: true
 title: Gabriele Marini
 ---
 
-# [Gabryxx7 Personal Blog](http://gmarini.com/)
+# [Gabryxx7 Personal Blog](https://gmarini.com/)
 ![Screenshot](/assets/gabryxx7/img/matrix_coding.gif){:.lead width="1920" height="1080" loading="lazy"}
 
 ~~~r
@@ -206,7 +206,7 @@ generateGantt <- function(tasks, hlines, vlines=NULL, plotTitle="Timeline", font
 }
 ```
 
-[gmarini.com](http://gmarini.com/)
+[gmarini.com](https://gmarini.com/)
 
 Developded with [Jekyll](https://jekyllrb.com/) and [Hydejack](https://hydejack.com/).
 

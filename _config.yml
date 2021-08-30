@@ -4,7 +4,7 @@
 # IMPORTANT: Set the URL of your site.
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
-url:                   http://gmarini.com
+url:                   https://gmarini.com
 
 # IMPORTANT: Set The "base URL" of your site.
 # When your site sits in a subdirectory, set to /<name of directory>
@@ -82,13 +82,13 @@ menu:
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
-legal:
-  - title:             LICENSE
-    url:               /LICENSE/
-  - title:             NOTICE
-    url:               /NOTICE/
-  - title:             CHANGELOG
-    url:               /CHANGELOG/
+# legal:
+#   - title:             LICENSE
+#     url:               /LICENSE/
+#   - title:             NOTICE
+#     url:               /NOTICE/
+#   - title:             CHANGELOG
+#     url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright:            Gabriele Marini © 2019. All rights reserved
@@ -159,11 +159,11 @@ defaults:
       sitemap:         false
 
   # # You can use the following to enable comments on all posts.
-  # - scope:
-  #     type:            posts
-  #   values:
-  #     comments:        true
-
+  - scope:
+      type:            posts
+    values:
+      comments:        true
+      # Set which comment system to use
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:
   - scope:
@@ -181,6 +181,31 @@ defaults:
     values:
       seo:
         type:          WebPage
+comments:
+  # 'disqus' or 'utterances' are available
+  provider:            giscus
+
+# You must install utterances github app before use.(https://github.com/apps/utterances)
+# Make sure all variables are set properly. Check below link for detail.
+# https://utteranc.es/
+utterances:
+  repo:                "Gabryxx7/Gabryxx7"
+  issue-term:          "pathname"
+  label:               "Blog Comments"
+  theme:               "dark"
+
+# You must install giscus github app before use.(https://github.com/apps/giscus)
+# Make sure all variables are set properly. Check below link for detail.
+# https://giscus.vercel.app/
+giscus:
+  repo:                "Gabryxx7/Gabryxx7"
+  repo-id:             "MDEwOlJlcG9zaXRvcnkyMDE3NDYwNDU="
+  category:            "General"
+  category-id:         "DIC_kwDODAZmfc4B-3ie"
+  mapping:             "pathname"
+  reaction-enabled:    "1"
+  theme:              "dark_dimmed" # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme", [url]
+  crossorigin:         "anonymous"
 
 kramdown:
   math_engine:         katex
@@ -211,7 +236,7 @@ google_analytics:      UA-145580315-1
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-disqus:                gabryxx7-com
+# disqus:                gabryxx7-com
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # PRO version only!
@@ -225,11 +250,11 @@ disqus:                gabryxx7-com
 hydejack:
   # Configure the order of complementary content on blog posts
   # post_addons:         [about, related, random, comments]
-  post_addons:         [about, newsletter, related, random, comments]
+  post_addons:         [about, comments, newsletter, related, random]
 
   # Configure the order of complementary content on project pages
   # project_addons:      [about, newsletter, other, comments]
-  project_addons:      [about, other, comments]
+  project_addons:      [about, comments, other]
 
   # Set to `true` if you don't want to show an icon indicating external links
   no_mark_external:    false
@@ -286,11 +311,11 @@ hydejack:
 
   # When using Google Analytics, set to `true` to display a cookie notice banner.
   # When enabled, no user-related data will be stored until the user gives consent.
-  cookies_banner:      false
+  cookies_banner:      true
 
   # Set to `true` if you would like to add a "Powered by Hydejack" link in the footer.
   # Note that this setting has no effect when using the free version.
-  advertise:           true
+  advertise:           false
 
   # Buyers of the PRO version can opt to hide all dates from the theme.
   # Frequent consumers of online content will know that nothing devalues a post like
@@ -310,6 +335,8 @@ hydejack:
 
     # Set to `true` to allow visitors to switch between light and dark mode.
     icon:              true
+
+    clap_button:       false
 
   # ⚡️ DANGER ZONE ⚡️
   # ----------------
@@ -365,7 +392,7 @@ plugins:
   - jekyll-feed
   - jekyll-optional-front-matter
   - jekyll-paginate
-  - jekyll-readme-index
+  # - jekyll-readme-index
   - jekyll-redirect-from
   - jekyll-relative-links
   - jekyll-seo-tag

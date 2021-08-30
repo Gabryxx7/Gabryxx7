@@ -144,7 +144,7 @@ I have never really paid much attention to how I put images in it, so they are o
 
 <img src='https://github.com/Gabryxx7/TheTower/blob/master/Textures/thetower2.png' alt="The Tower Logo" width="250"/> <img src='https://github.com/Gabryxx7/TheTower/blob/master/Textures/thetower3.png' alt="The Tower Logo" width="250"/> 
 
-<img alt="Gabryxx7 | Instagram" height="100px" src="http://gmarini.com/assets/gabryxx7/img/photos/202006/79841217_555270635156572_8260864494112333405_n.jpg" />
+<img alt="Gabryxx7 | Instagram" height="100px" src="https://gmarini.com/assets/gabryxx7/img/photos/202006/79841217_555270635156572_8260864494112333405_n.jpg" />
 
 ![Screenshot](tinderai1.png)
 

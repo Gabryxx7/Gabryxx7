@@ -1,0 +1,29 @@
+---
+layout: base
+---
+<div class="blog-page-message">
+  <div class="typing-window-wrapper">
+    <div class='typing-window blog'>
+      <div class='typing-toolbar'>
+        <div class="toolbar-title">
+          Window Title
+        </div>
+        <div class="toolbar-btns-container">
+          <div class="typing-toolbar-btn min">—</div>
+          <div class="typing-toolbar-btn size">☐</div>
+          <div class="typing-toolbar-btn close disabled">✕</div>
+        </div>
+      </div>
+      <div class="typing-area">▌</div>
+    </div>
+  </div>
+  <p class="note-sm">
+    Do you want to make one yourself for your website? Check this post out:
+    <strong>
+      <a href="/blog/blog/coding/2020-08-10-typing-window/" class="flip-title">How I made the blog's terminal
+        animation</a>
+    </strong>
+  </p>
+</div>
+
+{{ content | markdownify }}

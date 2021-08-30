@@ -1,27 +1,103 @@
 body .content {
   -webkit-font-smoothing: auto !important;
 }
-h1 code {
-  font-size: 80%;
+
+hy-push-state a {
+  text-decoration-style: solid;
+  text-underline-offset: .15rem;
+  text-decoration-thickness: 2px;
+}
+
+.read-more {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: right;
+  font-size: 0.9rem;
+}
+h1, h2, h3, .h1, .h2, .h3 {
+  margin: 2.5rem 0 1rem;
+}
+
+.mb6{
+  margin-bottom: 3.25em;
+}
+
+h1 code,h1 code, h2 code, h3 code, .h1 code, .h2 code, .h3 code  {
+  font-size: 75%;
+}
+code, .dark-mode code{
+  padding: 0.2rem 0.35em;
+  margin-bottom: -1.1rem;
+  /* line-height: 1; */
+  /* baseline-shift: -1rem; */
+  /* bottom: 50%; */
+  display: inline-block;
+  position: relative;
+  /* margin-bottom: -4rem; */
+  bottom: 0.1em;
 }
 
 .post-title{
   position: relative;
+  transition: all 250ms;
     &::before {
+      transition: all 250ms;
       content: "";
       position: absolute;
       top: 0.25rem;
       bottom: 0.1rem;
       left: -1.3rem;
       border-radius: 0.15rem;
-      border-left: 0.35rem solid var(--menu-text);
+      border-left-width: 0.35rem;
+      border-left-color: var(--menu-text);
+      border-left-style: solid;
     }
     &.new::before{
-      border-left: 0.4rem solid #fc6565;
+      border-left-width: 0.4rem;
+      border-left-color: #fc6565;
     }
 }
 
-.mb6 { margin-bottom: 4.5rem }
+.content {
+  h1, .h1 {
+    > a { text-decoration: none; border-bottom: none; }
+    @media screen and (max-width: $break-point-1) {
+      font-size: 2.3rem;
+      line-height: 1.2;
+    }
+    @media screen and (min-width: $break-point-5) {
+      font-size: 2.8rem;
+      line-height: 1.2;
+    }
+  }
+}
+
+@media (max-width: $break-point-2) {
+  .content{
+    padding-left: 1.65rem;
+  }
+  .post-title{
+  position: relative;
+    &::before {
+      border-left-width: 0.25rem;
+      content: "";
+      left: -0.7rem;
+    }
+    &.new::before{
+      border-left-width: 0.3rem;
+    } 
+}
+}
+
+.note-sm, #markdown-toc, .note {
+  background: transparent;
+  color: var(--body-color);
+  font-size: smaller;
+  border-left: 1px solid var(--border-color);
+  padding: 1.2rem 1rem 0 0.5rem;
+  margin: 1rem -0.5rem;
+  position: relative;
+}
 
 .avatar {
   width: 10rem;
