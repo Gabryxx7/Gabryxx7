@@ -1,6 +1,20 @@
 body .content {
   -webkit-font-smoothing: auto !important;
 }
+
+hy-push-state a {
+  text-decoration-style: solid;
+  text-underline-offset: .15rem;
+  text-decoration-thickness: 2px;
+}
+
+.read-more {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
 h1 code {
   font-size: 80%;
 }
