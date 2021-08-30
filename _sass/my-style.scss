@@ -15,11 +15,15 @@ hy-push-state a {
   font-size: 0.9rem;
 }
 h1, h2, h3, .h1, .h2, .h3 {
-  margin: 3rem 0 1rem;
+  margin: 2.5rem 0 1rem;
 }
 
-h1 code {
-  font-size: 80%;
+.mb6{
+  margin-bottom: 3.25em;
+}
+
+h1 code,h1 code, h2 code, h3 code, .h1 code, .h2 code, .h3 code  {
+  font-size: 75%;
 }
 
 .post-title{
@@ -37,8 +41,6 @@ h1 code {
       border-left: 0.4rem solid #fc6565;
     }
 }
-
-.mb6 { margin-bottom: 4.5rem }
 
 .avatar {
   width: 10rem;
