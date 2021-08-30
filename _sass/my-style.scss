@@ -47,17 +47,17 @@ h1 code,h1 code, h2 code, h3 code, .h1 code, .h2 code, .h3 code  {
 
 @media (max-width: $break-point-2) {
   .content{
-    padding-left: 2.1rem;
+    padding-left: 1.65rem;
   }
   .post-title{
   position: relative;
     &::before {
-      border-left-width: 0.3rem;
+      border-left-width: 0.25rem;
       content: "";
-      left: -1rem;
+      left: -0.7rem;
     }
     &.new::before{
-      border-left-width: 0.35rem;
+      border-left-width: 0.3rem;
     } 
 }
 }
