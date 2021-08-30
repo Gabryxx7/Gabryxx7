@@ -1,5 +1,5 @@
 ###  Hi there, I'm Gabriele. I am currently a PhD candidate in Computing and Information System at the University of Melbourne
-- 💡 I’m currently learning everything! Or trying at least / 🎯 2020 Goals: Contribute more to Open Source projects
+- 💡 I’m currently learning everything! Or trying at least / 🎯 2021 Goals: Contribute more to Open Source projects
 - 🏊 I am also an open water swimmer and dabble in calisthenics and weightlifting
 - Fun facts: 🎮 PC Gamer / 💬 I speak Italian, English and Spanish, learning Portuguese / ✈️ I have visited 22 countries so far.
 
@@ -13,11 +13,14 @@ Connect with me:  &nbsp; &nbsp;
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Gabryxx7&layout=compact&theme=onedark)](https://github.com/Gabryxx7)
 
 ## Photography [<img alt="Gabryxx7 | Instagram" width="15px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
-[<img alt="Gabryxx7 | Instagram" height="100px" src="http://gmarini.com/assets/gabryxx7/img/photos/202006/79841217_555270635156572_8260864494112333405_n.jpg" />][instagram] &nbsp; 
-[<img alt="Gabryxx7 | Instagram" height="100px" src="http://gmarini.com/assets/gabryxx7/img/photos/202006/d921048b9f8858f8fbbd9f651a64c5cb.jpg" />][instagram] &nbsp; 
-[<img alt="Gabryxx7 | Instagram" height="100px" src="http://gmarini.com/assets/gabryxx7/img/photos/202006/105949108_979756645775165_8661279133103583059_n.jpg" />][instagram] &nbsp; 
-[<img alt="Gabryxx7 | Instagram" height="100px" src="http://gmarini.com/assets/gabryxx7/img/photos/202004/eeadc6e1a203c084fe15656aaa7528ee.jpg" />][instagram] &nbsp; 
-[<img alt="Gabryxx7 | Instagram" height="100px" src="http://gmarini.com/assets/gabryxx7/img/photos/201909/260a4453657269ad127dfc1b661bbea5.jpg" />][instagram] &nbsp; 
+
+<div style="display: flex;justify-content: space-evenly;">
+<img alt="Gabryxx7 | Instagram" width="18%" height="auto" src="http://gmarini.com/assets/gabryxx7/img/photos/202006/79841217_555270635156572_8260864494112333405_n.jpg" /> 
+<img alt="Gabryxx7 | Instagram" width="18%" height="auto"  src="http://gmarini.com/assets/gabryxx7/img/photos/202006/d921048b9f8858f8fbbd9f651a64c5cb.jpg" />
+<img alt="Gabryxx7 | Instagram" width="18%" height="auto"  src="http://gmarini.com/assets/gabryxx7/img/photos/202006/105949108_979756645775165_8661279133103583059_n.jpg" />
+<img alt="Gabryxx7 | Instagram" width="18%" height="auto"  src="http://gmarini.com/assets/gabryxx7/img/photos/202004/eeadc6e1a203c084fe15656aaa7528ee.jpg" />
+<img alt="Gabryxx7 | Instagram" width="18%" height="auto"  src="http://gmarini.com/assets/gabryxx7/img/photos/201909/260a4453657269ad127dfc1b661bbea5.jpg" />
+</div>
 
 
 

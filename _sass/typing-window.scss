@@ -1,5 +1,5 @@
 
-.typing-window-wrapper .note-sm{
+.blog-page-message .note-sm{
     position: relative;
     right: unset;
     width: unset;
@@ -8,7 +8,7 @@
   }
   
   @media screen and (min-width: 1760px){
-    .typing-window-wrapper .note-sm{    
+    .blog-page-message .note-sm{    
       position: absolute;
       right: 7rem;
       width: 21rem;
@@ -19,12 +19,12 @@
   }
   
   @media screen and (min-width: 1930px){
-    .typing-window-wrapper .note-sm{    
+    .blog-page-message .note-sm{    
       right: 24rem;
     }
   }
   
-  .typing-window-wrapper{
+  .blog-page-message{
     transition: opacity 0.5s, max-height 0.5s;
     max-height: 9000px;
     margin-bottom: 3rem;

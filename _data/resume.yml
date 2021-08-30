@@ -14,13 +14,13 @@ basics:
   phone: "(+61) 048 1149376"
   website: "http://gmarini.com"
   summary: |
-    Computer Scientist, researcher, photographer and traveller. Currently pursuing a PhD in Computing and Information System at the University of Melbourne.
+    Third  year  PhD  Candidate  at  the  University  of  Melbourne,  sponsored  by  CSIRO-Data61.   My  research focuses on indoor localisation, sensors and modeling.  I am very passionate about research andespecially ubiquitous computing but I often work with 3D graphics (Unity mostly) and Android.
   location:
-    address: "168, The University of Melbourne, Grattan St, Parkville"
-    postalCode: "VIC 3052"
+    address: "700 Swanston St. The University of Melbourne"
+    postalCode: "VIC 3000"
     city: "Melbourne"
     countryCode: "AU"
-    region: "Victoria"
+    region: ""
   profiles:
     - network: "LinkedIn"
       username: "Gabriele Marini"
@@ -38,6 +38,13 @@ basics:
       username: "Gabryxx7"
       url: "https://github.com/Gabryxx7"
 work:
+  - company: "Nokia Bells Lab"
+    position: "Data Science Research Intern"
+    summary: "IoT, sensing and data science internship"
+    startDate: "2021-06-01"
+    endDate: "2021-09-01"
+    location: (Remote) Cambridge, UK
+
   - company: "The University of Melbourne"
     position: "PhD Candidate in Computing and Information Systems"
     website: "https://piedpiper.com"
@@ -49,6 +56,7 @@ work:
     highlights:
     extra: |-
        > __Teaching__
+         * S1 2021: [INFO20005 - User Interface Development](https://handbook.unimelb.edu.au/2021/subjects/info20005) (Taught on Zoom + GitHub)
          * S2 2020: [COMP30019 - Computer Graphics and Interaction](https://handbook.unimelb.edu.au/2020/subjects/comp30019) (Taught on Zoom + Discord + GitHub Classroom)
          * S1 2020: [INFO90003 - Designing Novel Interaction](https://handbook.unimelb.edu.au/2020/subjects/info90003)
          * S2 2019: [COMP30019 - Computer Graphics and Interaction](https://handbook.unimelb.edu.au/2019/subjects/comp30019)
@@ -56,10 +64,10 @@ work:
          * S2 2018: [COMP30019 - Computer Graphics and Interaction](https://handbook.unimelb.edu.au/2018/subjects/comp30019)
        
         > __Extras__
-          * Treasurer of the Computing and Information System GRaduate Research Students group ([CIS-GReS](https://www.cis-gres.org))
-          * Floor Warden
-          * Assets manager
-          * Part of the NH ERC
+          * **Trainees Program Chair** and member of the [NHMRC Center for Research Excellence](https://connectedhealth-cre.org/) (2020)
+          * **Treasurer** of the Computing and Information System GRaduate Research Students group ([**CIS-GReS**](https://www.cis-gres.org)) (2019)
+          * Floor Warden (2019)
+          * Assets manager for the IDL Lab (2019)
   
   - company: "CSIRO - Data61"
     position: "PhD Candidate"
@@ -229,6 +237,8 @@ certificates:
     extra: "University of Melbourne's Research Integrity Online Training"  
   - title: "WWCC - Working With Children Certificate"
     date: "2019-01-18" 
+  - title: "PADI Open Water Scuba License"
+    date: "2021-01-20" 
 skills:
   - name: "Programming"
     level: "Master"

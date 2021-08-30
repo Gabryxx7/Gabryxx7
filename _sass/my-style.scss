@@ -5,6 +5,24 @@ h1 code {
   font-size: 80%;
 }
 
+.post-title{
+  position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.25rem;
+      bottom: 0.1rem;
+      left: -1.3rem;
+      border-radius: 0.15rem;
+      border-left: 0.35rem solid var(--menu-text);
+    }
+    &.new::before{
+      border-left: 0.4rem solid #fc6565;
+    }
+}
+
+.mb6 { margin-bottom: 4.5rem }
+
 .avatar {
   width: 10rem;
   height: 10rem;
@@ -25,6 +43,13 @@ h1 code {
   }
  .h4{
   margin-bottom: 0.25rem;
+  }
+ .mt2{
+    margin-top: 1rem;
+  }
+  .location{
+    font-size: 0.85em;
+    color: var(--menu-text);
   }
 }
 
@@ -73,4 +98,4 @@ article.project-card {
 @import "code-highlight-fix";
 @import "typing-window";
 @import "photo-gallery";
-@import "icomoon-icons";
+// @import "icomoon-icons";

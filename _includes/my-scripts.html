@@ -129,7 +129,7 @@ var startTypers = function(){
 
 var linesAdded = false;
 var codeLinesSpan = "<span class='code-lines' style='display: none;'> </span>";
-var codeLinesBtn = "<span class='code-lines-btn icon-list-numbered'></span>";
+var codeLinesBtn = "<button class='code-lines-btn icon-list-numbered'></button>";
 var codeLanguageTag = "<span class='code-language-tag'></span>";
 var codeOutputTag = "<span class='code-output-tag icon-enlarge2'></span>";
 var codeOutputMinHeight = "{{ site.data.variables.code_output_peek_height }}rem";
@@ -155,7 +155,7 @@ var addCodeLines = function(){
     };
     var language = languageClass.split("-")[1].split(" ")[0].trim();
     var codeExtras = $(codeExtrasSpan);
-      var languageTag = $(codeLanguageTag);
+    var languageTag = $(codeLanguageTag);
     if(language === '{{ site.data.variables.code_output_alias }}'){
       languageTag.text("{{ site.data.variables.code_output_name }}");
       codeExtras.prepend(languageTag);
@@ -203,9 +203,13 @@ var addCodeLines = function(){
         });
         linesSpan.text([...Array(noLines).keys()].join("\n"));
         $(this).prepend(linesSpan);
-        codeExtras.prepend(linesBtnSpan);
-      };
+        codeExtras.append(linesBtnSpan);
+      }
+      else{
+        codeExtras.toggleClass("inline");
+      }
     };
+    codeExtras.append($(this).find("button"))
     $(this).prepend(codeExtras);
     $(this).addClass("code-extended");
   });

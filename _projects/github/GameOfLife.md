@@ -6,8 +6,6 @@ caption: 'A Multi-threaded version of the popular Game Of Life implemented in fo
   versions: Using Java8 threads, using the Skandium framework, using standard Java
   Threads and sequential'
 date: 2017-07-03 14:30:01
-image:
-  path: null
 description: 'A Multi-threaded version of the popular Game Of Life implemented in
   four versions: Using Java8 threads, using the Skandium framework, using standard
   Java Threads and sequential'
@@ -17,7 +15,7 @@ links:
 
 ---
 
-##Final project of the SPM course (Distributed Systems:  paradigms and models) of University of Pisa
+## Final project of the SPM course (Distributed Systems:  paradigms and models) of University of Pisa
 
 The goal of this project is the implementation of “Game Of Life” in Java, both in a sequential and parallel 
 way. For the parallel implementation of the game, Java’s threads and a CyclicBarrier, the Skandium 
