@@ -39,7 +39,9 @@ code, .dark-mode code{
 
 .post-title{
   position: relative;
+  transition: all 250ms;
     &::before {
+      transition: all 250ms;
       content: "";
       position: absolute;
       top: 0.25rem;
