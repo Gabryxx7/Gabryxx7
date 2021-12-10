@@ -1,0 +1,457 @@
+---
+test: LOL
+basics:
+  name: Gabriele Marini
+  pdf: /assets/Resume.pdf
+  nationality: "Italian"
+  dob: 12-09-1992
+  dob-long: 12th of September 1992
+  label: "PhD Candidate and Programmer"
+  picture: "/assets/icons/icon.jpg"
+  email: "giaga7@gmail.com"
+  phone: "(+61) 048 1149376"
+  website: "https://gmarini.com"
+  summary: |
+    Third  year  PhD  Candidate  at  the  University  of  Melbourne,  sponsored  by  CSIRO-Data61.   My  research focuses on indoor localisation, sensors and modeling.  I am very passionate about research andespecially ubiquitous computing but I often work with 3D graphics (Unity mostly) and Android.
+  location:
+    address: "700 Swanston St. The University of Melbourne"
+    postalCode: "VIC 3000"
+    city: "Melbourne"
+    countryCode: "AU"
+    region: ""
+  profiles:
+    - network: "LinkedIn"
+      username: "Gabriele Marini"
+      url: "https://www.linkedin.com/in/gabryxx7/"
+    - network: "Email"
+      username: "marinig@student.unimelb.edu.au"
+      url: "mailto:marinig@student.unimelb.edu.au"
+    - network: "Facebook"
+      username: "Gabriele Marini"
+      url: "https://www.facebook.com/Gabryxx7"
+    - network: "Instagram"
+      username: "gabryxx7"
+      url: "https://www.instagram.com/gabryxx7"
+    - network: "GitHub"
+      username: "Gabryxx7"
+      url: "https://github.com/Gabryxx7"
+work:
+  - company: "Nokia Bells Lab"
+    position: "Data Science Research Intern"
+    summary: "IoT, sensing and data science internship"
+    startDate: "2021-06-01"
+    endDate: "2021-09-01"
+    location: (Remote) Cambridge, UK
+
+  - company: "The University of Melbourne"
+    position: "PhD Candidate in Computing and Information Systems"
+    website: "https://piedpiper.com"
+    startDate: "2018-05-07"
+    endDate: ""
+    location: Melbourne, Australia
+    summary: >
+     Working on Ubiquitous Computing and IoT
+    highlights:
+    extra: |-
+       > __Teaching__
+         * S1 2021: [INFO20005 - User Interface Development](https://handbook.unimelb.edu.au/2021/subjects/info20005) (Taught on Zoom + GitHub)
+         * S2 2020: [COMP30019 - Computer Graphics and Interaction](https://handbook.unimelb.edu.au/2020/subjects/comp30019) (Taught on Zoom + Discord + GitHub Classroom)
+         * S1 2020: [INFO90003 - Designing Novel Interaction](https://handbook.unimelb.edu.au/2020/subjects/info90003)
+         * S2 2019: [COMP30019 - Computer Graphics and Interaction](https://handbook.unimelb.edu.au/2019/subjects/comp30019)
+         * S2 2019: [SWEN20003 - Object-Oriented Software Development](https://handbook.unimelb.edu.au/2019/subjects/swen20003) (Taught at the [International House College](https://ihouse.unimelb.edu.au/home))
+         * S2 2018: [COMP30019 - Computer Graphics and Interaction](https://handbook.unimelb.edu.au/2018/subjects/comp30019)
+       
+        > __Extras__
+          * **Trainees Program Chair** and member of the [NHMRC Center for Research Excellence](https://connectedhealth-cre.org/) (2020)
+          * **Treasurer** of the Computing and Information System GRaduate Research Students group ([**CIS-GReS**](https://www.cis-gres.org)) (2019)
+          * Floor Warden (2019)
+          * Assets manager for the IDL Lab (2019)
+  
+  - company: "CSIRO - Data61"
+    position: "PhD Candidate"
+    summary: "PhD Sponsored by a top-up Data61 - CSIRO scholarship"
+    startDate: "2018-05-01"
+    location: Melbourne, Australia
+
+  - company: "European Central Bank"
+    position: "Consultant"
+    startDate: "2017-10-01"
+    endDate: "2018-03-01"
+    location: Frankfurt Am Main Area, Germany
+    summary: "Working on the IReF long-term project "
+    extra: |-
+      > - Implementation of an online survey to be sent out to all the banks in Europe 
+      > - Technical support for IT-related matters (Python scripts, WordPress websites management, Javascript, VBA)
+
+  - company: "Scuola Superiore Sant'Anna - TeCIP Institute"
+    position: "Research Assistant"
+    startDate: "2017-07-01"
+    endDate: "2017-10-01"
+    location: Pisa, Italy
+    # summary: ""
+    extra: |-
+      > - Robot Vision and Hand-Eye Camera Robot calibration
+      > - HMI development (C#, MySQL)
+      > - 3D Viewer of robotic arm with Inverse Kinematics
+
+  - company: "Software Engineer Intern"
+    position: "VRMedia SRL"
+    startDate: "2016-10-01"
+    endDate: "2017-06-01"
+    location: Pisa, Italy    
+    extra: |-
+      > I worked on my Master's thesis under the supervision of Franco Tecchia and Marcello Carrozzino. Occasional work on part of other projects on the Unreal Engine.
+      > I developed a plugin for the Unreal Engine that implements the S3D scripting language and the of the XVR Environment (included its VM) in the engine. The project also includes the development of a code editor with a custom debugger and a debug UI
+  
+  - company: "Università di Cagliari"
+    position: "Internship"
+    startDate: "2014-05-01"
+    endDate: "2014-07-01"
+    location: Cagliari, Italy
+    summary: "Bachelor's thesis project under the supervision of Riccardo Scateni"
+
+volunteer:
+  - organization: "UbiComp 2020"
+    position: "Student Volunteer (SV)"
+    website: "http://ubicomp.org/ubicomp2020/"
+    startDate: "2020-09-06"
+    endDate: "2020-09-13"
+    summary:  "Conference reception and technical support"
+    # highlights:
+    #   - test
+  - organization: "UbiComp 2019"
+    position: "Student Volunteer (SV)"
+    website: "http://ubicomp.org/ubicomp2019/"
+    startDate: "2019-09-06"
+    endDate: "2019-09-13"
+    summary:  "Conference reception and technical support"
+  - organization: "HCI Lab (IDL) Open House"
+    position: "Demo"
+    startDate: "2019-08-23"
+    endDate: "2019-08-23"
+    summary:  "Showcase of PhD and side projects"
+  - organization: "University of Melbourne"
+    position: "Open Day Volunteer"
+    startDate: "2019-08-18"
+    endDate: "2019-08-18"
+    summary:  "Demonstration of Emotion Recognition Project"
+  - organization: "OzCHI 2018"
+    position: "Student Volunteer (SV)"
+    website: "http://www.ozchi.org/2018/"
+    startDate: "2018-09-01"
+    endDate: "2018-09-01"
+    summary: "Conference reception and technical support"
+education:
+  - institution: "University of Melbourne"
+    area: "Computing and Information Systems"
+    studyType: "PhD"
+    location: Melbourne, Australia
+    # description: "test"
+    # extra: "test2"
+    startDate: "2018-05-01"
+    # endDate: ""
+    # grade: "110/110 *cum laude*"
+    # courses:
+    #   - "DB1101 - Basic SQL"
+    #   - "CS2011 - Java Introduction"
+    extra: |-
+      > - INFO90003 - Designing Novel Interaction (Best Project Award) - H1
+      > - COMP90044 - Research Methods - H2B"
+      > - MTC-GR - Melbourne Teaching Certificate for Graduate Research
+  - institution: "Università degli studi di Pisa"
+    area: "Computer Science"
+    studyType: "MSc"
+    startDate: "2014-09-01"
+    endDate: "2017-06-01"
+    location: Pisa, Italy
+    grade: 110/110 *cum laude*
+    extra: |-
+      > - Advanced Database Systems
+      > - Advanced Programming
+      > - Computational Models
+      > - Distributed Systems: paradigms and models
+      > - Numerical Methods and Optimization
+      > - Principle of Programming Languages
+      > - Computer Graphics Fundamentals
+  - institution: "Università degli studi di Cagliari"
+    area: "Computer Science"
+    studyType: "BSc"
+    startDate: "2011-09-01"
+    endDate: "2014-07-01"
+    location: Cagliari, Italy
+    grade: 110/110 *cum laude*
+  # - institution: "University of Melbourne"
+  #   description: "TEST2"
+  #   area: "Computing and Information Systems"
+  #   studyType: "PhD"
+  #   startDate: "2018-05-01"
+  #   endDate: ""
+  #   grade: ""
+awards:
+  - title: "Data61 - CSIRO Scholarship"
+    date: "2018-05-01"
+    awarder: Data61 - CSIRO
+    website: "https://www.data61.csiro.au/"
+    # summary : ""
+  - title: "Top graduates (Academic year 2017)"
+    date: "2017-07-01"
+    awarder: "Università degli studi di Pisa"
+  - title: "Regional Merit Scholarship (Academic year 2014-2015)"
+    date: "2015-07-01"
+    awarder: "DSU Toscana"
+  - title: "Graduation Prize (Academic year 2015)"
+    date: "2015-07-01"
+    awarder: "ERSU Cagliari"
+  - title: "3rd Place Open Water Swimming Circuit"
+    date: "2014-07-01"
+    awarder: "FIN Sardegna"
+
+languages:
+  - language: "Italian"
+    fluency: "Native speaker"
+    stars: 5
+  - language: "English"
+    fluency: "C2- Proficient"
+    stars: 4
+  - language: "Spanish"
+    fluency: "Intermediate"
+    stars: 3
+  - language: "Portuguese"
+    fluency: "Beginner"
+    stars: 2
+
+certificates:
+  - title: "TOEFL"
+    date: "2017-05-01"
+    extra: "Total 112 (Reading: 28, Listening: 28, Speaking: 26, Writing: 30)"
+  - title: "MTC-GR"
+    date: "2019-11-01"
+    extra: "Melbourne Teaching Certificate for Graduate Research"  
+  - title: "Tutor Development Program"
+    date: "2018-11-01"
+    extra: "Tutor Certificate"   
+  - title: "RIOT - Research Integrity Online Training"
+    date: "2018-11-01"
+    extra: "University of Melbourne's Research Integrity Online Training"  
+  - title: "WWCC - Working With Children Certificate"
+    date: "2019-01-18" 
+  - title: "PADI Open Water Scuba License"
+    date: "2021-01-20" 
+skills:
+  - name: "Programming"
+    level: "Master"
+    # stars: 3
+    keywords:
+      - "C"
+      - "C++"
+      - "C#"
+      - "Java"
+      - "Python"
+      - "OCAML"
+      - "GLSL/HLSL"
+      - "XVR"
+  - name: "Data Analysis"
+    level: "Master"
+    # stars: 3
+    keywords:
+      - "R"
+      - "Python"    
+  - name: "Development & Softwares"
+    level: "Master"
+    # stars: 3
+    keywords:
+      - "Android"
+      - "Unity 3D"
+      - "Unreal Engine"
+      - ".NET"
+  - name: "Web Development"
+    level: "Master"
+    # stars: 3
+    keywords:
+      - "HTML"
+      - "CSS"
+      - "Javascript"
+      - "PHP"
+      - "SQL"
+      - "MySQL"
+      - "SQLite"
+      - "Node.JS"
+  - name: "Writing"
+    level: "Master"
+    # stars: 3
+    keywords:
+      - "LaTeX"
+      - "Markdown"
+  - name: "Editing"
+    level: "Master"
+    # stars: 3
+    keywords:
+      - "Adobe Lightroom"
+      - "Adobe Photoshop"
+      - "Adobe Illustrator"
+      - "Adobe Premiere"
+interests:
+  - name: "Hobbies"
+    keywords:
+      - "Traveling"
+      - "Gaming"
+      - "Programming"
+  - name: "Sports"
+    keywords:
+      - "Swimming"
+      - "Calisthenics"
+      - "Martial Arts"
+  - name: "Photography"
+    keywords:
+      - "Landscape"
+      - "Aerial Photography"
+      - "Astrophotography"
+references:
+  # - name: "Erlich Bachman"
+  #   reference: >
+  #     It is my pleasure to recommend Richard, his performance working as a consultant for Main St.
+  #     Company proved that he will be a valuable addition to any company.
+
+publications:
+  - name: 'A System to Quantify Mobility and Occupancy Levels in ClinicalSettings: Development
+    and Implementation'
+    publisher: Submitted to JMIR mHealth & uHealth
+    releaseDate: '2020-09-01'
+    authors:
+    - <ins><strong>Gabriele Marini</strong></ins>
+    - Benjamin Tag
+    - "Jorge Gon\xE7alves"
+    - Eduardo Velloso
+    - Raja Jurdak
+    - Vassilis Kostakos
+    - Bill Shearer
+    - Clare McCarthy
+    website: https://dl.acm.org/citation.cfm?id=3349306
+  - name: Northern Health gets its teeth into patient flow
+    publisher: VicHealth
+    publisherUrl: http://www.health.vic.gov.au
+    releaseDate: '2019-07-01'
+  - name: '"Hi! I am the Crowd Tasker" Crowdsourcing through Digital Voice Assistants.'
+    type: inproceedings
+    releaseDate: '2020-06-15'
+    year: '2020'
+    month: None
+    journal: None
+    editors: []
+    publisher: CHI
+    pages: 1-14
+    publisherDBLP: None
+    school: None
+    authors:
+    - Danula Hettiachchi
+    - Zhanna Sarsenbayeva
+    - Fraser Allison
+    - Niels van Berkel
+    - Tilman Dingler
+    - <ins><strong>Gabriele Marini</strong></ins>
+    - Vassilis Kostakos
+    - "Jorge Gon\xE7alves"
+    website: https://doi.org/10.1145/3313831.3376320
+  - name: Does Smartphone Use Drive our Emotions or vice versa? A Causal Analysis.
+    type: inproceedings
+    releaseDate: '2020-06-15'
+    year: '2020'
+    month: None
+    journal: None
+    editors: []
+    publisher: CHI
+    pages: 1-15
+    publisherDBLP: None
+    school: None
+    authors:
+    - Zhanna Sarsenbayeva
+    - <ins><strong>Gabriele Marini</strong></ins>
+    - Niels van Berkel
+    - Chu Luo
+    - Weiwei Jiang
+    - Kangning Yang
+    - Greg Wadley
+    - Tilman Dingler
+    - Vassilis Kostakos
+    - "Jorge Gon\xE7alves"
+    website: https://doi.org/10.1145/3313831.3376163
+  - name: Probing Sucrose Contents in Everyday Drinks Using Miniaturized Near-Infrared
+      Spectroscopy Scanners.
+    type: article
+    releaseDate: '2020-03-27'
+    year: '2019'
+    month: None
+    journal: IMWUT
+    editors: []
+    publisher: None
+    pages: 136:1-136:25
+    publisherDBLP: None
+    school: None
+    authors:
+    - Weiwei Jiang
+    - <ins><strong>Gabriele Marini</strong></ins>
+    - Niels van Berkel
+    - Zhanna Sarsenbayeva
+    - Zheyu Tan
+    - Chu Luo
+    - Xin He
+    - Tilman Dingler
+    - "Jorge Gon\xE7alves"
+    - Yoshihiro Kawahara
+    - Vassilis Kostakos
+    website: https://doi.org/10.1145/3369834
+  - name: Towards indoor localisation analytics for modelling flows of movements.
+    type: inproceedings
+    releaseDate: '2019-09-18'
+    year: '2019'
+    month: None
+    journal: None
+    editors: []
+    publisher: UbiComp/ISWC Adjunct
+    pages: 377-382
+    publisherDBLP: None
+    school: None
+    authors:
+    - <ins><strong>Gabriele Marini</strong></ins>
+    website: https://doi.org/10.1145/3341162.3349306
+  - name: Towards context-free semantic localisation.
+    type: inproceedings
+    releaseDate: '2019-12-27'
+    year: '2019'
+    month: None
+    journal: None
+    editors: []
+    publisher: UbiComp/ISWC Adjunct
+    pages: 584-591
+    publisherDBLP: None
+    school: None
+    authors:
+    - <ins><strong>Gabriele Marini</strong></ins>
+    - "Jorge Gon\xE7alves"
+    - Eduardo Velloso
+    - Raja Jurdak
+    - Vassilis Kostakos
+    website: https://doi.org/10.1145/3341162.3349329
+  - name: A Mobile Scanner for Probing Liquid Samples in Everyday Settings.
+    type: inproceedings
+    releaseDate: '2020-03-27'
+    year: '2018'
+    month: None
+    journal: None
+    editors: []
+    publisher: UbiComp/ISWC Adjunct
+    pages: 1172-1177
+    publisherDBLP: None
+    school: None
+    authors:
+    - Weiwei Jiang
+    - <ins><strong>Gabriele Marini</strong></ins>
+    - Niels van Berkel
+    - Zhanna Sarsenbayeva
+    - Chu Luo
+    - Xin He
+    - Tilman Dingler
+    - Yoshihiro Kawahara
+    - Vassilis Kostakos
+    website: https://doi.org/10.1145/3267305.3274764
+---
