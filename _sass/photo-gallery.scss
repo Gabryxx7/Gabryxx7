@@ -25,19 +25,19 @@
       position: relative;
     }
   
-    .photo-group-date-container::before{
-      content: "";
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 5rem;
-      margin: auto;
-      // box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.02), 0 22.3px 17.9px rgba(0, 0, 0, 0.05), 8px 20px 33.4px rgba(0, 0, 0, 0.02), 0 100px 80px rgba(0, 0, 0, 0.01);
-      box-shadow: -6px 4px 1px rgba(0,0,0,0.06), -5px 2px 2px rgba(0,0,0,0.06), -9px 6px 4px rgba(0,0,0,0.06), -8px 5px 8px rgba(0,0,0,0.06), -9px 7px 16px rgba(0,0,0,0.06);
-      z-index: -1;
-      padding: 0;
-      margin-left: -1rem;
-    }
+    // .photo-group-date-container::before{
+    //   content: "";
+    //   position: absolute;
+    //   display: block;
+    //   width: 100%;
+    //   height: 5rem;
+    //   margin: auto;
+    //   // box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.02), 0 22.3px 17.9px rgba(0, 0, 0, 0.05), 8px 20px 33.4px rgba(0, 0, 0, 0.02), 0 100px 80px rgba(0, 0, 0, 0.01);
+    //   box-shadow: -6px 4px 1px rgba(0,0,0,0.06), -5px 2px 2px rgba(0,0,0,0.06), -9px 6px 4px rgba(0,0,0,0.06), -8px 5px 8px rgba(0,0,0,0.06), -9px 7px 16px rgba(0,0,0,0.06);
+    //   z-index: -1;
+    //   padding: 0;
+    //   margin-left: -1rem;
+    // }
   }
   
   
@@ -157,10 +157,22 @@
       opacity: 1;
     }
   }
+
+
+  .photo-feed .photo-card.mini {
+    flex: 0 1 48%;
+  }
+  .photo-feed .photo-card.highlight {
+    flex: 0 1 90%;
+  }
+  .photo-feed .photo-card {
+    flex: 0 1 65%;
+  }
   
   
   .photo-feed .photo-card.multiple {
-    flex: 0 1 99% !important;
+    flex: 0 1 90% !important;
+    transform: scale(1.0);
   }
   .photo-feed .photo-card.multiple.multi-2 img {
     width: 48%;
@@ -169,27 +181,68 @@
     width: 32.5%;
   }
   .photo-feed .photo-card.multiple.multi-4 img {
-    width: 24%;
+    width: 49.6%;
   }
   .photo-feed .photo-card.multiple.multi-5 img {
-    width: 19%;
+    width: 32.8%;
   }
+  .photo-feed .photo-card.multiple.multi-6 img {
+    width: 32.8%;
+  }
+  .photo-feed .photo-card.multiple.multi-7 img {
+    width: 32.8%;
+  }
+  
+.photo-card-img.img {
+    display: flex;
+    /* height: auto; */
+    flex-wrap: wrap;
+    /* width: auto; */
+    /* place-items: center; */
+    align-content: space-between;
+    /* align-content: center; */
+    /* align-items: center; */
+    justify-content: space-between;
+    /* justify-items: center; */
+    /* justify-self: center; */
+}
+
+.photo-card.multiple.multi-4 .photo-card-img.img>*:first-child,
+.photo-card.multiple.multi-5 .photo-card-img.img>*:first-child,
+.photo-card.multiple.multi-6 .photo-card-img.img>*:first-child,
+.photo-card.multiple.multi-7 .photo-card-img.img>*:first-child {
+    align-self: center;
+    width: 49.8%;
+}
+.photo-card.multiple.multi-4 .photo-card-img.img>*:nth-child(2),
+.photo-card.multiple.multi-5 .photo-card-img.img>*:nth-child(2),
+.photo-card.multiple.multi-6 .photo-card-img.img>*:nth-child(2),
+.photo-card.multiple.multi-7 .photo-card-img.img>*:nth-child(2) {
+    align-self: center;
+    width: 49.8%;
+}
   
   
   //Content 64em
   @media screen and (min-width: 64em) {
     
     .photo-feed .photo-card.multiple.multi-2 img {
-      width: 44.5%;
+      width: 49.6%;
     }
     .photo-feed .photo-card.multiple.multi-3 img {
       width: 33%;
     }
     .photo-feed .photo-card.multiple.multi-4 img {
-      width: 24.5%;
+      width: 49.6%;
     }
     .photo-feed .photo-card.multiple.multi-5 img {
-      width: 19.5%;
+      width: 32.8%;
+    }
+    .photo-feed .photo-card.multiple.multi-6 img {
+      width: 32.8%;
+    }
+    .photo-feed .photo-card.multiple.multi-7 img {
+      width: 32.8%;
     }
   }
   
@@ -202,9 +255,6 @@
   
   /* ----------- Retina Screens ----------- */
   @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-    .photo-feed .photo-card {
-      flex: 0 1 34%;
-    }
   }
   
   
@@ -236,9 +286,6 @@
       max-width: 80rem;
     }
      
-    .photo-feed .photo-card {
-      flex: 0 1 32%;
-    }
   }
   
   //Content 160em

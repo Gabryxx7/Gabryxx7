@@ -15,12 +15,33 @@ addons: [comments, about]
 
 <div class="photo-feed">
 {% assign photolist = site.data.photos-list %}
-{% assign photo_sorted = site.data.photos-list.photos | sort:"date" | reverse %}
+{% assign photo_sorted = site.data.photos-list.photos | sort:"timestamp" | reverse %}
 {% assign prev_date = 0 %}
+{% assign extra_class = "" %}
+{% assign mini_cnt = 0 %}
 
 {% for photo in photo_sorted %}
     {% assign current_date = photo.date | date:"%Y" %}
-    {% if photo.file %}
+    {% if photo.file.size < 2 %}
+        {% if mini_cnt == 1 %}
+            {% assign mini_cnt = 2 %}
+            {% assign extra_class = "mini" %}
+        {% else %}
+            {% assign mini_cnt = 0 %}
+            {% assign min = 1 %}
+            {% assign max = 100 %}
+            {% assign diff = max | minus: min %}
+            {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+            {% if randomNumber > 0 and randomNumber <= 30 %}
+                {% assign extra_class = "mini" %}
+                {% assign mini_cnt = 1 %}
+            {% elsif randomNumber > 30 and randomNumber <= 75 %}
+                {% assign extra_class = "" %}
+            {% else %}
+                {% assign extra_class = "highlight" %}
+            {% endif %}
+        {% endif %}
+
         {% if page.grouped %}
             {% if current_date != prev_date %}
                 <blockquote class="photo-group-date-container">
@@ -33,17 +54,17 @@ addons: [comments, about]
         {% if photo.highlight %}
             <article class='photo-card' style="flex: 0 1 auto;">
         {% else %}
-            <article class='photo-card'>
+            <article class='photo-card {{ extra_class }}'>
         {% endif %}
             <div class='photo-icon'><span class='{{ photo.icon }}'></span></div>
             <div class='photo-card-img img'>
-                <img data-ignore src='{{ photolist.preview_folder }}{{ photo.file }}' loading='lazy'/>
+                <img data-ignore src='{{ photolist.preview_folder }}{{ photo.file }}'>
             </div>
     {% else %}  
-        <article class='photo-card multiple multi-{{ photo.files.size }}'>
+        <article class='photo-card multiple multi-{{ photo.file.size }}'>
             <div class='photo-card-img img'>
-            {% for file in photo.files %}
-                <img data-ignore src='{{ photolist.preview_folder }}{{ file }}' loading='lazy'/>
+            {% for file in photo.file %}
+                <img data-ignore src='{{ photolist.preview_folder }}{{ file }}'/>
             {% endfor %}    
             </div>
     {% endif %}
