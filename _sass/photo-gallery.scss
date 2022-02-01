@@ -43,14 +43,13 @@
   
   .photo-icon, .project-icon {
     display: block;
-    // background-color: transparent;
-    background-color: var(--gray-bg);
+    background-color: transparent;
     color: #dbd7d7b0 !important;
     text-shadow: 1px 1px 1px #29292966;
     position: absolute;
-    top: 1.8rem;
+    top: 1.8em;
     right: 0;
-    padding: 0.3rem;
+    padding: 0.2em;
     transition: all 250ms;
     z-index: 2;
     font-size: 1rem;
@@ -80,6 +79,7 @@
   }
   
   .photo-feed .photo-card {
+    background-color: var(--gray-bg);
     transition: all 250ms ease-out;
     position: relative;
     color: white !important;
@@ -102,6 +102,7 @@
   
     .photo-card-caption {
       display:flex;
+      text-decoration: none;
       background-color: var(--accent-color-transparent-darkened);
       color: white !important;
       position: absolute;
@@ -160,8 +161,9 @@
     .location {
       background-color: var(--gray-bg);
       margin: 0;
-      padding-top: 0.3rem;
-      padding-bottom: 0.2rem;
+      padding-top: 0.3em;
+      padding-bottom: 0.2em;
+      color: grey;
       color: grey;
       margin: auto;
       text-align: center;
@@ -284,6 +286,11 @@
     .content.layout-photo-feed .location {
       display: none;
     }
+
+    .content.layout-photo-feed .photo-icon{
+      font-size: 0.8reml;
+      top: 0.8em;
+    }
   }
   
   
@@ -312,6 +319,9 @@
       padding-right: 0;
       margin-right: 0;
     }     
+    .content.layout-photo-feed .photo-icon{
+      top: 2.4em;
+    }
   }
   
   //Content 160em
@@ -321,5 +331,8 @@
       margin-left: 30rem;
       padding-right: 0;
       margin-right: 0;
+    }
+    .content.layout-photo-feed .photo-icon{
+      top: 2.4em;
     }
   }
