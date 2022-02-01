@@ -88,14 +88,26 @@ addons: [comments, about]
         {% else %}
             <article class='photo-card {{ extra_class }}'>
         {% endif %}
+            {% if photo.location %}
+                <div class="location"> <span class="icon-location" style="font-size: 0.9rem;"> </span> {{ photo.location }}</div>
+            {% endif %}
                 {% if photo.file.first contains ".mp4" %}
-                    <div class='photo-icon'><span class='icon-video-camera1'></span></div>
+                    <div class='photo-icon'>
+                    <div class='icon-video-camera1'></div>
+                    <span class='icon-heart'></span>
+                    <span class="counter"> {{ photo.likes_count }} </span>
+                    
+                    </div>
                     <div class='photo-card-img img'>
                     <video loop="true" autoplay="autoplay" muted>
                     <source src='{{ photolist.preview_folder }}{{ photo.file }}' type="video/mp4">
                     </video>
                 {% else %}
-                    <div class='photo-icon'><span class='icon-instagram'></span></div>
+                    <div class='photo-icon'>
+                        <div class='icon-instagram'></div>
+                        <span class='icon-heart'></span>
+                        <span class="counter"> {{ photo.likes_count }} </span>
+                    </div>
                     <div class='photo-card-img img'>
                     <img data-ignore src='{{ photolist.preview_folder }}{{ photo.file }}'>
                 {% endif %}
@@ -103,7 +115,14 @@ addons: [comments, about]
     {% else %}  
         {% assign mini_cnt = 3 %}
         <article class='photo-card multiple multi-{{ photo.file.size }}'>
-            <div class='photo-icon'><span class='icon-instagram'></span></div>
+            {% if photo.location %}
+                <div class="location"> <span class="icon-location" style="font-size: 0.9rem;"> </span> {{ photo.location }}</div>
+            {% endif %}
+            <div class='photo-icon'>
+            <div class='icon-instagram'></div>
+            <span class='icon-heart'></span>
+            <span class="counter"> {{ photo.likes_count }} </span>
+            </div>
             <div class='photo-card-img img'>
             {% for file in photo.file %}
                 <img data-ignore src='{{ photolist.preview_folder }}{{ file }}'/>
@@ -116,9 +135,6 @@ addons: [comments, about]
         {% endif %}
         <div class='img-descr'> {{ photo.caption }} </div>
     </a>     
-    {% if photo.location %}
-        <div class="location"> <span class="icon-location" style="font-size: 0.9rem;"> </span> {{ photo.location }}</div>
-    {% endif %}
     </article>  
     {% assign prev_date = current_date %}
 {% endfor %}   

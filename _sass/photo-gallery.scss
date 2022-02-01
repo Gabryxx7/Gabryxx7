@@ -43,13 +43,14 @@
   
   .photo-icon, .project-icon {
     display: block;
-    background-color: transparent;
+    // background-color: transparent;
+    background-color: var(--gray-bg);
     color: #dbd7d7b0 !important;
     text-shadow: 1px 1px 1px #29292966;
     position: absolute;
-    top: 0;
+    top: 1.8rem;
     right: 0;
-    padding: 0.5rem;
+    padding: 0.3rem;
     transition: all 250ms;
     z-index: 2;
     font-size: 1rem;
@@ -59,6 +60,18 @@
     -ms-transform: translate3d(0,0,0);
     -o-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+
+    div, span {
+      margin-top: 0.2rem;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .counter{
+      vertical-align: middle;
+      text-shadow: 1px 1px 1px #29292991;
+      font-weight: 800;
+    }
   }
 
   .project-icon{
