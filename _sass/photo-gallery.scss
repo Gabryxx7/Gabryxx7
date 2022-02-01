@@ -44,12 +44,12 @@
   .photo-icon, .project-icon {
     display: block;
     background-color: transparent;
-    color: #ffffffbd !important;
+    color: #dbd7d7b0 !important;
     text-shadow: 1px 1px 1px #29292966;
     position: absolute;
     top: 0;
     right: 0;
-    padding: 2%;
+    padding: 0.5rem;
     transition: all 250ms;
     z-index: 2;
     font-size: 1rem;
@@ -72,9 +72,9 @@
     color: white !important;
     overflow: hidden;
     //box-shadow: #7d7d7d5c 2px 3px 5px 0;
-    margin-bottom: 1%;
-    border-radius: 0.4rem;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 6px 8px rgba(0,0,0,0.05), 0 8px 16px rgba(0,0,0,0.05);
+    margin-bottom: 0.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.13), -1px -1px 6px rgba(0, 0, 0, 0.13);
     -webkit-transform: translate3d(0,0,0);
     -moz-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);

@@ -1,6 +1,6 @@
 ---
 layout: photo-feed
-title: Photos
+title: Photo Gallery
 grouped: false
 addons: [comments, about]
 ---
@@ -95,7 +95,7 @@ addons: [comments, about]
                     <source src='{{ photolist.preview_folder }}{{ photo.file }}' type="video/mp4">
                     </video>
                 {% else %}
-                    <!-- <div class='photo-icon'><span class='{{ photo.icon }}'></span></div> -->
+                    <div class='photo-icon'><span class='icon-instagram'></span></div>
                     <div class='photo-card-img img'>
                     <img data-ignore src='{{ photolist.preview_folder }}{{ photo.file }}'>
                 {% endif %}
@@ -103,6 +103,7 @@ addons: [comments, about]
     {% else %}  
         {% assign mini_cnt = 3 %}
         <article class='photo-card multiple multi-{{ photo.file.size }}'>
+            <div class='photo-icon'><span class='icon-instagram'></span></div>
             <div class='photo-card-img img'>
             {% for file in photo.file %}
                 <img data-ignore src='{{ photolist.preview_folder }}{{ file }}'/>
