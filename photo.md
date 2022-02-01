@@ -1,12 +1,12 @@
 ---
 layout: photo-feed
 title: Photos
-grouped: true
+grouped: false
 addons: [comments, about]
 ---
 
 <div class="message">
-    I'm an amateur photographer who enjoys taking mostly landscape pictures!
+    I'm an amateur photographer who enjoys taking mostly landscape photos!
     <details>
     <summary>My current gear (updated 2022):</summary>
     
@@ -67,7 +67,7 @@ addons: [comments, about]
             {% if randomNumber > 0 and randomNumber <= 30 %}
                 {% assign extra_class = "mini" %}
                 {% assign mini_cnt = 1 %}
-            {% elsif randomNumber > 30 and randomNumber <= 75 %}
+            {% elsif randomNumber > 30 and randomNumber <= 85 %}
                 {% assign extra_class = "" %}
             {% else %}
                 {% assign extra_class = "highlight" %}
@@ -101,6 +101,7 @@ addons: [comments, about]
                 {% endif %}
             </div>
     {% else %}  
+        {% assign mini_cnt = 3 %}
         <article class='photo-card multiple multi-{{ photo.file.size }}'>
             <div class='photo-card-img img'>
             {% for file in photo.file %}
