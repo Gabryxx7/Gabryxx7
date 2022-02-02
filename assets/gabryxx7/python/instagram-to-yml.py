@@ -7,6 +7,7 @@ from geopy.adapters import AioHTTPAdapter
 import requests #to make TMDB API calls
 import urllib.parse
 
+
 class InstaPhoto:
     using_geolocator = 0
     max_geolocators = 10

@@ -71,8 +71,13 @@ author:
 menu:
   - title:             Blog
     url:               /blog
-  - title:             Photo Gallery
+  - title:             Photography
     url:               /photo/
+    menu:
+      - title:  Gallery
+        url:    /photo/
+      - title:  Tutorials
+        url:    /photo/
   - title:             Résumé\CV
     url:               /resume/
   - title:             Publications

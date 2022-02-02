@@ -1,0 +1,47 @@
+.sub-menu{
+    padding: 0;
+    margin: 0;
+    display: block;
+    transition: max-height 0.3s ease-out, opacity 0.2s linear;
+    max-height: 0rem;
+    position: relative;
+    margin-left: 0.5rem;
+    list-style: none;
+    overflow: hidden;
+    opacity: 0;
+    margin-left: 20%;
+    a {
+        font-size: 90%;
+        margin-bottom: 0.2rem;
+        font-weight: 100;
+        line-height: 1.3;
+        font-family: 'Noto Sans';
+        text-decoration-thickness: 1px;
+    }
+  }
+  
+  /* Show the dropdown menu on hover */
+  .has_submenu:hover > .sub-menu{
+      transition: max-height 0.3s ease-out, opacity 0.2s linear;
+      display: block;
+      max-height: 10rem;
+      opacity: 1;
+  }
+
+  .has_submenu > a::after{
+    font-family: 'icomoon' !important;
+    display: inline-block;
+    position: absolute;
+    content: "\ea29";
+    margin-left: 1.5rem;
+    margin-top: 0.7%;
+    font-size: 90%;
+    vertical-align: middle;
+}
+
+.sidebar-nav > ul > .has_submenu > .sub-menu{
+    margin-left: -0.2rem;  
+    margin-top: -0.1rem;
+  } 
+  
+  
