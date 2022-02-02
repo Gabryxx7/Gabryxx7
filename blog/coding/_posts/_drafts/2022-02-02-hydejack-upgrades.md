@@ -16,7 +16,7 @@ Create a new file `/#jekyll-theme-hydejack/_includes/body/sub-menu.html`
     <li {% if node.menu.size > 0 %} class="has_submenu" {% endif %}>
         <a
         {% if forloop.first %}id="_drawer--opened"{% endif %}
-        href="{% include_cached smart-url url=url %}"
+        {% if node.url %}href="{% include_cached smart-url url=url %}"{% endif %}        
         class="sidebar-nav-item {% if node.external  %}external{% endif %}"
         {% if node.rel %}rel="{{ node.rel }}"{% endif %}
     >
