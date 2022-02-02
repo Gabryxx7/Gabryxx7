@@ -1,15 +1,20 @@
 ---
-title: Hydejack Upgrades
+title: My Hydejack Theme Upgrades
 excerpt_separator: <!--more-->
-image: 
-  path: /home/gabryxx7/repos/blog/assets/img/blog/hydejack-9.jpg
+# image: 
+#   path: /assets/img/blog/hydejack-9.jpg
 #   class: "wide-img"
 ---
+
+- Table of Contents
+{:toc .large-only}
+
 
 # CSS only submenu
 Create a new file `/#jekyll-theme-hydejack/_includes/body/sub-menu.html`
 
-```liquid
+{% highlight liquid %}
+{% raw %}
 {% assign menu = include.menu %}
 {% for node in menu %}
     {% assign url = node.url | default: node.href %}
@@ -29,14 +34,17 @@ Create a new file `/#jekyll-theme-hydejack/_includes/body/sub-menu.html`
     {% endif %}
     </li>
 {% endfor %}
-```
+  {% endraw %}
+{% endhighlight %}
 
 Edit `/#jekyll-theme-hydejack/_includes/body/nav.html` and replace the content of this `if` statement with this:
-```liquid
+{% highlight liquid %}
+{% raw %}
   {% if site.menu %}
    {% include body/sub-menu.html menu=site.menu %}
   {% else %}
-```
+  {% endraw %}
+{% endhighlight %}
 
 Add a new `sass` file `sub-menu.scss`:
 
