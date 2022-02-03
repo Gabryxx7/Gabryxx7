@@ -225,7 +225,7 @@ class ScraperBot:
             self.logger.s(f"Added {len(filtered_list)} new instagram posts to your website! {str(filtered_list)}")
             os.system("sudo JEKYLL_ENV=production bundle exec jekyll build")
         else:
-            self.logger.i(f"All up to date!")
+            self.logger.s(f"All up to date!")
         return photo_list
 
     # max_pages: -1 for all of them, 0 only for the first one (so __a1) etc...
