@@ -27,18 +27,26 @@ import re
 
 
 class Post:
-    def __init__(self, caption=None, filepath=None, timestamp=None, exif_data=None):
-        self.caption = caption
-        self.file = filepath
-        self.exif_data = exif_data        
+    def __init__(self, timestamp=None, caption=None, post_id=None, location=None, shortcode=None, comments_count=None,likes_count=None, url=None, file=None, exif_data=None, bot_added=False):
         self.timestamp = timestamp
+        self.datetime_obj = None
+        self.datetime = None
+        self.caption = caption
+        self.id = post_id
+        self.location = location
+        self.shortcode = shortcode
+        self.comments_count = comments_count
+        self.likes_count = likes_count
+        self.url = url
+        self.file = file
+        self.exif_data = exif_data
+        self.bot_added = bot_added
         if self.timestamp is not None:
             self.datetime_obj = datetime.fromtimestamp(self.timestamp)
             self.datetime = str(self.datetime_obj.isoformat())
-        self.url = ""
 
     def __str__(self):
-        return str(self.file)
+        return f"Post: [time:{self.timestamp}, datetime:{self.datetime} caption:{self.caption}]"
     
 
 class ScraperBot:
@@ -85,16 +93,16 @@ class ScraperBot:
             print(f"No metadata json file! You can get it by going to 'https://www.instagram.com/<ig_username>/?__a=1'\nException: {e}")
             
 
-    def get_post_metadata(data, keys_path):
+    def get_post_metadata(self, data, keys_path):
         try:
             for key in keys_path:
                 data = data[key]
             return data
         except Exception as e:
-            print(f"Exception getting key {key}: {e}")
+            self.logger.e(f"Exception getting key {key} from {keys_path}: {e}")
             return None
 
-    def find_post_in_scraped_data(self, post):
+    def find_post_metadata(self, post):
         for edge in self.edges_list:
             node = edge["node"]
             if "taken_at_timestamp" in node and int(node["taken_at_timestamp"]) == int(post.timestamp):
@@ -102,51 +110,53 @@ class ScraperBot:
                 return node
         return None
 
-    def post_from_metadata(self, metadata):
-        post = Post(timestamp=metadata['taken_at_timestamp'])
-        post = self.update_post_metadata(post, metadata)
-        return Post
+    def post_from_metadata(self, metadata, photo_folder="."):
+        post = Post(timestamp=metadata['taken_at_timestamp'], bot_added=True)
+        post = self.update_post_metadata(post, metadata=metadata, photo_folder=photo_folder)
+        return post
             
-    def update_post_metadata(self, post, metadata=None):
+    def update_post_metadata(self, post, metadata=None, photo_folder="."):
         if metadata is None:
             if len(self.edges_list) > 0:
-                metadata = find_post_in_scraped_data(post)
-        post.caption = self.get_post_metadata(metadata, ["edge_media_to_caption","edges", "node","text"])
-        post.timestamp = self.get_post_metadata(metadata, ["taken_at_timestamp"])
-        post.datetime_obj = datetime.fromtimestamp(post.timestamp)
-        post.datetime = str(post.datetime_obj.isoformat())
-        post.id = self.get_post_metadata(metadata, ["id"])
-        post.location = self.get_post_metadata(metadata, ['location','name'])
-        post.shortcode = self.get_post_metadata(metadata, ['shortcode'])
-        post.comments_count = self.get_post_metadata(metadata, ['edge_media_to_comment', 'count'])
-        post.likes_count = self.get_post_metadata(metadata, ['edge_media_preview_like', 'count'])
-        post.url = f"https://www.instagram.com/p/{post.shortcode}/"
-        post.files = download_post_images(metadata, f"{post.datetime_obj.year:02d}{post.datetime_obj.month:02d}")        
-        return post    
+                metadata = self.find_post_metadata(post)
+        if metadata is not None:
+            post.caption = self.get_post_metadata(metadata, ["edge_media_to_caption","edges",0, "node","text"])
+            post.timestamp = self.get_post_metadata(metadata, ["taken_at_timestamp"])
+            post.datetime_obj = datetime.fromtimestamp(post.timestamp)
+            post.datetime = str(post.datetime_obj.isoformat())
+            post.id = self.get_post_metadata(metadata, ["id"])
+            post.location = self.get_post_metadata(metadata, ['location','name'])
+            post.shortcode = self.get_post_metadata(metadata, ['shortcode'])
+            post.comments_count = self.get_post_metadata(metadata, ['edge_media_to_comment', 'count'])
+            post.likes_count = self.get_post_metadata(metadata, ['edge_media_preview_like', 'count'])
+            post.url = f"https://www.instagram.com/p/{post.shortcode}/"
+            post.file = self.download_post_images(metadata, root_folder=f"{photo_folder}/", base_path=f"{post.datetime_obj.year:02d}{post.datetime_obj.month:02d}")
+            self.logger.i(f"Post updated {post}")     
+        return post
 
-    def download_post_images(self, metadata, base_path):
+    def download_post_images(self, metadata, root_folder, base_path):
         files_paths = []
-        filename = download_image(get_post_metadata(metadata, ["display_url"]), folder)
-        count = 1
-        if "edge_sidecar_to_children" in node:
-            for edge in node["edge_sidecar_to_children"]["edges"]:
-                sub_node = edge["node"]
-                try:
-                    download_image(get_post_metadata(sub_node, ["display_url"]), folder)
-                    count += 1
-                except Exception as e:
-                    print(f)
+        files_paths.append(self.download_image(self.get_post_metadata(metadata, ["display_url"]), root_folder, base_path))
+        if "edge_sidecar_to_children" in metadata:
+            first_skipped = False
+            for edge in metadata["edge_sidecar_to_children"]["edges"]:
+                if not first_skipped:
+                    first_skipped = True
+                else:
+                    sub_node = edge["node"]
+                    files_paths.append(self.download_image(self.get_post_metadata(sub_node, ["display_url"]), root_folder,  base_path))
+        return files_paths
 
-    def download_image(self, url, folder):
+    def download_image(self, url, root_folder, base_path):
         response = requests.get(url, stream=True)
         match = re.search(r"s[0-9]{1,5}x[0-9]{1,5}\/(.*)\?", url)
         filename = match.group(1)
-        if not os.path.exists(folder):
-            os.makedirs(folder)
-        with open(folder+'/'+filename, 'wb') as out_file:
+        if not os.path.exists(base_path):
+            os.makedirs(base_path)
+        with open(root_folder+base_path+'/'+filename, 'wb') as out_file:
             shutil.copyfileobj(response.raw, out_file)
         del response
-        return folder+'/'+filename
+        return base_path+'/'+filename
 
     def read_exported_data(self):
         self.logger.i("START!")
@@ -172,31 +182,51 @@ class ScraperBot:
                 break
         return posts_list
 
-    def filter_sort_photos(self, posts_list, date_to_filter, excluded_keys=None):
+    def filter_sort_photos(self, posts_list, date_to_filter=None, excluded_keys=None):
         excluded_keys = [] if excluded_keys is None else excluded_keys
         filtered_list = []
         for photo in posts_list:
-            if photo.timestamp >  date_to_filter.timestamp() and len(photo.caption.strip()) > 1:
-                photo_dict = photo.__dict__
-                for key in excluded_keys:
-                    photo_dict.pop(key)
-                filtered_list.append(photo_dict)
+            if date_to_filter is None:
+                filtered_list.append(photo.__dict__)
+            elif photo.timestamp > date_to_filter.timestamp() and len(photo.caption.strip()) > 1:
+                filtered_list.append(photo.__dict__)
+        for photo_dict in filtered_list:
+            for key in excluded_keys:
+                photo_dict.pop(key)
         filtered_list.sort(key=lambda x: x["timestamp"], reverse=True)
         return filtered_list
 
-    def export_to_yaml(self, posts_list, date_to_filter, excluded_keys=None):
-        filtered_list = filter_sort_photos(posts_list, date_to_filter, excluded_keys)
-        with open("photos_new.yml", "w+", encoding = 'utf-8') as yml_file:
-            yaml.safe_dump(filtered_list, yml_file)
+    def export_to_yaml(self, posts_list, filename):
+        with open(filename, "w+", encoding = 'utf-8') as yml_file:
+            yaml.safe_dump(posts_list, yml_file)
 
-    def update_photo_list(self, photo_list):
-        last_post = photo_list["photos"][3]
+    def update_photo_list(self, photo_list_path, photo_folder="."):
+        try:
+            with open(photo_list_path, "r") as f:
+                photo_list = yaml.safe_load(f)
+        except Exception as e:
+            self.logger.e(f"Error opening photo list yaml file at {photo_list_path}:\n{e}")
+        new_posts_list = []
+        last_post = photo_list["photos"][0]
         last_timestamp = last_post["timestamp"]
         for edge in self.edges_list:
             node = edge["node"]
             if "taken_at_timestamp" in node and int(node["taken_at_timestamp"]) > int(last_timestamp):
-                self.logger.i(f"Found new post! {node['taken_at_timestamp']} {get_post_metadata(node, ['location','name'])}")
-                new_post = self.post_from_metadata(node)
+                self.logger.i(f"Found new post! {node['taken_at_timestamp']} {self.get_post_metadata(node, ['location','name'])}")
+                new_post = self.post_from_metadata(node, photo_folder)                
+                new_posts_list.append(new_post)
+        if len(new_posts_list) > 0:
+            filtered_list = self.filter_sort_photos(new_posts_list)
+            self.logger.i(f"New posts to add {len(filtered_list)}")
+            for i in reversed(range(0, len(filtered_list)-1)):       
+                photo_list["photos"].insert(0, filtered_list[i])
+            self.export_to_yaml(photo_list, photo_list_path)
+            self.logger.i(f"Updated file {photo_list_path}")
+            self.logger.s(f"Added {len(filtered_list)} new instagram posts to your website! {str(filtered_list)}")
+            os.system("sudo JEKYLL_ENV=production bundle exec jekyll build")
+        else:
+            self.logger.i(f"All up to date!")
+        return photo_list
 
     # max_pages: -1 for all of them, 0 only for the first one (so __a1) etc...
     def scrape_profile(self, ig_username, cookies, query_hash, max_pages=-1):
@@ -301,7 +331,7 @@ def main():
         json.dump(edges, f)
     # date_to_filter = datetime.fromisoformat("2017-01-01T00:00:00+00:00")
     # insta_photos = extract_data("./content", "posts_1.json")
-    # excluded_keys = []
+    # filtered_list = filter_sort_photos(posts_list, date_to_filter, excluded_keys=["bot_added"])
     # export_to_yaml(insta_photos, date_to_filter)
 
 if __name__ == "__main__":

@@ -1,0 +1,1 @@
+*/5 * * * * /usr/bin/python3 /home/gabryxx7/repos/blog/assets/gabryxx7/python/instagram_bot/update_insta_gallery.py >> home/gabryxx7/repos/blog/logs/cron.log 2>&1

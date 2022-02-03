@@ -38,7 +38,7 @@ class Logger:
     def v(self, txt, **kwargs):
         self.log(log_type="v", txt=txt, **kwargs)
 
-    def log(self, log_type="i", txt="", with_time=True, end="\n", start="\n", pb_notif=True, to_file=True):
+    def log(self, log_type="i", txt="", with_time=True, end="\n", start="", pb_notif=True, to_file=True):
         prefix = ""
         if with_time:
             prefix = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\t"
@@ -52,7 +52,7 @@ class Logger:
             # send_to_pb = True
         elif log_type in ["e","f", "n", "error", "fail", "no"]:
             color = bcolors.FAIL
-            send_to_pb = True
+            # send_to_pb = True
         elif log_type in ["s","success", "ok"]:
             color = bcolors.OKGREEN
             send_to_pb = True
@@ -60,7 +60,7 @@ class Logger:
         print(start+prefix+color+txt, end=end)
         if to_file and self.log_file is not None:
             try:
-                self.log_file.write(start+prefix+txt+end+"\n")
+                self.log_file.write(prefix+txt+end)
                 self.log_file.flush()
             except Exception as e:
                 pass
