@@ -270,15 +270,63 @@
 .content.layout-photo-feed {
   max-width: 100%;
   width: 100%;
-}
-  
-  /* ----------- Retina Screens ----------- */
-  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+
+  @media screen {
+    // padding-left: $content-padding + .5rem;
+    // min-height: 100vh;
+  }
+
+  @media screen and (min-width: $break-point-1) {
+    max-width: 66rem;
+    margin-left: 24rem;
+  }
+
+  @media screen and (min-width: $break-point-2) {
+    max-width: 74.5rem;
+    margin-left: 26rem;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  @media screen and (min-width: $break-point-3) {
+    padding-left: $content-padding;
+    margin-left: $sidebar-width + $content-margin-3;
+    margin-right: $content-margin-3;
   }
   
+  @media screen and (min-width: $break-point-4) {
+    padding-left: $content-padding;
+    margin-left: $sidebar-width + $content-margin-3;
+    margin-right: $content-margin-3;
+  }
+
+  @media screen and (min-width: $break-point-5) {
+    max-width: 76rem;
+    margin-left: 27rem;
+    padding-right: 0;
+    margin-right: 0;
+  }
+  
+  @media screen and (min-width: $break_point_font_large) {
+    max-width: 98rem;
+    margin-left: 30rem;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  @media screen and (min-width: $break-point-dynamic) {
+    margin: auto;
+  }
+  // >>>
+  // <<< link
+  @media print {
+    padding: 1rem;
+  }
+  // >>>
+}
 
   /* Smartphones */
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: $break-point-2) {
     .photo-feed .photo-card {
       flex: 0 1 90%;
     }
@@ -292,47 +340,4 @@
       top: 0.8em;
     }
   }
-  
-  
-  //Content 64em
-  @media screen and (min-width: 64em) {
-    .content.layout-photo-feed {
-      max-width: 66rem;
-      margin-left: 24rem;
-    }  
-  }
-  //Content 88em
-  @media screen and (min-width: 88em) {
-    .content.layout-photo-feed {
-      max-width: 74.5rem;
-      margin-left: 26rem;
-      padding-right: 0;
-      margin-right: 0;
-    }
-  }
-  
-  //Content 120em
-  @media screen and (min-width: 120em) {
-    .content.layout-photo-feed {
-      max-width: 76rem;
-      margin-left: 30rem;
-      padding-right: 0;
-      margin-right: 0;
-    }     
-    .content.layout-photo-feed .photo-icon{
-      top: 2.4em;
-    }
-  }
-  
-  //Content 160em
-  @media screen and (min-width: 160em) {
-    .content.layout-photo-feed {
-      max-width: 76rem;
-      margin-left: 30rem;
-      padding-right: 0;
-      margin-right: 0;
-    }
-    .content.layout-photo-feed .photo-icon{
-      top: 2.4em;
-    }
-  }
+

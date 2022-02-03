@@ -1,3 +1,7 @@
+*.no_commit
+*.no-commit
+*.nocommit
+
 # Ignore docs files
 _gh_pages
 _site
@@ -50,3 +54,9 @@ _zip
 /assets/js/*hydejack-*
 /_sass/*/__*__/*
 assets/gabryxx7/python/github_credentials.yaml
+assets/gabryxx7/python/*/*.log
+assets/gabryxx7/python/*/*.txt
+assets/gabryxx7/python/*/*.out
+assets/gabryxx7/python/*/*.pyc
+assets/gabryxx7/python/instagram_bot/__pycache__/*
+assets/gabryxx7/python/*.out

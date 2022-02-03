@@ -18,17 +18,17 @@
         font-family: 'Noto Sans';
         text-decoration-thickness: 1px;
     }
-  }
-  
-  /* Show the dropdown menu on hover */
-  .has_submenu:hover > .sub-menu{
-      transition: max-height 0.3s ease-out, opacity 0.2s linear;
-      display: block;
-      max-height: 10rem;
-      opacity: 1;
-  }
+}
 
-  .has_submenu > a::after{
+/* Show the dropdown menu on hover */
+.has_submenu:hover > .sub-menu{
+    transition: max-height 0.3s ease-out, opacity 0.2s linear;
+    display: block;
+    max-height: 10rem;
+    opacity: 1;
+}
+
+.has_submenu > a::after{
     font-family: 'icomoon' !important;
     display: inline-block;
     position: absolute;
@@ -42,6 +42,30 @@
 .sidebar-nav > ul > .has_submenu > .sub-menu{
     margin-left: -0.2rem;  
     margin-top: -0.1rem;
-  } 
-  
-  
+} 
+
+/*ipad PRo 12.9"*/
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen
+and (min-device-width: 1024px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2){
+    .sidebar-nav > ul > .has_submenu > .sub-menu{
+        margin-left: -0.2rem;  
+        margin-top: -0.1rem;
+    } 
+}
+@media only screen
+and (min-device-width: 1366px)
+and (max-device-width: 1366px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2){
+    .sidebar-nav > ul > .has_submenu > .sub-menu{
+        margin-left: -0.2rem;  
+        margin-top: -0.1rem;
+    } 
+
+}

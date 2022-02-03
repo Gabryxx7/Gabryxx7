@@ -1,0 +1,21 @@
+# Account data (to get cookies, if it only worked...)
+username: <username>
+password: <password>
+
+# Pre-set cookies from your browser's session!
+cookie: xxxxxxxx...
+query_hash: xxxxxxxx....
+
+# PushBullet access token to notify your phone!
+pushbullet_token: xxxxx....
+
+# Instagram Data Export extracted folder
+# You can request a JSON export here https://www.instagram.com/download/request/
+# The pro of this method is that photos will be of higher quality that you can't get otherwise (yes even with the size=l or the display_url trick!)
+export_path: "/home/gabryxx7/gabryxx7_20220101"
+
+# Profile metadata JSON
+# This is the complete profile metadata export which starts from this JSON data: https://www.instagram.com/<ig_username>/?__a=1
+# The bot automatically requests the next page until all the posts are loaded (NEEDS COOKIES!)
+# At the moment, the path will be in the same folder and you can let the bot download it all with your cookies
+metadata_path: "."
