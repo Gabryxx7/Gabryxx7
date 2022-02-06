@@ -1,6 +1,18 @@
 ---
 layout: base
 ---
+
+{% assign photolist = site.data.photos-list %}
+{% assign photo_sorted = site.data.photos-list.photos | sort:"timestamp" | reverse %}
+{% assign prev_date = 0 %}
+{% assign extra_class = "" %}
+{% assign mini_cnt = 0 %}
+{% assign min = 1 %}
+{% assign max = photo_sorted.size %}
+{% assign diff = max | minus: min %}
+{% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+{% assign photo = photo_sorted[randomNumber] %}
+
 <div class="blog-page-message">
   <div class="typing-window-wrapper">
     <div class='typing-window blog'>
@@ -24,6 +36,10 @@ layout: base
         animation</a>
     </strong>
   </p>
+  <div class="random-image-wrapper ">
+    {% assign photo = photo_sorted[randomNumber] %}
+    {% include photo-card.html photo=photo %}
+  </div>
 </div>
 
 {{ content | markdownify }}

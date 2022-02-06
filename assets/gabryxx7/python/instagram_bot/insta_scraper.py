@@ -207,14 +207,20 @@ class ScraperBot:
         filtered_list.sort(key=lambda x: x["timestamp"], reverse=True)
         return filtered_list
 
-    def export_to_yaml(self, posts_list, filename):
-        with open(filename, "w+", encoding = 'utf-8') as yml_file:
-            yaml.safe_dump(posts_list, yml_file)
+    def export_to_file(self, posts_list, filename):
+        with open(filename, "w", encoding = 'utf-8') as f:
+            if "json" in photo_list_path:
+                json.dump(posts_list, f)
+            else:
+                yaml.safe_dump(posts_list, yml_file)
 
     def update_photo_list(self, photo_list_path, photo_folder="."):
         try:
             with open(photo_list_path, "r") as f:
-                photo_list = yaml.safe_load(f)
+                if "json" in photo_list_path:
+                    photo_list = json.load(f)
+                else:
+                    photo_list = yaml.safe_load(f)
         except Exception as e:
             self.log.e("update_photo_list", f"Error opening photo list yaml file at {photo_list_path}:\n{e}")
         new_posts_list = []
@@ -231,7 +237,7 @@ class ScraperBot:
             self.log.i("update_photo_list",f"New posts to add {len(filtered_list)}")
             for i in reversed(range(0, len(filtered_list)-1)):       
                 photo_list["photos"].insert(0, filtered_list[i])
-            self.export_to_yaml(photo_list, photo_list_path)
+            self.export_to_file(photo_list, photo_list_path)
             self.log.i("update_photo_list",f"Updated file {photo_list_path}")
             self.log.s("update_photo_list",f"Added {len(filtered_list)} new instagram posts to your website! {str(filtered_list)}")
             os.system("sudo JEKYLL_ENV=production bundle exec jekyll build")
@@ -384,7 +390,7 @@ def main():
     # date_to_filter = datetime.fromisoformat("2017-01-01T00:00:00+00:00")
     # insta_photos = extract_data("./content", "posts_1.json")
     # filtered_list = filter_sort_photos(posts_list, date_to_filter, excluded_keys=["bot_added"])
-    # export_to_yaml(insta_photos, date_to_filter)
+    # export_to_file(insta_photos, date_to_filter)
 
 if __name__ == "__main__":
     # get_insta_cookies()

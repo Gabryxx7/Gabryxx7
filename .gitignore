@@ -66,3 +66,4 @@ assets/gabryxx7/python/instagram_bot/__pycache__
 assets/gabryxx7/python/instagram_bot/logs
 assets/gabryxx7/python/instagram_bot/tmp
 assets/gabryxx7/python/*.out
+assets/gabryxx7/python/instagram_bot/cron_logs

@@ -6,6 +6,7 @@ excerpt_separator: <!--more-->
 #   class: "wide-img"
 ---
 
+<!--more-->
 - Table of Contents
 {:toc .large-only}
 

@@ -1,0 +1,46 @@
+{% assign photo = include.photo %}
+{% assign extra_class = include.extra_class | default:"" %}
+{% assign extra_style = include.extra_style | default:"" %}
+
+{% if photo.file.size < 2 %}
+    {% assign multi_class = "" %}
+{% else %}  
+    {% assign multi_class = "multiple multi-" | append:photo.file.size %}
+{% endif %}  
+{% assign icon = "icon-instagram" %}
+{% for file in photo.file %}        
+    {% if photo.file.first contains ".mp4" %}
+        {% assign icon = "icon-video-camera1" %}
+    {% endif %}  
+{% endfor %}    
+
+<article class='photo-card {{ multi_class }} {{ extra_class }}' style='{{ extra_style }}'>
+    <div class="photo-metadata-container">
+        {% if photo.location %}
+            <div class="location"> <span class="icon-location" style="font-size: 0.9rem;"> </span> {{ photo.location }}</div>
+        {% endif %}
+        <div class="datetime"> <span class="icon-history" style="font-size: 0.9rem;"> </span> {{ photo.timestamp | date:"%b %Y" }} </div>
+        <div class='photo-icon'>
+            <div class='{{ icon }}'></div>
+            <span class='icon-heart'></span>
+            <span class="counter"> {{ photo.likes_count }} </span>                
+        </div>
+    </div>
+    <div class='photo-card-img img'>
+    {% for file in photo.file %}        
+        {% if photo.file.first contains ".mp4" %}
+        <video loop="true" autoplay="autoplay" muted>
+            <source src='{{ photolist.preview_folder }}{{ file }}' type="video/mp4">
+        </video>
+        {% else %}
+            <img data-ignore src='{{ photolist.preview_folder }}{{ file }}' >
+        {% endif %}
+    {% endfor %}    
+    </div>
+    <a href='{{ photo.url }}' class='no-hover no-print-link photo-card-caption'>
+        {% if photo.title.size > 0 %}
+            <div class='img-title'> <h3>{{ photo.title }}</h3></div>
+        {% endif %}
+            <div class='img-descr'> {{ photo.caption }} </div>
+    </a>     
+</article>  

@@ -78,7 +78,7 @@
 
   }
   
-  .photo-feed .photo-card {
+  .photo-card {
     background-color: var(--gray-bg);
     transition: all 250ms ease-out;
     position: relative;
@@ -99,7 +99,11 @@
       transform: scale(1.0);
       filter: blur(0px);
     }
-  
+
+    .photo-metadata-container {
+      display: block;
+      background-color: transparent;
+    }
     .photo-card-caption {
       display:flex;
       text-decoration: none;
@@ -170,6 +174,10 @@
       font-weight: bold;
       font-size: 0.8em;
       color: var(--body-color);
+    }
+
+    .datetime{
+      display: none;
     }
 
     flex: 0 1 60%;
@@ -301,24 +309,18 @@
   }
 
   @media screen and (min-width: $break-point-5) {
-    max-width: 76rem;
-    margin-left: 27rem;
+    max-width: 80rem;
+    margin-left: 32rem;
     padding-right: 0;
     margin-right: 0;
   }
   
   @media screen and (min-width: $break_point_font_large) {
+    margin: auto;
     max-width: 98rem;
-    margin-left: 30rem;
-    padding-right: 0;
-    margin-right: 0;
+    margin-left: 72rem;
   }
 
-  @media screen and (min-width: $break-point-dynamic) {
-    margin: auto;
-  }
-  // >>>
-  // <<< link
   @media print {
     padding: 1rem;
   }
@@ -327,17 +329,71 @@
 
   /* Smartphones */
   @media screen and (max-width: $break-point-2) {
-    .photo-feed .photo-card {
+    .photo-card {
       flex: 0 1 90%;
     }
 
-    .content.layout-photo-feed .location {
+    .photo-card .location {
       display: none;
     }
 
-    .content.layout-photo-feed .photo-icon{
+    .photo-card .photo-icon{
       font-size: 0.8reml;
       top: 0.8em;
     }
   }
 
+  .random-image-wrapper {
+    background-color: var(--border-color);
+    padding: 2rem 3rem 2rem 3rem;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+
+
+  .photo-card {
+    width: 61%;
+    margin: auto;
+    .photo-metadata-container {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 0rem;
+      background-color: #1616164f;
+      height: 1.7rem;
+      z-index: 99;
+    }
+    .location, .photo-icon, .datetime{    display: block;
+      background: transparent;
+      text-align: center;
+      vertical-align: middle;
+      position: absolute;
+      z-index: 99;
+      top: 0;
+      color: #f7f7f7db !important;
+      text-shadow: 1px 1px 1px #29292966;
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
+      font-size: 0.9rem;
+      font-weight: 100;
+    }
+
+    .location{
+      padding-left: 1rem;
+    }
+    .datetime{
+      left: 47%;
+    }
+    .photo-icon{      
+      padding-right: 1rem;
+    }
+    .photo-icon div{
+      margin-top: 0rem;
+      text-align: center;
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 0.3rem;
+      margin-left: 0.2rem;
+
+    }
+  }
+}

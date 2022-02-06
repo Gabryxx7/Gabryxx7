@@ -54,6 +54,15 @@ addons: [comments, about]
 
 {% for photo in photo_sorted %}
     {% assign current_date = photo.date | date:"%Y" %}
+    {% if page.grouped %}
+        {% if current_date != prev_date %}
+            <blockquote class="photo-group-date-container">
+                <div class="photo-group-date">
+                    {{ current_date }}
+                </div>
+            </blockquote>
+        {% endif %}
+    {% endif %}
     {% if photo.file.size < 2 %}
         {% if mini_cnt == 1 %}
             {% assign mini_cnt = 2 %}
@@ -73,69 +82,16 @@ addons: [comments, about]
                 {% assign extra_class = "highlight" %}
             {% endif %}
         {% endif %}
-
-        {% if page.grouped %}
-            {% if current_date != prev_date %}
-                <blockquote class="photo-group-date-container">
-                    <div class="photo-group-date">
-                        {{ current_date }}
-                    </div>
-                </blockquote>
-            {% endif %}
-        {% endif %}
         {% if photolist.highlights_timestamps contains photo.timestamp %}
-            <article class='photo-card highlighted_timestamp' style="flex: 0 1 auto;">
+            {% assign extra_class = "highlighted_timestamp" %}
+            {% assign extra_style = "flex: 0 1 auto;" %}
         {% else %}
-            <article class='photo-card {{ extra_class }}'>
+            {% assign extra_style = "" %}
         {% endif %}
-            {% if photo.location %}
-                <div class="location"> <span class="icon-location" style="font-size: 0.9rem;"> </span> {{ photo.location }}</div>
-            {% endif %}
-                {% if photo.file.first contains ".mp4" %}
-                    <div class='photo-icon'>
-                    <div class='icon-video-camera1'></div>
-                    <span class='icon-heart'></span>
-                    <span class="counter"> {{ photo.likes_count }} </span>
-                    
-                    </div>
-                    <div class='photo-card-img img'>
-                    <video loop="true" autoplay="autoplay" muted>
-                    <source src='{{ photolist.preview_folder }}{{ photo.file }}' type="video/mp4">
-                    </video>
-                {% else %}
-                    <div class='photo-icon'>
-                        <div class='icon-instagram'></div>
-                        <span class='icon-heart'></span>
-                        <span class="counter"> {{ photo.likes_count }} </span>
-                    </div>
-                    <div class='photo-card-img img'>
-                    <img data-ignore src='{{ photolist.preview_folder }}{{ photo.file }}'>
-                {% endif %}
-            </div>
-    {% else %}  
+    {% else %}
         {% assign mini_cnt = 3 %}
-        <article class='photo-card multiple multi-{{ photo.file.size }}'>
-            {% if photo.location %}
-                <div class="location"> <span class="icon-location" style="font-size: 0.9rem;"> </span> {{ photo.location }}</div>
-            {% endif %}
-            <div class='photo-icon'>
-            <div class='icon-instagram'></div>
-            <span class='icon-heart'></span>
-            <span class="counter"> {{ photo.likes_count }} </span>
-            </div>
-            <div class='photo-card-img img'>
-            {% for file in photo.file %}
-                <img data-ignore src='{{ photolist.preview_folder }}{{ file }}'/>
-            {% endfor %}    
-            </div>
     {% endif %}
-    <a href='{{ photo.url }}' class='no-hover no-print-link photo-card-caption'>
-        {% if photo.title.size > 0 %}
-            <div class='img-title'> <h3>{{ photo.title }}</h3></div>
-        {% endif %}
-        <div class='img-descr'> {{ photo.caption }} </div>
-    </a>     
-    </article>  
+    {% include photo-card.html photo=photo extra_class=extra_class extra_style=extra_style %}
     {% assign prev_date = current_date %}
 {% endfor %}   
 </div>

@@ -24,7 +24,7 @@
   break_point_3: 64 #em
   break_point_4: 72 #em
   break_point_5: 86 #em
-  break_point_font_large: 124 #em
+  break_point_font_large: 130 #em
 
   
   code_output_alias: plaintext # language class to look for to classify as output
