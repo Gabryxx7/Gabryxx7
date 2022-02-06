@@ -354,19 +354,16 @@
     width: 100%;
     margin: auto;
     .photo-metadata-container {
-      display: none;
+      display: block;
       position: absolute;
       width: 100%;
       top: 0rem;
-      background-color: #1616164f;
+      background-color: transparent;
       height: 1.7rem;
       z-index: 99;
-      @media screen and (min-width: $break-point-2) {
-        display: block;
-      }
-    }
-    .location, .photo-icon, .datetime{    
-      display: block;
+
+    .location, .datetime, .photo-icon{    
+      display: none;
       background: transparent;
       text-align: center;
       vertical-align: middle;
@@ -379,6 +376,10 @@
       padding-bottom: 0.2rem;
       font-size: 0.9rem;
       font-weight: 100;
+    }
+
+    .photo-icon{
+      display: block;
     }
 
     .location{
@@ -400,11 +401,18 @@
 
     }
   }
+}
 
   @media screen and (min-width: $break-point-2) {
     padding: 2rem 3rem 2rem 3rem;
     .photo-card {
       width: 65%;
+      .photo-metadata-container {
+        background-color: #1616164f;
+        .location, .datetime {    
+          display: block;
+        }
+      }
     }
   }
 }
