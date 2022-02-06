@@ -1,20 +1,25 @@
-from instagram_to_yml import *
-from logger import Logger
+from insta_scraper import *
+from pylogger import *
 from datetime import datetime
 import traceback
 
 
 def main():
-    with open("/home/gabryxx7/repos/blog/assets/gabryxx7/python/instagram_bot/insta_config.no_commit", "r") as f:
+    with open("/home/gabryxx7/repos/blog/assets/gabryxx7/python/instagram_bot/insta_config.no_commit.yaml", "r") as f:
         config_data = yaml.safe_load(f)    
-    logger = Logger(f"/home/gabryxx7/repos/blog/logs/log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log", config_data)
-    try:
-        scraper_bot = ScraperBot(metadata_path=config_data["metadata_path"], export_path=config_data["export_path"], logger=logger)
-        scraper_bot.scrape_profile("gabryxx7", {'cookie':config_data['cookie']}, config_data["query_hash"], max_pages=0)
+    
+    pb_token = config_data.get("pushbullet_token", "")
+    log = Log(config_data["logs_folder"])
+    log.init_pushbullet(pb_access_token=pb_token)
+    log.set_pb_logging_level(levels_list=["s"])
+    try:          
+        scraper_bot = ScraperBot(metadata_path=config_data["metadata_path"], export_path=config_data["export_path"],
+        tmp_files_folder=config_data["tmp_files_folder"], log=log)
+        profile_metadata = scraper_bot.scrape_profile_metadata("gabryxx7", {'cookie':config_data['cookie']}, config_data["query_hash"], max_pages=-0)
         scraper_bot.update_photo_list(photo_list_path=config_data["photo_list_filepath"], photo_folder=config_data["photo_base_path"])
     except Exception as e:
-        logger.e(f"Exception in the main loop: {e}\n{traceback.format_exc()}")
-    logger.close()
+        log.e("main", f"Exception in the main loop: {e}\n{traceback.format_exc()}")
+    log.stop()
 
 
 if __name__ == "__main__":

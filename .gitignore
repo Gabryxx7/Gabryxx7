@@ -1,6 +1,10 @@
 *.no_commit
 *.no-commit
 *.nocommit
+*.no_commit*
+*.no-commit*
+*.nocommit*
+
 
 # Ignore docs files
 _gh_pages
@@ -58,5 +62,7 @@ assets/gabryxx7/python/*/*.log
 assets/gabryxx7/python/*/*.txt
 assets/gabryxx7/python/*/*.out
 assets/gabryxx7/python/*/*.pyc
-assets/gabryxx7/python/instagram_bot/__pycache__/*
+assets/gabryxx7/python/instagram_bot/__pycache__
+assets/gabryxx7/python/instagram_bot/logs
+assets/gabryxx7/python/instagram_bot/tmp
 assets/gabryxx7/python/*.out

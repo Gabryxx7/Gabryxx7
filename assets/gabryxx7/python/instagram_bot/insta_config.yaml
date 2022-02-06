@@ -3,16 +3,26 @@ username: <username>
 password: <password>
 
 # Pre-set cookies from your browser's session!
-cookie: xxxxxxxx...
-query_hash: xxxxxxxx....
+cookie: mid=Yf9iv...
+query_hash: "8c2a..."
+
+logs_folder: "./Logs/"
+tmp_files_folder: "./tmp/"
 
 # PushBullet access token to notify your phone!
-pushbullet_token: xxxxx....
+pushbullet_token: "o.X0..."
+
+# Path to the yaml file with your update instagram profile data
+photo_list_filepath: "./photos-list.yml"
+
+# Path to the root folder where to store the downloaded photos 
+# The path is structured the same as an instagram export so something like photo_base_path/202201/374498764_120054770006799_8305513780373229742_n_17891978165536915.jpg
+photo_base_path: "./photos"
 
 # Instagram Data Export extracted folder
 # You can request a JSON export here https://www.instagram.com/download/request/
 # The pro of this method is that photos will be of higher quality that you can't get otherwise (yes even with the size=l or the display_url trick!)
-export_path: "/home/gabryxx7/gabryxx7_20220101"
+export_path: "./gabryxx7_20220101"
 
 # Profile metadata JSON
 # This is the complete profile metadata export which starts from this JSON data: https://www.instagram.com/<ig_username>/?__a=1
