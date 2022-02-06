@@ -344,25 +344,29 @@
   }
 
   .random-image-wrapper {
-    background-color: var(--border-color);
-    padding: 2rem 3rem 2rem 3rem;
+    background-color: var(--border-color);    
+    padding: 0;
     margin-top: 2rem;
     border-radius: 0.5rem;
 
 
   .photo-card {
-    width: 61%;
+    width: 100%;
     margin: auto;
     .photo-metadata-container {
-      display: block;
+      display: none;
       position: absolute;
       width: 100%;
       top: 0rem;
       background-color: #1616164f;
       height: 1.7rem;
       z-index: 99;
+      @media screen and (min-width: $break-point-2) {
+        display: block;
+      }
     }
-    .location, .photo-icon, .datetime{    display: block;
+    .location, .photo-icon, .datetime{    
+      display: block;
       background: transparent;
       text-align: center;
       vertical-align: middle;
@@ -394,6 +398,13 @@
       margin-right: 0.3rem;
       margin-left: 0.2rem;
 
+    }
+  }
+
+  @media screen and (min-width: $break-point-2) {
+    padding: 2rem 3rem 2rem 3rem;
+    .photo-card {
+      width: 65%;
     }
   }
 }
