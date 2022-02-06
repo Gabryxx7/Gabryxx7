@@ -40,6 +40,48 @@ layout: base
     {% assign photo = photo_sorted[randomNumber] %}
     {% include photo-card.html photo=photo %}
   </div>
+
+  <script>
+    $.getJSON("/assets/gabryxx7/python/instagram_bot/photos-list.json", function(json) {
+      var base_path = json["full_folder"];
+      var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      var randomIndex = Math.floor(Math.random() * (json["photos"].length+1));
+      var photo = json["photos"][randomIndex];
+      var elem = $(".random-image-wrapper");
+      var photo_card = elem.find(".photo-card");
+      var loc = elem.find(".location");
+      var datetime = elem.find(".datetime");
+      var date = new Date(photo["timestamp"]*1000);
+      var counter = elem.find(".counter");
+      var photo_img = elem.find(".photo-card-img");
+      var caption = elem.find(".photo-card-caption");
+      var img_descr = elem.find(".img-descr");
+      var photo_icon = elem.find(".photo-icon");
+      caption.attr("href", photo["url"]);
+      photo_img[0].innerHTML = "";
+      photo["file"].forEach(function(file){
+        var url = base_path+file;
+        if(file.includes("mp4")){
+          photo_img.append("<video loop='true' autoplay='autoplay' muted=''> <source src='"+url+"' type='video/mp4'> </video>");
+          photo_icon.find("div").attr("class","icon-video-camera1");
+        }
+        else{          
+          photo_img.append("<img data-ignore='' src='"+url+"'>");
+          photo_icon.find("div").attr("class","icon-instagram");
+        };
+      });
+      if(photo["file"].length > 1){
+        photo_card.attr("class", "photo-card multiple multi-"+photo["file"].length);
+      }
+      else{
+        photo_card.attr("class", "photo-card");
+      };
+      loc[0].innerHTML = loc.find("span")[0].outerHTML+photo["location"];
+      datetime[0].innerHTML = datetime.find("span")[0].outerHTML+months[date.getMonth()] + " " +date.getFullYear();
+      counter[0].innerHTML = photo["likes_count"];
+      img_descr[0].innerHTML = photo["caption"];
+  });
+   </script>
 </div>
 
 {{ content | markdownify }}
