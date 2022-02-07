@@ -76,7 +76,12 @@ layout: base
       else{
         photo_card.attr("class", "photo-card");
       };
-      loc[0].innerHTML = loc.find("span")[0].outerHTML+photo["location"];
+      if(photo["location"] != null){
+        loc[0].innerHTML = loc.find("span")[0].outerHTML+photo["location"];
+      }
+      else{
+        loc[0].innerHTML = ""
+      }
       datetime[0].innerHTML = datetime.find("span")[0].outerHTML+months[date.getMonth()] + " " +date.getFullYear();
       counter[0].innerHTML = photo["likes_count"];
       img_descr[0].innerHTML = photo["caption"];
