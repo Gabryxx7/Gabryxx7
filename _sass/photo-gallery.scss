@@ -102,7 +102,14 @@
 
     .photo-metadata-container {
       display: block;
-      background-color: transparent;
+      position: absolute;
+      width: 100%;
+      top: 0rem;
+      transform: scale(1.0);
+      backdrop-filter: blur(9px);
+      background-color: #53535382;
+      height: 1.8rem;
+      z-index: 99;
     }
     .photo-card-caption {
       display:flex;
@@ -162,23 +169,40 @@
       }
     }
 
-    .location {
-      background-color: var(--gray-bg);
-      margin: 0;
-      padding-top: 0.3em;
-      padding-bottom: 0.2em;
-      color: grey;
-      color: grey;
-      margin: auto;
-      text-align: center;
-      font-weight: bold;
-      font-size: 0.8em;
-      color: var(--body-color);
-    }
+      .location, .datetime, .photo-icon{    
+        display: block;
+        background: transparent;
+        text-align: center;
+        vertical-align: middle;
+        position: absolute;
+        z-index: 99;
+        top: 0;
+        color: #f7f7f7db !important;
+        text-shadow: 1px 1px 1px #29292966;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        font-size: 0.9rem;
+        font-weight: 100;
+      }
 
-    .datetime{
-      display: none;
-    }
+      .location{
+        padding-left: 1rem;
+      }
+      .datetime{
+        left: 46%;
+      }
+      .photo-icon{      
+        padding-right: 1rem;
+        div{
+          margin-top: 0rem;
+          text-align: center;
+          vertical-align: middle;
+          display: inline-block;
+          margin-right: 0.3rem;
+          margin-left: 0.2rem;
+  
+        }
+      }
 
     flex: 0 1 60%;
   &.mini {
@@ -310,7 +334,7 @@
 
   @media screen and (min-width: $break-point-5) {
     max-width: 80rem;
-    margin-left: 32rem;
+    margin-left: 31rem;
     padding-right: 0;
     margin-right: 0;
   }
@@ -338,8 +362,7 @@
     }
 
     .photo-card .photo-icon{
-      font-size: 0.8reml;
-      top: 0.8em;
+      font-size: 0.8rem;
     }
   }
 
@@ -349,66 +372,16 @@
     margin-top: 2rem;
     border-radius: 0.5rem;
 
-
   .photo-card {
     width: 100%;
     margin: auto;
-    .photo-metadata-container {
-      display: block;
-      position: absolute;
-      width: 100%;
-      top: 0rem;
-      background-color: transparent;
-      height: 1.7rem;
-      z-index: 99;
-
-    .location, .datetime, .photo-icon{    
-      display: none;
-      background: transparent;
-      text-align: center;
-      vertical-align: middle;
-      position: absolute;
-      z-index: 99;
-      top: 0;
-      color: #f7f7f7db !important;
-      text-shadow: 1px 1px 1px #29292966;
-      padding-top: 0.2rem;
-      padding-bottom: 0.2rem;
-      font-size: 0.9rem;
-      font-weight: 100;
-    }
-
-    .photo-icon{
-      display: block;
-    }
-
-    .location{
-      padding-left: 1rem;
-    }
-    .datetime{
-      left: 47%;
-    }
-    .photo-icon{      
-      padding-right: 1rem;
-    }
-    .photo-icon div{
-      margin-top: 0rem;
-      text-align: center;
-      vertical-align: middle;
-      display: inline-block;
-      margin-right: 0.3rem;
-      margin-left: 0.2rem;
-
-    }
   }
-}
 
   @media screen and (min-width: $break-point-2) {
     padding: 2rem 3rem 2rem 3rem;
     .photo-card {
       width: 65%;
       .photo-metadata-container {
-        background-color: #1616164f;
         .location, .datetime {    
           display: block;
         }

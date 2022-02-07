@@ -170,18 +170,6 @@ article.project-card {
 }
 
 
-@media screen and (min-width: 200em) {
-  .content.layout-photo-feed {
-    max-width: 90rem;
-    margin-left: 48rem;
-    padding-right: 0;
-    margin-right: 0;
-  }
-  .content.layout-photo-feed .photo-icon{
-    top: 2.4em;
-  }
-}
-
 @import "ayu-mirage";
 @import "ayu-light";
 @import "code-highlight-fix";
