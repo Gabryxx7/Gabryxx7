@@ -59,6 +59,9 @@ layout: base
       var photo_icon = elem.find(".photo-icon");
       caption.attr("href", photo["url"]);
       photo_img[0].innerHTML = "";
+      if(photo["file"].length == 3){
+        photo["file"].pop();
+      };
       photo["file"].forEach(function(file){
         var url = base_path+file;
         if(file.includes("mp4")){
@@ -80,7 +83,7 @@ layout: base
         loc[0].innerHTML = loc.find("span")[0].outerHTML+photo["location"];
       }
       else{
-        loc[0].innerHTML = ""
+        loc[0].innerHTML = "";
       }
       datetime[0].innerHTML = datetime.find("span")[0].outerHTML+months[date.getMonth()] + " " +date.getFullYear();
       counter[0].innerHTML = photo["likes_count"];
