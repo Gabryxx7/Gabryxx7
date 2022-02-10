@@ -1,32 +1,33 @@
+<div class="github-feed">
+
 ### Hi there, I'm Gabriele. I am currently a PhD candidate in Computing and Information System at the University of Melbourne
 - 💡 I’m currently learning everything! Or trying at least / 🎯 2021 Goals: Contribute more to Open Source projects
 - 🏊 I am also an open water swimmer and dabble in calisthenics and weightlifting
 - Fun facts: 🎮 PC Gamer / 💬 I speak Italian, English and Spanish, learning Portuguese / ✈️ I have visited 22 countries so far.
 
 
-Connect with me:  &nbsp; &nbsp;
-[<img alt="gmarini.com" width="15px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" class="no-hover no-mark" />][website] &nbsp; &nbsp;
-[<img alt="Gabryxx7 | LinkedIn" width="15px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" class="no-hover no-mark" />][linkedin] &nbsp; &nbsp;
-[<img alt="Gabryxx7 | Instagram" width="15px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" class="no-hover no-mark" />][instagram] &nbsp; &nbsp;
+Connect with me:     
+[<img alt="gmarini.com" class="no-hover no-mark" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" width="15px"/>][website]    
+[<img alt="Gabryxx7 | LinkedIn" class="no-hover no-mark" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" width="15px"/>][linkedin]    
+[<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" width="15px"/>][instagram]    
 
 <div>
-<a href="https://github.com/Gabryxx7" class="no-hover no-mark">
-    <img src="https://github-readme-stats.vercel.app/api?username=Gabryxx7&count_private=true&show_icons=true&theme=onedark&include_all_commits=1" alt="Gabryxx7's github stats">
+<a class="no-hover no-mark" href="https://github.com/Gabryxx7">
+<img alt="Gabryxx7's github stats" src="https://github-readme-stats.vercel.app/api?username=Gabryxx7&amp;count_private=true&amp;show_icons=true&amp;theme=onedark&amp;include_all_commits=1"/>
 </a>
-
-<a href="https://github.com/Gabryxx7" class="no-hover no-mark">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gabryxx7&layout=compact&theme=onedark" alt="Top Langs">
+<a class="no-hover no-mark" href="https://github.com/Gabryxx7">
+<img alt="Top Langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gabryxx7&amp;layout=compact&amp;theme=onedark"/>
 </a>
 </div>
 
-## [Photography <img alt="Gabryxx7 | Instagram" width="15px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
+## [Photography <img alt="Gabryxx7 | Instagram" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" width="15px"/>][instagram]
 
-<div style="display: flex;justify-content: space-evenly;">
-<img alt="Gabryxx7 | Instagram" width="18%" height="auto" class="no-hover no-mark" src="https://gmarini.com/assets/gabryxx7/img/photos/202006/79841217_555270635156572_8260864494112333405_n.jpg" /> 
-<img alt="Gabryxx7 | Instagram" width="18%" height="auto" class="no-hover no-mark" src="https://gmarini.com/assets/gabryxx7/img/photos/202006/d921048b9f8858f8fbbd9f651a64c5cb.jpg" />
-<img alt="Gabryxx7 | Instagram" width="18%" height="auto" class="no-hover no-mark" src="https://gmarini.com/assets/gabryxx7/img/photos/202006/105949108_979756645775165_8661279133103583059_n.jpg" />
-<img alt="Gabryxx7 | Instagram" width="18%" height="auto" class="no-hover no-mark" src="https://gmarini.com/assets/gabryxx7/img/photos/202004/eeadc6e1a203c084fe15656aaa7528ee.jpg" />
-<img alt="Gabryxx7 | Instagram" width="18%" height="auto" class="no-hover no-mark" src="https://gmarini.com/assets/gabryxx7/img/photos/201909/260a4453657269ad127dfc1b661bbea5.jpg" />
+<div class="github-insta-feed" style="display: flex;justify-content: space-evenly;">
+<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202202/273721495_465933114940658_4410640883662196380_n.mp4" width="18%"/>
+<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272403231_3099930970284306_2054452382131918485_n_18216735250113087.jpg" width="18%"/>
+<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272498964_160054973026799_8305514290373229742_n_17891978165536915.jpg" width="18%"/>
+<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272177500_278593610924961_183644696826839967_n_17994795400417473.jpg" width="18%"/>
+<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272107688_952135689058183_1104079245098692016_n_17930040874960542.jpg" width="18%"/>
 </div>
 
 
@@ -42,4 +43,4 @@ Connect with me:  &nbsp; &nbsp;
 [reactplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAK4TdffpxKY3QGyHCpxFcQ0
 
 <!-- Source: https://raw.githubusercontent.com/codeSTACKr/codeSTACKr/master/README.md -->
-
+</div>

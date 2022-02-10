@@ -2,6 +2,20 @@ from insta_scraper import *
 from pylogger import *
 from datetime import datetime
 import traceback
+from bs4 import BeautifulSoup
+
+def update_github_feed(readme_path, photo_list):
+    soup = ""
+    with open(readme_path, "r", encoding='utf-8') as f:
+        soup = BeautifulSoup(f, 'html.parser')
+        index = 0
+        for img in soup.select('.github-feed .github-insta-feed img'):
+            post = photo_list['photos'][index]
+            img['src'] = f"{photo_list['full_folder']}{post['file'][0]}"
+            index += 1
+    with open(readme_path, "w", encoding='utf-8') as f:
+        print(f"Writing to {readme_path}")
+        f.write(str(soup))
 
 
 def main():
@@ -17,6 +31,7 @@ def main():
         tmp_files_folder=config_data["tmp_files_folder"], log=log)
         profile_metadata = scraper_bot.scrape_profile_metadata("gabryxx7", {'cookie':config_data['cookie']}, config_data["query_hash"], max_pages=-0)
         photo_list = scraper_bot.update_photo_list(edges_list=profile_metadata["posts_data"], photo_list_path=config_data["photo_list_filepath"], photo_folder=config_data["photo_base_path"])
+        update_github_feed(config_data["github_readme_path"], photo_list)
     except Exception as e:
         log.e("main", f"Exception in the main loop: {e}\n{traceback.format_exc()}")
     log.stop()
