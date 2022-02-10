@@ -9,7 +9,9 @@ def update_github_feed(readme_path, photo_list):
     with open(readme_path, "r", encoding='utf-8') as f:
         soup = BeautifulSoup(f, 'html.parser')
         index = 0
-        for img in soup.select('.github-feed .github-insta-feed img'):
+        for img in soup.select('.github-insta-feed img'):
+            while '.mp4' in photo_list['photos'][index]['file'][0]:
+                index += 1
             post = photo_list['photos'][index]
             img['src'] = f"{photo_list['full_folder']}{post['file'][0]}"
             index += 1

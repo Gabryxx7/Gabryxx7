@@ -1,5 +1,3 @@
-<div class="github-feed">
-
 ### Hi there, I'm Gabriele. I am currently a PhD candidate in Computing and Information System at the University of Melbourne
 - 💡 I’m currently learning everything! Or trying at least / 🎯 2021 Goals: Contribute more to Open Source projects
 - 🏊 I am also an open water swimmer and dabble in calisthenics and weightlifting
@@ -23,11 +21,11 @@ Connect with me:     
 ## [Photography <img alt="Gabryxx7 | Instagram" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" width="15px"/>][instagram]
 
 <div class="github-insta-feed" style="display: flex;justify-content: space-evenly;">
-<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202202/273721495_465933114940658_4410640883662196380_n.mp4" width="18%"/>
 <img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272403231_3099930970284306_2054452382131918485_n_18216735250113087.jpg" width="18%"/>
 <img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272498964_160054973026799_8305514290373229742_n_17891978165536915.jpg" width="18%"/>
 <img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272177500_278593610924961_183644696826839967_n_17994795400417473.jpg" width="18%"/>
 <img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272107688_952135689058183_1104079245098692016_n_17930040874960542.jpg" width="18%"/>
+<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/271938790_4961244277272347_2918326676412093919_n_17914329953141154.jpg" width="18%"/>
 </div>
 
 
@@ -43,4 +41,3 @@ Connect with me:     
 [reactplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAK4TdffpxKY3QGyHCpxFcQ0
 
 <!-- Source: https://raw.githubusercontent.com/codeSTACKr/codeSTACKr/master/README.md -->
-</div>
