@@ -20,15 +20,13 @@ Connect with me:     
 
 ## [Photography <img alt="Gabryxx7 | Instagram" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" width="15px"/>][instagram]
 
-<div class="github-insta-feed" style="display: flex;justify-content: space-evenly;">
-<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272403231_3099930970284306_2054452382131918485_n_18216735250113087.jpg" width="18%"/>
-<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272498964_160054973026799_8305514290373229742_n_17891978165536915.jpg" width="18%"/>
-<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272177500_278593610924961_183644696826839967_n_17994795400417473.jpg" width="18%"/>
-<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272107688_952135689058183_1104079245098692016_n_17930040874960542.jpg" width="18%"/>
-<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/271938790_4961244277272347_2918326676412093919_n_17914329953141154.jpg" width="18%"/>
+<div class="github-insta-feed" style="display: flex;justify-content: center; align-items: center;">
+<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272403231_3099930970284306_2054452382131918485_n_18216735250113087.jpg" width="25%"/>
+<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272498964_160054973026799_8305514290373229742_n_17891978165536915.jpg" width="25%"/>
+<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272177500_278593610924961_183644696826839967_n_17994795400417473.jpg" width="25%"/>
+<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272107688_952135689058183_1104079245098692016_n_17930040874960542.jpg" width="25%"/>
+<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/271938790_4961244277272347_2918326676412093919_n_17914329953141154.jpg" width="25%"/>
 </div>
-
-
 
 [website]: https://gmarini.com/
 [twitter]: https://twitter.com/Gabryxx7
