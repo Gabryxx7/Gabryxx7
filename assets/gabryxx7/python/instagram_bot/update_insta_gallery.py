@@ -16,7 +16,7 @@ def main():
         scraper_bot = ScraperBot(metadata_path=config_data["metadata_path"], export_path=config_data["export_path"],
         tmp_files_folder=config_data["tmp_files_folder"], log=log)
         profile_metadata = scraper_bot.scrape_profile_metadata("gabryxx7", {'cookie':config_data['cookie']}, config_data["query_hash"], max_pages=-0)
-        scraper_bot.update_photo_list(photo_list_path=config_data["photo_list_filepath"], photo_folder=config_data["photo_base_path"])
+        photo_list = scraper_bot.update_photo_list(edges_list=profile_metadata["posts_data"], photo_list_path=config_data["photo_list_filepath"], photo_folder=config_data["photo_base_path"])
     except Exception as e:
         log.e("main", f"Exception in the main loop: {e}\n{traceback.format_exc()}")
     log.stop()

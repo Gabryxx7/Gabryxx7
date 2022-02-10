@@ -137,30 +137,37 @@ class ScraperBot:
             post.comments_count = self.get_post_metadata(metadata, ['edge_media_to_comment', 'count'])
             post.likes_count = self.get_post_metadata(metadata, ['edge_media_preview_like', 'count'])
             post.url = f"https://www.instagram.com/p/{post.shortcode}/"
-            post.file = self.download_post_images(metadata, root_folder=f"{photo_folder}/", base_path=f"{post.datetime_obj.year:02d}{post.datetime_obj.month:02d}")
+            post.file = self.download_post_media(metadata, root_folder=f"{photo_folder}/", base_path=f"{post.datetime_obj.year:02d}{post.datetime_obj.month:02d}")
             self.log.d("update_post_metadata", f"Post updated: {post.timestamp} {post.datetime}, {post.file}")     
         return post
 
-    def download_post_images(self, metadata, root_folder, base_path):
+    def download_post_media(self, post_metadata, root_folder, base_path):
         files_paths = []
-        files_paths.append(self.download_image(self.get_post_metadata(metadata, ["display_url"]), root_folder, base_path))
-        if "edge_sidecar_to_children" in metadata:
+        files_paths.append(self.download_media(post_metadata, root_folder, base_path))
+        if "edge_sidecar_to_children" in post_metadata:
             first_skipped = False
-            for edge in metadata["edge_sidecar_to_children"]["edges"]:
+            for edge in post_metadata["edge_sidecar_to_children"]["edges"]:
                 if not first_skipped:
                     first_skipped = True
                 else:
                     sub_node = edge["node"]
-                    files_paths.append(self.download_image(self.get_post_metadata(sub_node, ["display_url"]), root_folder,  base_path))
+                    files_paths.append(self.download_media(sub_node, root_folder,  base_path))
         return files_paths
 
-    def download_image(self, url, root_folder, base_path):
-        filename = "tmp.png"
+    def download_media(self, metadata, root_folder, base_path):
+        reg_exp = r"([^\/]+\.(?:mp4|jpg|png|jpeg))\?"  
+        if "video_url" in metadata:
+            filename = "tmp.mp4"     
+            url = metadata["video_url"]   
+        else:
+            filename = "tmp.png"
+            url = metadata["display_url"]   
         try:
-            match = re.search(r"[sp][0-9]{1,5}x[0-9]{1,5}\/(.*)\?", url)
+            match = re.search(reg_exp, url)
             filename = match.group(1)
         except Exception as e:
-            self.log.e("download_image", f"Could not get filename from url {url}: {e}")
+            self.log.e("download_media", f"Could not get image filename from url {url}: {e}")
+            
         response = requests.get(url, stream=True)
         if not os.path.exists(root_folder+base_path):
             os.makedirs(root_folder+base_path)
@@ -207,14 +214,14 @@ class ScraperBot:
         filtered_list.sort(key=lambda x: x["timestamp"], reverse=True)
         return filtered_list
 
-    def export_to_file(self, posts_list, filename):
-        with open(filename, "w", encoding = 'utf-8') as f:
+    def export_to_file(self, posts_list, photo_list_path):
+        with open(photo_list_path, "w", encoding = 'utf-8') as f:
             if "json" in photo_list_path:
                 json.dump(posts_list, f)
             else:
                 yaml.safe_dump(posts_list, yml_file)
 
-    def update_photo_list(self, photo_list_path, photo_folder="."):
+    def update_photo_list(self, edges_list, photo_list_path, photo_folder="."):
         try:
             with open(photo_list_path, "r") as f:
                 if "json" in photo_list_path:
@@ -222,21 +229,24 @@ class ScraperBot:
                 else:
                     photo_list = yaml.safe_load(f)
         except Exception as e:
-            self.log.e("update_photo_list", f"Error opening photo list yaml file at {photo_list_path}:\n{e}")
+            self.log.e("update_photo_list", f"Error opening photo list file at {photo_list_path}:\n{e}")
         new_posts_list = []
         last_post = photo_list["photos"][0]
         last_timestamp = last_post["timestamp"]
-        for edge in self.edges_list:
+        for edge in edges_list:
             node = edge["node"]
+            self.log.i("update_photo_list",f"Last post timestamp: {last_timestamp}\nLast downloaded post {node['taken_at_timestamp']}")
             if "taken_at_timestamp" in node and int(node["taken_at_timestamp"]) > int(last_timestamp):
                 self.log.i("update_photo_list",f"Found new post! {node['taken_at_timestamp']} {self.get_post_metadata(node, ['location','name'])}")
                 new_post = self.post_from_metadata(node, photo_folder)                
                 new_posts_list.append(new_post)
         if len(new_posts_list) > 0:
-            filtered_list = self.filter_sort_photos(new_posts_list)
+            filtered_list = self.filter_sort_photos(new_posts_list, excluded_keys=["datetime_obj"])
             self.log.i("update_photo_list",f"New posts to add {len(filtered_list)}")
-            for i in reversed(range(0, len(filtered_list)-1)):       
+            self.log.i("update_photo_list",f"Total posts before: {len(photo_list['photos'])}")
+            for i in reversed(range(0, len(filtered_list))):       
                 photo_list["photos"].insert(0, filtered_list[i])
+            self.log.i("update_photo_list",f"Total posts after: {len(photo_list['photos'])}")
             self.export_to_file(photo_list, photo_list_path)
             self.log.i("update_photo_list",f"Updated file {photo_list_path}")
             self.log.s("update_photo_list",f"Added {len(filtered_list)} new instagram posts to your website! {str(filtered_list)}")
