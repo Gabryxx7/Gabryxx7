@@ -38,15 +38,18 @@ layout: base
   </p>
   <div class="random-image-wrapper ">
     {% assign photo = photo_sorted[randomNumber] %}
-    {% include photo-card.html photo=photo %}
+    {% include photo-card.html photo=photo description_outside=true %}
   </div>
 
   <script>
+    var json_global = null;
+    var photo = null;
     $.getJSON("/assets/gabryxx7/python/instagram_bot/photos-list.json", function(json) {
+      json_global = json;
       var base_path = json["full_folder"];
       var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
       var randomIndex = Math.floor(Math.random() * (json["photos"].length+1));
-      var photo = json["photos"][randomIndex];
+      photo = json["photos"][randomIndex];
       var elem = $(".random-image-wrapper");
       var photo_card = elem.find(".photo-card");
       var loc = elem.find(".location");
@@ -87,7 +90,7 @@ layout: base
       }
       datetime[0].innerHTML = datetime.find("span")[0].outerHTML+months[date.getMonth()] + " " +date.getFullYear();
       counter[0].innerHTML = photo["likes_count"];
-      img_descr[0].innerHTML = photo["caption"];
+      img_descr[0].innerHTML = photo["caption"].split("#")[0].split("\n.")[0].trim();
   });
    </script>
 </div>

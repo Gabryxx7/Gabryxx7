@@ -14,7 +14,7 @@ excerpt_separator: <!--more-->
 # CSS only submenu
 Create a new file `/#jekyll-theme-hydejack/_includes/body/sub-menu.html`
 
-{% highlight liquid %}
+~~~liquid
 {% raw %}
 {% assign menu = include.menu %}
 {% for node in menu %}
@@ -35,21 +35,22 @@ Create a new file `/#jekyll-theme-hydejack/_includes/body/sub-menu.html`
     {% endif %}
     </li>
 {% endfor %}
-  {% endraw %}
-{% endhighlight %}
+{% endraw %}
+~~~
 
 Edit `/#jekyll-theme-hydejack/_includes/body/nav.html` and replace the content of this `if` statement with this:
-{% highlight liquid %}
+~~~liquid
 {% raw %}
   {% if site.menu %}
    {% include body/sub-menu.html menu=site.menu %}
   {% else %}
   {% endraw %}
-{% endhighlight %}
+~~~
 
 Add a new `sass` file `sub-menu.scss`:
 
 ```sass
+// file: '/#jekyll-theme-hydejack/_includes/body/sub-menu.html'
 .sub-menu{
     padding: 0;
     margin: 0;

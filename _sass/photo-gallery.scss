@@ -315,14 +315,23 @@
   }
 
   .random-image-wrapper {
-    background-color: var(--border-color);    
+    background-color: var(--border-color);
     padding: 0;
     margin-top: 2rem;
     border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
 
   .photo-card {
-    width: 100%;
     margin: auto;
+    vertical-align: top;
+    width: 65%;
+    margin: 0;
+    display: inline-block;
   }
 
   @media screen and (min-width: $break-point-2) {
@@ -330,5 +339,15 @@
     .photo-card {
       width: 65%;
     }
+  }
+
+  .img-descr {
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
+		width: fit-content;
+    margin: 0;
+    padding: 0.5rem;
+    padding-top: 0.25rem;
+    font-size: 0.85rem;
   }
 }

@@ -20,8 +20,8 @@ pre > code,
 .highlight>pre {
     transition: padding-left 200ms, max-height 200ms;
     text-align: left;
-    box-shadow: inset -3px 1px 2px rgba(0, 0, 0, 0.1), inset -9px -4px 14px -7px rgba(0, 0, 0, 0.12), 0 1px 0 rgba(255, 255, 255, 0.04), 0 -1px 0 rgba(0, 0, 0, 0.2);
-    border-radius: .4rem;
+    // box-shadow: inset -3px 1px 2px rgba(0, 0, 0, 0.1), inset -9px -4px 14px -7px rgba(0, 0, 0, 0.12), 0 1px 0 rgba(255, 255, 255, 0.04), 0 -1px 0 rgba(0, 0, 0, 0.2);
+    // border-radius: .4rem;
     //   text-shadow: 1px 1px 1px #3c3c3c11;
     line-height: 1.4;
     -webkit-transform: translate3d(0, 0, 0);
@@ -44,26 +44,8 @@ pre > code,
     box-shadow: inset -3px 1px 2px rgba(0, 0, 0, 0.1), inset -9px -4px 14px -7px rgba(0, 0, 0, 0.12), 0 1px 0 rgba(255, 255, 255, 0.04), 0 -1px 0 rgba(0, 0, 0, 0.2);
 }
 
-.code-lines {
-    transition: opacity 200ms;
-    background-color: var(--body-bg);
-    padding: 0.3rem 0.4rem;
-    margin-top: 0.7rem;
-    margin-right: 0.5rem;
-    margin-left: -1rem;
-    border-radius: 0.3rem;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    box-shadow: 4px 0px 4px -4px rgba(0,0,0,0.35);
-    color: #a7a7a7;
-    text-align: right;
-    position: fixed;
-    display: table;
-    position: absolute;
-    z-index: 2;
-    width: auto;
-    white-space: pre-line;
-}
+
+
 
 /* This is for the inline code */
 code, .dark-mode code{
@@ -78,119 +60,133 @@ code, .dark-mode code{
 }
 
 /* IMPORTANT: this is to avoid the inline code styling applying to the blocks */
-.highlight code{
+.highlight {
+  .code-lines {
+    transition: opacity 200ms;
+    background-color: var(--body-bg);
+    padding: 0.3rem 0.4rem;
+    margin-top: 2.2rem;
+    margin-right: 0.5rem;
+    margin-left: -1rem;
+    border-radius: 0.3rem;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    // box-shadow: 4px 0px 4px -4px rgba(0,0,0,0.35);
+    color: #a7a7a7;
+    text-align: right;
+    position: fixed;
+    display: table;
+    position: absolute;
+    z-index: 2;
+    width: auto;
+    white-space: pre-line;
+  }
+  &:has(.pre-header) .code-lines{
+    margin-top: 1.75rem;
+  }
+
+  code{
     color: unset;
     background-color: unset;
     border-radius: unset;
-}
+  }
 
-
-.highlight td pre{
+  td pre{
     padding: 1rem;
+  }
+  pre table{
+      background-color: transparent;
+      margin: 0;
+      tbody{
+          background-color: transparent;
+          tr{
+              background-color: transparent;
+              td{
+                  background-color: transparent !important;   
+              }
+          }
+      }
+  }
 
-}
-
-.highlight pre table{
-    background-color: transparent;
-    margin: 0;
-    tbody{
-        background-color: transparent;
-        tr{
-            background-color: transparent;
-            td{
-                background-color: transparent !important;   
-            }
-        }
-    }
-}
-
-.code-extras{
+    
+  .code-extras{
+    opacity: 1;
     position: absolute;
     font-family: var(--font-family);
     color: #ccc;
     font-size: 0.9rem;
-    right: -0.8rem;
+    right: -1rem;
     top: 0.1rem;
     z-index: 2;
     text-align: center;
     line-height: 1;
     display: flex;
-    flex-flow: column;
-    align-items: flex-end;
+    flex-flow: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    // column-gap: 0.5rem;    
+    overflow: hidden;
     &.inline{
         flex-flow: row;
     }
-    > button {
-        @extend .pre-header-common;
-        overflow: hidden;
-        cursor: pointer;
-        opacity: 1;
-        padding: 0.5rem;
-        border: none;
-        border-radius: 0.4rem;
     
-        &:hover {
-        background-color: rgba(200,200,200,0.7);
-        color: #666;
-        }
+    > * {
+      @extend .pre-header-common;
+      border-bottom: none;
+      color: var(--menu-text);
+      background: none;
+      padding: 0rem 0.5rem;
+      overflow: hidden;
+      cursor: pointer;
+      transition: opacity 300ms;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     
-        &.copy-success {
-          > .icon-copy {
-            animation-name: icon-copy;
-            animation-duration: 1.5s;
-            animation-timing-function: ease;
-          }
-          > .icon-checkmark {
-            animation-name: icon-checkmark;
-            animation-duration: 1.5s;
-            animation-timing-function: ease;
-          }
-        }
-        > .icon-copy { 
-          display: inline-block;
+      &.copy-success {
+        > .icon-copy {
+          animation-name: icon-copy;
+          animation-duration: 1.5s;
+          animation-timing-function: ease;
         }
         > .icon-checkmark {
-          position: absolute;
-    
-          top: 50%;
-          margin-top: -3em;
-    
-          left: 0;
-          right: 0;
-          text-align: center;
+          animation-name: icon-checkmark;
+          animation-duration: 1.5s;
+          animation-timing-function: ease;
         }
       }
-    > * {            
-        border: none;
-        height: 2rem;
-        position: relative;
-        margin: 0.15rem;
-        content: attr(data-lang);
-        display: inline;
-        background-color: rgba(188,188,188,0.3);
-        padding: 0.5rem;
-        border-radius: 0.3rem;
-        // box-shadow: 0 1px 1px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 6px 8px rgba(0,0,0,0.05), 0 8px 16px rgba(0,0,0,0.05);
-        box-shadow: 2px 2px 3px 0px #00000033;
-        color: var(--gray-text);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 250ms;
+      > .icon-copy { 
+        display: inline-block;
+      }
+      > .icon-checkmark {
+        position: absolute;
+        top: -1.25rem;
+        display: inline-block;
+        padding: -0.5rem;
+        right: 0.5rem;
+        text-align: center;
+      }
     }
+    > button:hover {
+      background: var(--gray-bg);
+    }
+
+    .enabled{
+      background: var(--gray-bg);
+      color: #666;
+    }
+  }
+  // &:hover .code-extras {
+  //   opacity: 1;
+  //   transition: opacity 100ms;
+  // }
+    
 }
+
 
 .code-language-tag{
     text-transform: capitalize;
-}
-
-.code-language-btn.enabled,
-.code-lines-btn.enabled,
-.code-lines-btn:hover,
-.code-output-tag.enabled,
-.code-output-tag:hover{
-    background-color: rgba(200,200,200,0.7);
-    color: #666;
 }
 
 

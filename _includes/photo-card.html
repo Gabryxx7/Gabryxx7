@@ -1,6 +1,7 @@
 {% assign photo = include.photo %}
 {% assign extra_class = include.extra_class | default:"" %}
 {% assign extra_style = include.extra_style | default:"" %}
+{% assign description_outside = include.description_outside | default:false %}
 
 {% if photo.file.size < 2 %}
     {% assign multi_class = "" %}
@@ -41,6 +42,12 @@
         {% if photo.title.size > 0 %}
             <div class='img-title'> <h3>{{ photo.title }}</h3></div>
         {% endif %}
+        
+        {% unless description_outside %}
             <div class='img-descr'> {{ photo.caption }} </div>
+        {% endunless %}
     </a>     
-</article>  
+</article> 
+{% if description_outside %}
+<div class='img-descr'> {{ photo.caption }} </div>
+{% endif %} 
