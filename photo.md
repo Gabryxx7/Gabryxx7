@@ -1,9 +1,19 @@
 ---
 layout: photo-feed
 title: Photo Gallery
-grouped: false
+grouped: true
 addons: [comments, about]
 ---
+
+<div class="photo-toc">
+<ul class="large-only toc-show" id="markdown-toc">
+<li><a href="#2022" id="markdown-toc-2022" style="font-weight: bold;">2022</a></li>
+<li><a href="#2021" id="markdown-toc-2021" style="font-weight: bold;">2021</a></li>
+<li><a href="#2020" id="markdown-toc-2020" style="font-weight: bold;">2020</a></li>
+<li><a href="#2019" id="markdown-toc-2019" style="font-weight: bold;">2019</a></li>
+<li><a href="#2018" id="markdown-toc-2018" style="font-weight: bold;">2018</a></li>
+</ul>
+</div>
 
 <div class="message">
     I'm an amateur photographer who enjoys taking mostly landscape photos!
@@ -45,22 +55,28 @@ addons: [comments, about]
 </details>
 </div>
 
+
+
 <div class="photo-feed">
+
 {% assign photolist = site.data.photos-list %}
 {% assign photo_sorted = site.data.photos-list.photos | sort:"timestamp" | reverse %}
-{% assign prev_date = 0 %}
+{% assign prev_year = 0 %}
 {% assign extra_class = "" %}
 {% assign mini_cnt = 0 %}
 
 {% for photo in photo_sorted %}
-    {% assign current_date = photo.date | date:"%Y" %}
+    {% assign current_year = photo.timestamp | date:"%Y" %}
     {% if page.grouped %}
-        {% if current_date != prev_date %}
-            <blockquote class="photo-group-date-container">
+        {% if current_year != prev_year %}
+            {% assign prev_year = current_year %}
+            <div class="year-break"> 
+            <h1 id="{{ current_year }}"> {{ current_year }} </h1>
+            <!-- <blockquote class="photo-group-date-container">
                 <div class="photo-group-date">
-                    {{ current_date }}
                 </div>
-            </blockquote>
+            </blockquote> -->
+            </div>
         {% endif %}
     {% endif %}
     {% if photo.file.size < 2 %}
@@ -92,6 +108,6 @@ addons: [comments, about]
         {% assign mini_cnt = 3 %}
     {% endif %}
     {% include photo-card.html photo=photo extra_class=extra_class extra_style=extra_style %}
-    {% assign prev_date = current_date %}
+    {% assign prev_year = current_year %}
 {% endfor %}   
 </div>
