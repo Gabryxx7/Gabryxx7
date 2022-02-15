@@ -9,9 +9,11 @@
     {% assign multi_class = "multiple multi-" | append:photo.file.size %}
 {% endif %}  
 {% assign icon = "icon-instagram" %}
+{% assign photo_class = "img" %}
 {% for file in photo.file %}        
     {% if photo.file.first contains ".mp4" %}
         {% assign icon = "icon-video-camera1" %}
+        {% assign photo_class = "video" %}
     {% endif %}  
 {% endfor %}    
 
@@ -27,7 +29,7 @@
             <span class="counter"> {{ photo.likes_count }} </span>                
         </div>
     </div>
-    <div class='photo-card-img img'>
+    <div class='photo-card-img {{ photo_class }}'>
     {% for file in photo.file %}        
         {% if photo.file.first contains ".mp4" %}
         <video loop="true" autoplay="autoplay" muted>
