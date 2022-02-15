@@ -1,3 +1,7 @@
+*[#]*[#]
+*[#]*
+./#jekyll-theme-hydejack
+./#jekyll-theme-hydejackBAK
 *.no_commit
 *.no-commit
 *.nocommit
