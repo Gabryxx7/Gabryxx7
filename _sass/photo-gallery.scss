@@ -190,6 +190,13 @@
   }
   &.highlight {
     flex: 0 1 90%;
+    .photo-card-img{
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+    }
   }
     
   &.multiple {
