@@ -27,20 +27,20 @@
     h1 {
       display: inline-block;
       padding: 0;
-      margin: 0.5rem 2rem;
-      font-size: 3.5rem;
+      margin: 0.1em 0.5em;
+      font-size: 3em;
       vertical-align: middle;
 
       &:before{
         font-family: "icomoon";
         content: "\e953";
-        font-size: 0.6em;
+        font-size: 0.55em;
         display: inline-block;
         position: relative;
         vertical-align: middle;
         margin-right: 1rem;
         top: -0.1em;
-        opacity: 0.7;
+        opacity: 0.35;
       }
 
       &.no-icon:after,
@@ -328,12 +328,37 @@
 max-width: 100%;
 width: 100%;
 
+.posts-year-count{
+  position: relative;
+  display: inline-block;
+  font-family: "Noto Sans";
+  font-size: 0.6em;
+  opacity: 0.6;
+  vertical-align: middle;
+  font-weight: 100;
+  text-align: center;
+  bottom: 0.1em;
+
+  &:before{
+    content: "[";
+  }
+  &:after{
+    content: "]";
+  }
+}
+
+.year-break {  
+  font-size: 70%;
+}
+
 .photo-toc #markdown-toc {
+  position: fixed;
   width: 12%;
   padding-top: 1.5rem;
   padding-left: 2rem;
   font-size: 1rem;
   right: -1em;
+  top: 20%;
 
   &:before {
     font-size: 0.9rem;
@@ -346,6 +371,9 @@ width: 100%;
 }
 
 @media screen and (min-width: $break-point-1) {
+  .year-break {  
+    font-size: 100%;
+  }
   max-width: 66rem;
   margin-left: 24rem;
 }

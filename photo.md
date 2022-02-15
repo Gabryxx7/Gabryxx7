@@ -5,16 +5,6 @@ grouped: true
 addons: [comments, about]
 ---
 
-<div class="photo-toc">
-<ul class="large-only toc-show" id="markdown-toc">
-<li><a href="#2022" id="markdown-toc-2022" style="font-weight: bold;">2022</a></li>
-<li><a href="#2021" id="markdown-toc-2021" style="font-weight: bold;">2021</a></li>
-<li><a href="#2020" id="markdown-toc-2020" style="font-weight: bold;">2020</a></li>
-<li><a href="#2019" id="markdown-toc-2019" style="font-weight: bold;">2019</a></li>
-<li><a href="#2018" id="markdown-toc-2018" style="font-weight: bold;">2018</a></li>
-</ul>
-</div>
-
 <div class="message">
     I'm an amateur photographer who enjoys taking mostly landscape photos!
     <details>
@@ -59,6 +49,7 @@ addons: [comments, about]
 
 <div class="photo-feed">
 
+{% assign years = "" %}
 {% assign photolist = site.data.photos-list %}
 {% assign photo_sorted = site.data.photos-list.photos | sort:"timestamp" | reverse %}
 {% assign prev_year = 0 %}
@@ -71,7 +62,8 @@ addons: [comments, about]
         {% if current_year != prev_year %}
             {% assign prev_year = current_year %}
             <div class="year-break"> 
-            <h1 id="{{ current_year }}"> {{ current_year }} </h1>
+            <h1 id="{{ current_year }}"> {{ current_year }}  <span class="posts-year-count"> </span> </h1>
+            {% assign years = years | append: "," | append: current_year %}
             <!-- <blockquote class="photo-group-date-container">
                 <div class="photo-group-date">
                 </div>
@@ -111,3 +103,38 @@ addons: [comments, about]
     {% assign prev_year = current_year %}
 {% endfor %}   
 </div>
+
+
+{% assign years = years | remove_first: ',' | split: ',' %}
+{% if years.size > 0 %}
+<div class="photo-toc">
+<ul class="large-only toc-show" id="markdown-toc">
+{% for year in years %}
+<li><a href="#{{ year }}" id="markdown-toc-{{ year }}" style="font-weight: bold;">{{ year }} <span class="posts-year-count"> </span></a></li>
+{% endfor %}
+</ul>
+</div>
+
+<script>
+$(function(){
+    var counter = 0;
+    var year = 0;
+    var data = $(".photo-feed > *");
+    $.each(data, function(index, value) {
+        var isLastElement = index == data.length -1;
+        if($(this).hasClass("year-break") || isLastElement){
+            if(year > 0){
+                console.log(year +" - " + counter);
+                $("#"+year+" .posts-year-count").text(counter);
+                $("#markdown-toc-"+year+" .posts-year-count").text(counter);
+            }
+            if(!isLastElement){
+                year = $(this).find("h1")[0].childNodes[0].nodeValue.trim();
+                counter = 0;
+            }
+        }
+        counter++;
+    });
+});
+</script>
+{% endif %}
