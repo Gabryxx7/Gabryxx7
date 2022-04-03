@@ -155,7 +155,7 @@ class ScraperBot:
         return files_paths
 
     def download_media(self, metadata, root_folder, base_path):
-        reg_exp = r"([^\/]+\.(?:mp4|jpg|png|jpeg))\?"  
+        reg_exp = r"([^\/]+\.(?:mp4|jpg|png|jpeg|webp|webm))\?"  
         if "video_url" in metadata:
             filename = "tmp.mp4"     
             url = metadata["video_url"]   

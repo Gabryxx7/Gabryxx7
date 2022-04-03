@@ -21,11 +21,11 @@ Connect with me:     
 ## [Photography <img alt="Gabryxx7 | Instagram" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" width="15px"/>][instagram]
 
 <div class="github-insta-feed" style="display: flex;justify-content: center; align-items: center;flex-wrap: wrap;">
+<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202204/277605133_2087739528065104_6257238005817337765_n.webp" style="vertical-align: middle;" width="28%"/>
+<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202203/tmp.png" style="vertical-align: middle;" width="28%"/>
 <img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202202/273995325_1070134527103110_3104834349327748712_n.webp.jpg" style="vertical-align: middle;" width="28%"/>
 <img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272403231_3099930970284306_2054452382131918485_n_18216735250113087.jpg" style="vertical-align: middle;" width="28%"/>
 <img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272498964_160054973026799_8305514290373229742_n_17891978165536915.jpg" style="vertical-align: middle;" width="28%"/>
-<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272177500_278593610924961_183644696826839967_n_17994795400417473.jpg" style="vertical-align: middle;" width="28%"/>
-<img alt="Gabryxx7 | Instagram" class="no-hover no-mark" height="auto" src="/assets/gabryxx7/img/photos/202201/272107688_952135689058183_1104079245098692016_n_17930040874960542.jpg" style="vertical-align: middle;" width="28%"/>
 </div>
 
 [website]: https://gmarini.com/

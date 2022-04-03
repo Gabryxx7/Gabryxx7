@@ -31,14 +31,16 @@
     </div>
     <div class='photo-card-img {{ photo_class }}'>
     {% for file in photo.file %}        
+    <div class="feed-media-container">
         {% if photo.file.first contains ".mp4" %}
         <video loop="true" autoplay="autoplay" muted>
             <source src='{{ photolist.preview_folder }}{{ file }}' type="video/mp4">
         </video>
         {% else %}
             <img data-ignore src='{{ photolist.preview_folder }}{{ file }}' >
-        {% endif %}
-    {% endfor %}    
+        {% endif %} 
+    </div>
+    {% endfor %}   
     </div>
     <a href='{{ photo.url }}' class='no-hover no-print-link photo-card-caption'>
         {% if photo.title.size > 0 %}
