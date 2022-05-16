@@ -217,7 +217,8 @@ class ScraperBot:
     def export_to_file(self, posts_list, photo_list_path):
         with open(photo_list_path, "w", encoding = 'utf-8') as f:
             if "json" in photo_list_path:
-                json.dump(posts_list, f)
+                json_str = json.dumps(posts_list, ensure_ascii=True, indent=3, separators=(',', ': '))
+                f.write(json_str.encode('utf-8', 'xmlcharrefreplace').decode("utf-8").replace(r"\\\u", r"\\u"))
             else:
                 yaml.safe_dump(posts_list, yml_file)
 
@@ -282,8 +283,14 @@ class ScraperBot:
 
         # if cookies is None:
         #     cookies = get_insta_cookies();
-        first_page_data = requests.get(starting_url, cookies=cookies)
-        first_page = first_page_data.json()
+        first_page_data = requests.get(starting_url, cookies=cookies)        
+        # first_page_data.encoding = first_page_data.apparent_encoding
+        # first_page = first_page_data.text.encode('ascii', 'xmlcharrefreplace')
+        first_page = first_page_data.text.encode("UTF-8").decode("UTF-8").encode('ascii', 'xmlcharrefreplace')
+        # first_page = first_page_data.text.replace(r"\\u", r"\\\u").encode("UTF-16").decode("UTF-16")
+        # first_page = first_page_data.text
+        # print(first_page)
+        first_page = json.loads(first_page)
         user_data = first_page["graphql"]["user"]
         profile_metadata["posts_data"].extend(user_data["edge_owner_to_timeline_media"]["edges"])
         total = user_data["edge_owner_to_timeline_media"]["count"]
@@ -303,7 +310,9 @@ class ScraperBot:
             # self.log.i("scrape_profile", f"Vars dict: {vars_dict_str}\nEncoded: {vars_url_encoded}")
             request_url = query_url+vars_url_encoded
             self.log.i("scrape_profile_metadata",f"Sending request with token: {token}")
-            result = requests.get(request_url, cookies=cookies).json()
+            result_data = requests.get(request_url, cookies=cookies).json()
+            result = result_data.text.encode("UTF-8").decode("UTF-8").encode('ascii', 'xmlcharrefreplace')
+            result = json.loads(result)
             result["request_url"] = request_url
             result["request_token"] = request_url
             result["request_vars"] = vars_dict_str

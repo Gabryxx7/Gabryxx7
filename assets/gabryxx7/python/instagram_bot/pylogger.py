@@ -268,9 +268,9 @@ class Log():
     def init_pushbullet(self, pb_access_token):
         try:
             self.pb = PushBullet(pb_access_token)
-            self.pb_enabled = False
+            self.pb_enabled = True
         except Exception as e:
-            self.e("LOGGER", f"Error in initializing PushBullet, notifications DISABLED: {e}")
+            self.e("LOGGER", f"Error in initializing PushBullet, notifications DISABLED: {e}") 
 
     def set_general_logging_level(self, min_level=-1, levels_list=None):
         if isinstance(min_level, str):
@@ -300,15 +300,18 @@ class Log():
         self.i("LOGGER", f"File Logging Level Changed: {self.file_log_levels}")
 
     def set_pb_logging_level(self, min_level=-1, levels_list=None):
-        if isinstance(min_level, str):
-            min_level = self.logging_levels[min_level]
-        if min_level > 0:
-            self.pb_log_levels = [list(self.logging_levels)[i] for i in range(0, min_level)]
-            self.pb_enabled = True
-        elif levels_list is not None:
-            self.pb_log_levels = levels_list if isinstance(levels_list, list) else [levels_list]
-            self.pb_enabled = True
-        self.i("LOGGER", f"PushBullet Logging Level Changed: {self.pb_log_levels}")
+        if self.pb_enabled:
+            if isinstance(min_level, str):
+                min_level = self.logging_levels[min_level]
+            if min_level > 0:
+                self.pb_log_levels = [list(self.logging_levels)[i] for i in range(0, min_level)]
+                self.pb_enabled = True
+            elif levels_list is not None:
+                self.pb_log_levels = levels_list if isinstance(levels_list, list) else [levels_list]
+                self.pb_enabled = True
+            self.i("LOGGER", f"PushBullet Logging Level Changed: {self.pb_log_levels}")
+        else:
+            self.i("LOGGER", f"PushBullet Logging Level NOT Changed (PB is Disabled)")
 
     def set_widget_logging_level(self, min_level=-1, levels_list=None):
         if isinstance(min_level, str):
