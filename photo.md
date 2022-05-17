@@ -107,7 +107,8 @@ addons: [comments, about]
 {% assign years = years | remove_first: ',' | split: ',' %}
 {% if years.size > 0 %}
 <div class="photo-toc">
-<ul class="large-only toc-show" id="markdown-toc">
+<ul class="toc-show" id="markdown-toc">
+<li class="close-btn">&gt;</li>
 {% for year in years %}
 <li><a href="#{{ year }}" id="markdown-toc-{{ year }}" style="font-weight: bold;">{{ year }} <span class="posts-year-count"> </span></a></li>
 {% endfor %}
@@ -116,6 +117,9 @@ addons: [comments, about]
 
 <script>
 $(function(){
+    $(".photo-toc .close-btn").click(function(event) {
+        $(event.target).parent().parent().toggleClass("closed");
+    });
     var counter = 0;
     var year = 0;
     var data = $(".photo-feed > *");

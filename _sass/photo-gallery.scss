@@ -359,17 +359,69 @@ width: 100%;
   font-size: 70%;
 }
 
-.photo-toc #markdown-toc {
-  position: fixed;
-  width: 12%;
-  padding-top: 1.5rem;
-  padding-left: 2rem;
-  font-size: 1rem;
-  right: -1em;
-  top: 20%;
+.photo-toc{
+  &.closed{
+    #markdown-toc{
+      transform: translateX(65%);
+      transition: all 250ms ease-in-out;
+      .close-btn{
+        transition: all 250ms ease-in-out;
+        -moz-transform:    scaleX(-1); /* Gecko */
+        -o-transform:      scaleX(-1); /* Opera */
+        -webkit-transform: scaleX(-1); /* Webkit */
+        transform:         scaleX(-1); /* Standard */
+      
+        filter: FlipH;                 /* IE 6/7/8 */      
+      }
+    }
+  }
+  #markdown-toc {
+    transform: translateX(0%);
+    transition: all 250ms ease-in-out;
+    position: fixed;
+    right: 0em;
+    top: 10%;
+    background-color: rgba(var(--body-bg), 0.7) !important;
+    backdrop-filter: blur(15px);
+    border-radius: 5px;
+    min-width: 7rem !important;
+    padding: 2rem 1rem 1rem 1.5rem !important;
+    width: auto !important;
+    box-shadow: -0.2rem 0rem 0.4rem 0rem #00000040;
+    border: 1px solid #ffffff40 !important;
+    text-align: center;
+    overflow: hidden;
 
-  &:before {
-    font-size: 0.9rem;
+    &::before {
+      content: "Years" !important;
+      text-align: center;
+      left: 0;
+      right: 0;
+      top: 0.5rem !important;
+      font-size: 0.9rem;
+    }
+    li{
+      display: block;
+    }
+  }
+  .close-btn {
+    transition: all 250ms ease-in-out;
+    display: flex !important;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray-text);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2rem;
+    vertical-align: middle;
+    text-align: center;
+    opacity: 0.5;
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transform: scaleY(1.5);
   }
 }
 
