@@ -1,0 +1,46 @@
+{% if resume.talks.size > 0 %}
+<section>
+  <div class="npb">
+  <h2 id="talks" class="h3 hr-bottom">
+    {{ strings.resume.talks | default:"Talks" }}
+    <span class="symbol {{ icons.volunteer | default:'icon-earth' }}"></span>
+  </h2>
+  {% for talk in resume.talks %}
+  <section class="no-page-break">
+    <header class="{% unless forloop.first %}mt2{% endunless %}">
+      {% if talk.date.size > 0 %}
+        <span class="faded">
+          {% include components/from-to.html from=talk.date to=talk.date no_end="" format=from_to_format %}
+        </span>
+      {% endif %}
+       - 
+      <span class="h4 faded">
+        {% capture name %}<span class="bc">{{ talk.name }}</span>{% endcapture %}
+        {% capture event %}<span class="bc">{{ talk.event }}</span>{% endcapture %}
+        {{ strings.resume.talk_title
+          | default:"<!--name--> at <!--event-->"
+          | replace:"<!--name-->", name
+          | replace:"<!--event-->", event
+        }}
+      </span>
+      {% if talk.location.size > 0 %}
+      <span class="location" style="float: right;">
+        <span class="icon-location2" style="font-size: 0.9rem;"> </span>
+       {{ talk.location | default:"" }} 
+      </span>
+    {% endif %}
+    </header>
+
+    {% include components/message.html class="message" text=talk.summary alt="" style="margin: 0.5rem 0rem 0rem -0.2rem; padding: 0.5rem;" %}
+
+    <h4 class="sr-only">{{ strings.resume.highlights | default:"Highlights" }}</h4>
+    <ul>
+      {% for highlight in talk.highlights %}
+        <li>{{ highlight }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% if forloop.first %}</div>{% endif %}
+  {% endfor %}
+</section>
+{% endif %}

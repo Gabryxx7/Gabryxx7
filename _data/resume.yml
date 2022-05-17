@@ -44,6 +44,13 @@ work:
     startDate: "2021-06-01"
     endDate: "2021-09-01"
     location: (Remote) Cambridge, UK
+    extra: |-
+      > "Set up an RFID based indoor localization system and proxemics tracker. Deployment did not go
+        through due to COVID limitations. The project got repurposed to a Data Science related work. We
+        extracted and analysed a corpus of Slack messages through NLP tools, Social Network Analysis with
+        some Network Metrics. We then built a model to detect leadership in teams through these metrics
+        without prior knowledge about the group's hierarchy."
+
 
   - company: "The University of Melbourne"
     position: "PhD Candidate in Computing and Information Systems"
@@ -55,7 +62,9 @@ work:
      Working on Ubiquitous Computing and IoT
     highlights:
     extra: |-
-       > __Teaching__
+       > I have been teaching at least one subject each semester during my PhD. Teaching and tutoring also included material creation, rubrics writing as well as marking of assignments, projects and final exams:
+       __Teaching__
+         * S1 2022: [INFO20005 - User Interface Development](https://handbook.unimelb.edu.au/2021/subjects/info20005)
          * S1 2021: [INFO20005 - User Interface Development](https://handbook.unimelb.edu.au/2021/subjects/info20005) (Taught on Zoom + GitHub)
          * S2 2020: [COMP30019 - Computer Graphics and Interaction](https://handbook.unimelb.edu.au/2020/subjects/comp30019) (Taught on Zoom + Discord + GitHub Classroom)
          * S1 2020: [INFO90003 - Designing Novel Interaction](https://handbook.unimelb.edu.au/2020/subjects/info90003)
@@ -64,15 +73,23 @@ work:
          * S2 2018: [COMP30019 - Computer Graphics and Interaction](https://handbook.unimelb.edu.au/2018/subjects/comp30019)
        
         > __Extras__
-          * **Trainees Program Chair** and member of the [NHMRC Center for Research Excellence](https://connectedhealth-cre.org/) (2020)
           * **Treasurer** of the Computing and Information System GRaduate Research Students group ([**CIS-GReS**](https://www.cis-gres.org)) (2019)
           * Floor Warden (2019)
-          * Assets manager for the IDL Lab (2019)
+          * Equipment manager for the IDL (now HCI) Lab (2019)
   
+  - company: "[NHMRC Centre of Research Excellence (CRE) in Digital Technology to Transform Chronic Disease](https://connectedhealth-cre.org/)"
+    position: "Trainees Program Chair"
+    summary: "I have lead the group of PhD students trainees and was in charge of setting up and conducting the
+monthly meetings and reporting back to the Chief Investigators. I also took part in the organization"
+    startDate: "2020-09-01"
+    endDate: "2021-06-01"
+    location: Melbourne, Australia
+    
   - company: "CSIRO - Data61"
     position: "PhD Candidate"
     summary: "PhD Sponsored by a top-up Data61 - CSIRO scholarship"
     startDate: "2018-05-01"
+    startDate: "2021-05-01"
     location: Melbourne, Australia
 
   - company: "European Central Bank"
@@ -80,10 +97,7 @@ work:
     startDate: "2017-10-01"
     endDate: "2018-03-01"
     location: Frankfurt Am Main Area, Germany
-    summary: "Working on the IReF long-term project "
-    extra: |-
-      > - Implementation of an online survey to be sent out to all the banks in Europe 
-      > - Technical support for IT-related matters (Python scripts, WordPress websites management, Javascript, VBA)
+    summary: "I worked on the long-term IReF project implementing an online survey to be sent out to all the banks in Europe. Besides that, I offered technical support for IT-related matters (Python scripts, WordPress websites management, Javascript, VBA, SQL)"
 
   - company: "Scuola Superiore Sant'Anna - TeCIP Institute"
     position: "Research Assistant"
@@ -92,9 +106,7 @@ work:
     location: Pisa, Italy
     # summary: ""
     extra: |-
-      > - Robot Vision and Hand-Eye Camera Robot calibration
-      > - HMI development (C#, MySQL)
-      > - 3D Viewer of robotic arm with Inverse Kinematics
+      > I worked mostly on robot vision and Hand-Eye camera robot calibration. I also developed part of the HMI (C#, MySQL) with a 3D Viewer of the robotic arm with inverse kinematics
 
   - company: "Software Engineer Intern"
     position: "VRMedia SRL"
@@ -162,12 +174,13 @@ education:
       > - MTC-GR - Melbourne Teaching Certificate for Graduate Research
   - institution: "Università degli studi di Pisa"
     area: "Computer Science"
-    studyType: "MSc"
+    studyType: "MSc (Laurea Magistrale)"
     startDate: "2014-09-01"
     endDate: "2017-06-01"
     location: Pisa, Italy
     grade: 110/110 *cum laude*
     extra: |-
+      > Master's Thesis: Injection of an efficient scripting language in a large C++ framework for fully immersive Virtual Environments
       > - Advanced Database Systems
       > - Advanced Programming
       > - Computational Models
@@ -177,11 +190,13 @@ education:
       > - Computer Graphics Fundamentals
   - institution: "Università degli studi di Cagliari"
     area: "Computer Science"
-    studyType: "BSc"
+    studyType: "BSc (Laurea Triennale)"
     startDate: "2011-09-01"
     endDate: "2014-07-01"
     location: Cagliari, Italy
     grade: 110/110 *cum laude*
+    extra: |-
+      > Bachelor's Thesis: An Interactive Shoes Showcase
   # - institution: "University of Melbourne"
   #   description: "TEST2"
   #   area: "Computing and Information Systems"
@@ -313,7 +328,39 @@ references:
   #   reference: >
   #     It is my pleasure to recommend Richard, his performance working as a consultant for Main St.
   #     Company proved that he will be a valuable addition to any company.
-
+talks:
+  - name: Brainstorming Workshop 
+    event: NHMRC CRE Retreat
+    date: November 2021
+    location: Melbourne, Australia
+  - name: Masterclass in Photography for HCI Research  
+    event: HCI Lab, University of Melbourne
+    date: April 2021
+    location: Melbourne, Australia
+  - name: Towards Context-Free Semantic Localization 
+    event: UbiComp 2019
+    date: Sep 2019
+    location: London, UK
+  - name: Towards Indoor Localization Analytics for Modelling Flow of Movements
+    event: Doctoral Colloquium, UbiComp 2019
+    date: Sep 2019
+    location: London, UK
+  - name: Flow-Optimisation based on indoor localisation 
+    event: Data61/CSIRO
+    date: Aug 2019
+    location: Melbourne, Australia (Online)
+  - name: Reliable Operating Rooms
+    event: Seminar at Northern Health
+    date: Nov 2018
+    location: Melbourne
+  - name: Seminar on Indoor Localisation for supporting decision-making 
+    event: HCI Lab Seminar, University of Melbourne
+    date: Nov 2018
+    location: Melbourne, Australia
+  - name: Flow Optimization based on indoor localization 
+    event: PhD Confirmation Seminar
+    date: Jun 2018
+    location: University of Melbourne
 publications:
   - name: 'A System to Quantify Mobility and Occupancy Levels in ClinicalSettings: Development
     and Implementation'
